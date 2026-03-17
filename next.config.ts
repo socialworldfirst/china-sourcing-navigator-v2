@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/china-sourcing-navigator",
+  // basePath: "/china-sourcing-navigator", // disabled for local preview
   images: {
     unoptimized: true,
   },

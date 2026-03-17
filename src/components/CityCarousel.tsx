@@ -6,9 +6,9 @@ import CityCard from "./CityCard";
 interface City {
   name: string;
   slug: string;
+  region: string;
   topCategories: string[];
   description: string;
-  isGuangdong: boolean;
   imageUrl: string;
 }
 

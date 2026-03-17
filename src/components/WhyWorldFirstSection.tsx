@@ -15,37 +15,35 @@ export default function WhyWorldFirstSection() {
             />
           </div>
 
-          {/* Right: Text */}
+          {/* Right: Text — thesis-led */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-semibold text-wf-text mb-6">
-              Why <span className="accent-word">WorldFirst</span> Built This
+            <h2 className="text-3xl md:text-4xl font-semibold text-wf-text mb-4">
+              Source Smarter, <span className="accent-word">Pay Safer</span>
             </h2>
             <p className="text-wf-text-secondary text-base leading-relaxed mb-5">
-              WorldFirst has been helping businesses move money across borders
-              since 2004. We process payments across 200+ countries in 20+ currencies.
+              We&apos;ve helped 1.5 million businesses move money across borders since 2004.
+              We&apos;ve watched thousands of importers transition from marketplace platforms
+              to direct factory sourcing.
             </p>
             <p className="text-wf-text-secondary text-base leading-relaxed mb-5">
-              We&apos;ve watched thousands of importers transition from marketplace platforms
-              to direct factory sourcing. The ones who succeed did their homework on
-              cities, suppliers, and payment protection before wiring their first deposit.
+              The ones who succeed did their homework &mdash; they understood the cities,
+              verified their suppliers, and protected their payments before wiring
+              their first deposit.
             </p>
-            <p className="text-wf-text-secondary text-base leading-relaxed mb-8">
-              We built this guide because safe sourcing and safe payment are inseparable.
+            <p className="text-wf-text font-medium text-base leading-relaxed mb-8">
+              That&apos;s why we built this guide. So you can source with confidence
+              and pay with certainty.
             </p>
 
-            <div className="grid grid-cols-4 gap-4">
-              {[
-                { stat: "2004", label: "Founded" },
-                { stat: "200+", label: "Countries" },
-                { stat: "20+", label: "Currencies" },
-                { stat: "1M+", label: "Businesses" },
-              ].map(({ stat, label }) => (
-                <div key={label}>
-                  <div className="text-2xl font-semibold text-wf-text">{stat}</div>
-                  <div className="text-xs text-wf-text-muted mt-1">{label}</div>
-                </div>
-              ))}
-            </div>
+            <a
+              href="https://www.worldfirst.com/uk/world-account/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-pill inline-flex items-center gap-2 px-6 py-3 border border-wf-red text-wf-red text-sm font-medium hover:bg-wf-red hover:text-white transition-colors"
+            >
+              About WorldFirst
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </a>
           </div>
         </div>
       </div>

@@ -26,7 +26,7 @@ export default function Header() {
               href="#cities"
               className="text-[15px] text-wf-text hover:text-wf-red transition-colors"
             >
-              Cities
+              Sourcing Cities
             </Link>
             <Link
               href="#categories"
@@ -38,7 +38,7 @@ export default function Header() {
               href="#payment"
               className="text-[15px] text-wf-text hover:text-wf-red transition-colors"
             >
-              Payment
+              Pay Suppliers
             </Link>
             <Link
               href="#download"
@@ -48,7 +48,7 @@ export default function Header() {
             </Link>
             {/* Canton Fair — highlighted with WF red, special treatment */}
             <Link
-              href="#canton-fair"
+              href="/canton-fair-2026"
               className="flex items-center gap-1.5 text-[15px] font-medium text-wf-red hover:text-wf-red-dark transition-colors"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-wf-red canton-pulse" />
@@ -56,10 +56,10 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons — global URLs */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="https://www.worldfirst.com/uk/login/"
+              href="https://www.worldfirst.com/global/login/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-pill px-5 py-2 text-sm text-wf-red border border-wf-red hover:bg-wf-red hover:text-white"
@@ -67,7 +67,7 @@ export default function Header() {
               Login
             </a>
             <a
-              href="https://www.worldfirst.com/uk/register/"
+              href="https://www.worldfirst.com/global/register/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-pill px-5 py-2 text-sm text-white bg-wf-red hover:bg-wf-red-hover"
@@ -97,22 +97,22 @@ export default function Header() {
         <div className="md:hidden bg-white border-t border-wf-border">
           <nav className="px-4 py-3 space-y-1">
             {[
-              { label: "Cities", href: "#cities" },
+              { label: "Sourcing Cities", href: "#cities" },
               { label: "Categories", href: "#categories" },
-              { label: "Payment", href: "#payment" },
+              { label: "Pay Suppliers", href: "#payment" },
               { label: "Free Guide", href: "#download" },
             ].map((item) => (
               <Link key={item.href} href={item.href} className="block py-2.5 text-[15px] text-wf-text hover:text-wf-red" onClick={() => setMobileOpen(false)}>
                 {item.label}
               </Link>
             ))}
-            <Link href="#canton-fair" className="flex items-center gap-1.5 py-2.5 text-[15px] text-wf-red font-medium" onClick={() => setMobileOpen(false)}>
+            <Link href="/canton-fair-2026" className="flex items-center gap-1.5 py-2.5 text-[15px] text-wf-red font-medium" onClick={() => setMobileOpen(false)}>
               <span className="w-1.5 h-1.5 rounded-full bg-wf-red" />
               Canton Fair 2026
             </Link>
             <div className="flex gap-3 pt-3 border-t border-wf-border">
-              <a href="https://www.worldfirst.com/uk/login/" className="btn-pill flex-1 text-center px-4 py-2.5 text-sm text-wf-red border border-wf-red">Login</a>
-              <a href="https://www.worldfirst.com/uk/register/" className="btn-pill flex-1 text-center px-4 py-2.5 text-sm text-white bg-wf-red">Sign Up</a>
+              <a href="https://www.worldfirst.com/global/login/" className="btn-pill flex-1 text-center px-4 py-2.5 text-sm text-wf-red border border-wf-red">Login</a>
+              <a href="https://www.worldfirst.com/global/register/" className="btn-pill flex-1 text-center px-4 py-2.5 text-sm text-white bg-wf-red">Sign Up</a>
             </div>
           </nav>
         </div>

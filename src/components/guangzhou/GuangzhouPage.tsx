@@ -26,7 +26,7 @@ export default function GuangzhouPage() {
       <FAQAccordion />
 
       {/* ── Payment + Why WorldFirst — shared components ── */}
-      <PaymentSection title="Pay Guangzhou Suppliers" escrowSuffix="." />
+      <PaymentSection />
       <WhyWorldFirstSection />
 
       <Footer />

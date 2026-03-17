@@ -11,11 +11,11 @@ export default function Footer() {
             <h4 className="font-medium text-sm mb-4">Product</h4>
             <ul className="space-y-2.5">
               {[
-                ["World Account", "https://www.worldfirst.com/uk/world-account/"],
-                ["Receive", "https://www.worldfirst.com/uk/receive/"],
-                ["Pay", "https://www.worldfirst.com/uk/pay/"],
-                ["FX", "https://www.worldfirst.com/uk/fx/"],
-                ["Pay 1688 Suppliers", "https://www.worldfirst.com/uk/pay-1688/"],
+                ["World Account", "https://www.worldfirst.com/global/world-account/"],
+                ["Receive", "https://www.worldfirst.com/global/receive/"],
+                ["Pay", "https://www.worldfirst.com/global/pay/"],
+                ["FX", "https://www.worldfirst.com/global/fx/"],
+                ["1688 World Pay", "https://www.worldfirst.com/global/product/pay/1688-world-pay/"],
               ].map(([name, href]) => (
                 <li key={name}>
                   <a href={href} target="_blank" rel="noopener noreferrer" className="text-white/70 text-[13px] hover:text-white transition-colors">{name}</a>
@@ -28,9 +28,9 @@ export default function Footer() {
             <h4 className="font-medium text-sm mb-4">Solutions</h4>
             <ul className="space-y-2.5">
               {[
-                ["E-commerce Seller", "https://www.worldfirst.com/uk/ecommerce/"],
-                ["Supplier Payment", "https://www.worldfirst.com/uk/supplier-payment/"],
-                ["Pay into China", "https://www.worldfirst.com/uk/pay-to-china/"],
+                ["E-commerce Seller", "https://www.worldfirst.com/global/ecommerce/"],
+                ["Supplier Payment", "https://www.worldfirst.com/global/supplier-payment/"],
+                ["Pay into China", "https://www.worldfirst.com/global/pay-to-china/"],
               ].map(([name, href]) => (
                 <li key={name}>
                   <a href={href} target="_blank" rel="noopener noreferrer" className="text-white/70 text-[13px] hover:text-white transition-colors">{name}</a>
@@ -45,11 +45,11 @@ export default function Footer() {
               {[
                 ["Guangzhou", "/cities/guangzhou"],
                 ["Shenzhen", "/cities/shenzhen"],
-                ["Dongguan", "/cities/dongguan"],
-                ["Foshan", "/cities/foshan"],
                 ["Yiwu", "/cities/yiwu"],
-                ["Ningbo", "/cities/ningbo"],
-                ["Electronics", "/categories/electronics"],
+                ["Kunshan", "/cities/kunshan"],
+                ["Quanzhou", "/cities/quanzhou"],
+                ["View all cities →", "#cities"],
+                ["View all categories →", "#categories"],
               ].map(([name, href]) => (
                 <li key={name}>
                   <Link href={href} className="text-white/70 text-[13px] hover:text-white transition-colors">{name}</Link>
@@ -62,10 +62,10 @@ export default function Footer() {
             <h4 className="font-medium text-sm mb-4">Resources</h4>
             <ul className="space-y-2.5">
               {[
-                ["Blog", "https://www.worldfirst.com/uk/blog/"],
-                ["Customer Stories", "https://www.worldfirst.com/uk/customer-stories/"],
-                ["User Guides", "https://www.worldfirst.com/uk/user-guides/"],
-                ["FAQs", "https://www.worldfirst.com/uk/faqs/"],
+                ["Blog", "https://www.worldfirst.com/global/blog/"],
+                ["Customer Stories", "https://www.worldfirst.com/global/customer-stories/"],
+                ["User Guides", "https://www.worldfirst.com/global/user-guides/"],
+                ["FAQs", "https://www.worldfirst.com/global/faqs/"],
               ].map(([name, href]) => (
                 <li key={name}>
                   <a href={href} target="_blank" rel="noopener noreferrer" className="text-white/70 text-[13px] hover:text-white transition-colors">{name}</a>
@@ -78,10 +78,10 @@ export default function Footer() {
             <h4 className="font-medium text-sm mb-4">Company</h4>
             <ul className="space-y-2.5">
               {[
-                ["About WorldFirst", "https://www.worldfirst.com/uk/about-us/"],
-                ["Why WorldFirst", "https://www.worldfirst.com/uk/why-worldfirst/"],
-                ["Contact Us", "https://www.worldfirst.com/uk/contact-us/"],
-                ["Security", "https://www.worldfirst.com/uk/security/"],
+                ["About WorldFirst", "https://www.worldfirst.com/global/about-us/"],
+                ["Why WorldFirst", "https://www.worldfirst.com/global/why-worldfirst/"],
+                ["Contact Us", "https://www.worldfirst.com/global/contact-us/"],
+                ["Security", "https://www.worldfirst.com/global/security/"],
               ].map(([name, href]) => (
                 <li key={name}>
                   <a href={href} target="_blank" rel="noopener noreferrer" className="text-white/70 text-[13px] hover:text-white transition-colors">{name}</a>

@@ -3,9 +3,9 @@ import Link from "next/link";
 interface CityCardProps {
   name: string;
   slug: string;
+  region?: string;
   topCategories: string[];
   description: string;
-  isGuangdong?: boolean;
   imageUrl: string;
 }
 

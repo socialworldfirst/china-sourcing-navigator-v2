@@ -26,7 +26,7 @@ export default function ElectronicsPage() {
       <FAQAccordion />
 
       {/* ── Payment + Why WorldFirst — shared components ── */}
-      <PaymentSection title="Pay Electronics Suppliers" escrowSuffix="." />
+      <PaymentSection />
       <WhyWorldFirstSection />
 
       <Footer />

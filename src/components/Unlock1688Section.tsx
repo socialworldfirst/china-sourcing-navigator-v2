@@ -2,128 +2,86 @@ import basePath from "@/lib/basePath";
 
 export default function Unlock1688Section() {
   return (
-    <>
-      {/* Section hero header */}
-      <div className="text-center mb-12">
-        <h2 className="text-2xl md:text-4xl font-semibold mb-3">
-          <span style={{ color: '#FF6A00' }}>Unlock 1688</span><br className="md:hidden" />{' '}
+    <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+      {/* LEFT: Content + CTA */}
+      <div className="flex-1 order-2 lg:order-1 text-center lg:text-left">
+        <h3 className="text-2xl md:text-3xl font-semibold mb-3">
+          <span style={{ color: '#FF6A00' }}>Unlock 1688</span>{' '}
           <span className="text-wf-red">with WorldFirst</span>
-        </h2>
-        <p className="text-wf-text-secondary text-base max-w-xl mx-auto leading-relaxed">
-          1688 is where you source at factory price. It&apos;s Alibaba&apos;s domestic B2B marketplace in China.
+        </h3>
+        <p className="text-wf-text-secondary text-sm mb-6 leading-relaxed">
+          1688 is Alibaba&apos;s domestic B2B marketplace &mdash; where Chinese factories
+          trade with each other at 20&ndash;40% less than Alibaba.com. The catch? It only
+          accepts CNY from Chinese bank accounts.{' '}
+          <span className="text-wf-text font-medium">1688 World Pay</span> lets you
+          pay any 1688 supplier directly from your WorldFirst account.
         </p>
+
+        {/* Key benefits — compact */}
+        <ul className="space-y-2 mb-6 inline-block text-left">
+          {[
+            "20–40% cheaper than Alibaba.com",
+            "0.4% payment fee (vs 3% card surcharge)",
+            "No Chinese bank account needed",
+            "Browse 1688, pay at checkout via WorldFirst",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-2 text-sm text-wf-text-secondary">
+              <svg className="mt-0.5 flex-shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <div className="lg:text-left text-center">
+          <a
+            href="https://www.worldfirst.com/global/product/pay/1688-world-pay/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-pill inline-flex items-center gap-2 px-8 py-3.5 bg-[#FF6A00] text-white text-sm font-medium hover:bg-[#E55E00] transition-colors"
+          >
+            Learn about 1688 World Pay
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+          </a>
+        </div>
       </div>
 
-      {/* 3 horizontal cards */}
-      <div className="grid md:grid-cols-3 gap-6">
-        {/* Card 1: Why Choose 1688? */}
-        <div className="bg-wf-bg-light border border-wf-border rounded-2xl overflow-hidden flex flex-col">
-          <div className="aspect-[4/3] border-b border-wf-border overflow-hidden">
-            <img
-              src={`${basePath}/images/1688.webp`}
-              alt="1688 marketplace platform"
-              className="w-full h-full object-cover object-left-top"
-              loading="lazy"
-            />
-          </div>
-          <div className="p-6 flex flex-col flex-1">
-            <h3 className="text-wf-text font-semibold text-lg mb-3">Why Choose 1688?</h3>
-            <p className="text-wf-text-secondary text-sm leading-relaxed mb-4">
-              Alibaba&apos;s domestic B2B marketplace where factories and wholesalers
-              actually trade with each other. Prices are 20-40% lower than Alibaba.com.
-            </p>
-            <ul className="space-y-2 mb-5">
-              {["20-40% lower than Alibaba.com prices", "Source directly from real factories", "No international middleman markup"].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-wf-text-secondary">
-                  <svg className="mt-0.5 flex-shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-auto">
-              <a
-                href="https://www.worldfirst.com/uk/1688/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-pill inline-flex items-center gap-2 px-5 py-3 bg-wf-red text-white text-sm font-medium hover:bg-wf-red-hover"
-              >
-                Log in with WorldFirst
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-              </a>
+      {/* RIGHT: 1688 screenshot — bigger, with WorldFirst pay overlay */}
+      <div className="flex-shrink-0 order-1 lg:order-2 flex justify-center">
+        <div className="relative w-[22rem] md:w-[26rem] lg:w-[30rem] h-auto">
+          {/* 1688.com badge — overflows top-left */}
+          <div className="absolute -top-3 -left-3 z-10">
+            <div className="bg-[#FF6A00] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+              1688.com
             </div>
           </div>
-        </div>
-
-        {/* Card 2: 1688 AI Sourcing Agent */}
-        <div className="bg-wf-bg-light border border-wf-border rounded-2xl overflow-hidden flex flex-col">
-          <div className="aspect-[4/3] border-b border-wf-border overflow-hidden">
-            <img
-              src={`${basePath}/images/ai-agent.webp`}
-              alt="AI Sourcing Agent — search 1688 in English"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-          <div className="p-6 flex flex-col flex-1">
-            <div className="flex items-center gap-3 mb-3">
-              <h3 className="text-wf-text font-semibold text-lg">1688 AI Sourcing Agent</h3>
-            </div>
-            <p className="text-wf-text-secondary text-sm leading-relaxed mb-4">
-              Search 1688 in English. Our AI translates, scans factory listings,
-              compares prices, and returns verified results.
-            </p>
-            <ul className="space-y-2 mb-5">
-              {["Search 1688 in English with AI translation", "Factory verification built into results", "Compare quotes across suppliers"].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-wf-text-secondary">
-                  <svg className="mt-0.5 flex-shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-auto">
-              <a href="https://www.worldfirst.com/uk/register/" target="_blank" rel="noopener noreferrer" className="btn-pill inline-flex items-center gap-2 px-6 py-3 bg-wf-red text-white text-sm font-medium hover:bg-wf-red-hover">
-                Try the AI Sourcing Agent
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Card 3: 1688 World Pay */}
-        <div className="bg-wf-bg-light border border-wf-border rounded-2xl overflow-hidden flex flex-col">
-          <div className="aspect-[4/3] border-b border-wf-border overflow-hidden">
-            <img
-              src={`${basePath}/images/1688-world-pay.webp`}
-              alt="1688 World Pay — pay suppliers in CNY"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-          <div className="p-6 flex flex-col flex-1">
-            <div className="flex items-center gap-3 mb-3">
-              <h3 className="text-wf-text font-semibold text-lg">1688 World Pay</h3>
-            </div>
-            <p className="text-wf-text-secondary text-sm leading-relaxed mb-4">
-              1688 only accepts CNY from Chinese bank accounts. 1688 World Pay lets
-              you pay any 1688 supplier directly from your World Account.
-            </p>
-            <ul className="space-y-2 mb-5">
-              {["Pay 1688 suppliers directly in CNY", "0.4% fee vs 3% credit card surcharge", "No Chinese bank account required"].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-wf-text-secondary">
-                  <svg className="mt-0.5 flex-shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-auto">
-              <a href="https://www.worldfirst.com/uk/pay-1688/" target="_blank" rel="noopener noreferrer" className="btn-pill inline-flex items-center gap-2 px-6 py-3 border border-[#FF6A00] text-[#FF6A00] text-sm font-medium hover:bg-[#FF6A00] hover:text-white transition-colors">
-                Learn about 1688 World Pay
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-              </a>
+          <img
+            src={`${basePath}/images/1688.webp`}
+            alt="1688 marketplace — Alibaba's domestic B2B platform"
+            className="w-full h-auto object-contain rounded-xl shadow-lg border border-wf-border"
+            loading="lazy"
+          />
+          {/* WorldFirst Pay overlay — bottom-right, overflows the image */}
+          <div className="absolute -bottom-4 -right-4 z-10 w-[70%]">
+            <div className="bg-white rounded-xl shadow-2xl border border-gray-100 px-4 py-3">
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-full bg-wf-red flex items-center justify-center">
+                    <span className="text-white text-[8px] font-bold">WF</span>
+                  </div>
+                  <span className="text-xs font-semibold text-gray-800">WorldFirst</span>
+                </div>
+                <span className="text-[10px] text-green-600 font-medium">&#10003; Verified</span>
+              </div>
+              <button className="w-full bg-wf-red text-white text-xs font-semibold py-2 rounded-lg hover:bg-wf-red-hover transition-colors">
+                Pay with 1688 World Pay
+              </button>
+              <p className="text-[9px] text-gray-400 text-center mt-1.5">Official payment partner of 1688</p>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

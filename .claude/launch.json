@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "china-sourcing-navigator",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "port": 3000
+      "name": "csn-v2",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "/Users/steven/Documents/Claude/china-sourcing-navigator-v2/out", "-l", "3002", "--no-clipboard"],
+      "port": 3002
     }
   ]
 }

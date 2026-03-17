@@ -11,13 +11,11 @@ import Unlock1688Section from "@/components/Unlock1688Section";
 import PaymentSection from "@/components/PaymentSection";
 import WhyWorldFirstSection from "@/components/WhyWorldFirstSection";
 import basePath from "@/lib/basePath";
-import { cities, categoriesInitial, categoriesExpanded } from "@/lib/data";
+import { cities, categories } from "@/lib/data";
 
 export default function Home() {
   const [showAllCategories, setShowAllCategories] = useState(false);
-  const allCategories = showAllCategories
-    ? [...categoriesInitial, ...categoriesExpanded]
-    : categoriesInitial;
+  const displayCategories = showAllCategories ? categories : categories.slice(0, 12);
 
   return (
     <main className="min-h-screen bg-white">
@@ -68,7 +66,7 @@ export default function Home() {
       </section>
 
       {/* ================================================
-          CITIES — Full-width horizontal carousel
+          CITIES — Full-width horizontal carousel (20 cities)
           ================================================ */}
       <section id="cities" className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,7 +75,7 @@ export default function Home() {
               Where Things Are <span className="accent-word">Made</span>
             </h2>
             <p className="text-wf-text-secondary text-sm md:text-base">
-              Click a city to see what it makes and how to source there
+              20 sourcing cities across 6 regions &mdash; click a city to see what it makes
             </p>
           </div>
         </div>
@@ -87,7 +85,7 @@ export default function Home() {
       </section>
 
       {/* ================================================
-          CATEGORIES — expand 12 → 24
+          CATEGORIES — all 24, show 12 initially
           ================================================ */}
       <section id="categories" className="py-16 md:py-24 bg-wf-bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,12 +94,12 @@ export default function Home() {
               Explore by <span className="accent-word">Category</span>
             </h2>
             <p className="text-wf-text-secondary text-sm md:text-base max-w-lg mx-auto">
-              Find the right sourcing region for your product
+              24 product categories mapped to the best sourcing cities
             </p>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-            {allCategories.map((cat, i) => (
+            {displayCategories.map((cat, i) => (
               <div key={cat.slug} className={!showAllCategories && i >= 6 ? 'hidden md:block' : ''}>
                 <CategoryCard {...cat} />
               </div>
@@ -114,7 +112,7 @@ export default function Home() {
                 onClick={() => setShowAllCategories(true)}
                 className="btn-pill inline-flex items-center gap-2 px-8 py-3.5 border border-wf-red text-wf-red font-medium text-sm hover:bg-wf-red hover:text-white transition-colors"
               >
-                See all categories
+                See all 24 categories
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 9l6 6 6-6" />
                 </svg>
@@ -134,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* ================================================
-          DOWNLOAD THE SOURCING MAP
+          DOWNLOAD THE SOURCING MAP — clean CTA
           ================================================ */}
       <section id="download" className="py-16 md:py-24 bg-wf-bg-light">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,21 +141,21 @@ export default function Home() {
       </section>
 
       {/* ================================================
-          UNLOCK 1688 — Hero header + 3 cards
+          UNLOCK 1688 — Single clean section, one CTA
           ================================================ */}
       <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Unlock1688Section />
         </div>
       </section>
 
       {/* ================================================
-          PAY INTO CHINA — Shared component
+          PAY INTO CHINA — Network messaging
           ================================================ */}
       <PaymentSection />
 
       {/* ================================================
-          WHY WORLDFIRST — Shared component
+          WHY WORLDFIRST
           ================================================ */}
       <WhyWorldFirstSection />
 

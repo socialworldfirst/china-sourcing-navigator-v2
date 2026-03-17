@@ -6,13 +6,13 @@ import CategoryCard from "@/components/CategoryCard";
 import CityCarousel from "@/components/CityCarousel";
 import PaymentSection from "@/components/PaymentSection";
 import basePath from "@/lib/basePath";
-import { cities, categoriesInitial, categoriesExpanded } from "@/lib/data";
+import { cities, categories } from "@/lib/data";
 
 export default function ReviewPage() {
   const [showAllCategories, setShowAllCategories] = useState(false);
   const allCategories = showAllCategories
-    ? [...categoriesInitial, ...categoriesExpanded]
-    : categoriesInitial;
+    ? categories
+    : categories.slice(0, 12);
 
   return (
     <main className="min-h-screen bg-white">
