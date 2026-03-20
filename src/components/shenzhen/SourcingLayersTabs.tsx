@@ -85,7 +85,7 @@ export default function SourcingLayersTabs() {
                           onClick={() => setShowAllMarkets(true)}
                           className="btn-pill inline-flex items-center gap-2 px-6 py-2.5 bg-wf-red text-white text-sm font-medium hover:bg-wf-red-hover"
                         >
-                          Show all 10 markets
+                          Show all 12 markets
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg>
                         </button>
                       </div>

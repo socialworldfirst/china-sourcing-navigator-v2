@@ -1,11 +1,12 @@
 import basePath from "@/lib/basePath";
 
 const tradeShows = [
-  { month: "APR", startDay: "9", endDay: "11", name: "CITE \u2014 China Information Technology Expo", focus: "AI, computing, data centres, electronic components" },
-  { month: "MAY", startDay: "13", endDay: "15", name: "CIBF \u2014 China International Battery Fair", focus: "Batteries, energy storage, EV power systems" },
+  { month: "APR", startDay: "9", endDay: "11", name: "CITE + CEF \u2014 Information Technology & Electronic Components", focus: "AI, computing, components. Futian Convention Center" },
+  { month: "MAY", startDay: "13", endDay: "15", name: "CIBF \u2014 China International Battery Fair", focus: "Batteries, energy storage, EV. 280,000 sqm, 3,000+ exhibitors" },
   { month: "AUG", startDay: "26", endDay: "28", name: "IOTE \u2014 Internet of Things Exhibition", focus: "RFID, smart retail, sensors, intelligent payment" },
-  { month: "SEP", startDay: "9", endDay: "11", name: "CIOE + ELEXCON", focus: "Optoelectronics, lasers, electronics, embedded systems" },
-  { month: "NOV", startDay: "26", endDay: "28", name: "CHTF \u2014 China Hi-Tech Fair", focus: "AI, NEV, manufacturing, medical devices. 400,000 sqm" },
+  { month: "SEP", startDay: "9", endDay: "11", name: "CIOE + ELEXCON \u2014 Optoelectronics & Embedded", focus: "Lasers, fiber optics, electronics, embedded systems. 340,000 sqm combined" },
+  { month: "OCT", startDay: "27", endDay: "29", name: "NEPCON ASIA \u2014 Electronics Manufacturing", focus: "SMT equipment, soldering, inspection, packaging. 60,000+ buyers" },
+  { month: "NOV", startDay: "26", endDay: "28", name: "CHTF \u2014 China Hi-Tech Fair", focus: "AI, NEV, manufacturing, medical devices. 400,000 sqm, 5,000+ exhibitors" },
 ];
 
 export default function TradeShowsLayer() {

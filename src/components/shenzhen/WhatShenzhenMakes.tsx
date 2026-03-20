@@ -6,13 +6,13 @@ const categories = [
   {
     name: "Electronics & Components",
     stars: 5,
-    hook: "Huaqiangbei: 1.45 km\u00B2, 40+ markets, 20,000 merchants, 400B+ RMB in annual transactions",
+    hook: "Huaqiangbei: 1.45 km\u00B2, 40+ markets, 20,000 merchants, 480B+ RMB in annual transactions",
     images: [
       { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80", alt: "Electronic components and circuit boards" },
       { src: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&q=80", alt: "PCB assembly production line" },
     ],
     content: [
-      "Shenzhen produces 90% of the world\u2019s consumer electronics at some point in the supply chain. Huaqiangbei in Futian district is the nerve centre: SEG Plaza alone has 3,000+ component shops across 10 floors. Bao\u2019an district runs PCB assembly. Longhua hosts Foxconn\u2019s largest global campus. Nanshan concentrates R&D for Huawei, ZTE, DJI, and Tencent.",
+      "A significant share of the world\u2019s consumer electronics pass through Shenzhen\u2019s supply chain. Huaqiangbei in Futian district is the nerve centre: SEG Plaza alone has 3,000+ component shops across 10 floors. Bao\u2019an district runs PCB assembly. Longhua hosts Foxconn\u2019s largest global campus. Nanshan concentrates R&D for Huawei, ZTE, DJI, and Tencent.",
       "You can source individual IC chips, resistors, and connectors from Huaqiangbei, or commission full PCBA runs from Bao\u2019an factories with MOQs as low as 1 piece for prototypes. PCB prototypes cost $2 and arrive next day. 1688 search terms: \u6DF1\u5733\u7535\u5B50\u5143\u5668\u4EF6, \u6DF1\u5733PCB\u6253\u6837, \u6DF1\u5733PCBA\u52A0\u5DE5. Sub-marketplace: ec.1688.com for electronics.",
     ],
     cta: "Explore Shenzhen electronics suppliers",
@@ -69,7 +69,7 @@ const categories = [
     ],
     content: [
       "Shuibei district in Luohu processes 60% of China\u2019s gold jewelry and 70% of its diamond wholesale. Gold trades at 710 RMB/g vs 930 retail \u2014 24% cheaper. The district has 9,000+ merchants across multiple buildings anchored by the Shuibei International Jewelry Trade Center. Metro Line 3/7 to Tianbei Station.",
-      "Gold, silver, diamonds, jade, pearls, gemstones, finished jewelry, loose stones, fashion jewelry. The Shuibei cluster includes Bolin International (50B RMB annual volume), Jinli International (high-end gold and diamond), and Jinzhan Plaza (silver and fashion pieces). 1688 terms: \u6DF1\u5733\u9EC4\u91D1\u9996\u9970, \u6C34\u8D1D\u73E0\u5B9D\u6279\u53D1.",
+      "Gold, silver, diamonds, jade, pearls, gemstones, finished jewelry, loose stones, fashion jewelry. The Shuibei cluster includes Bolin International (50B RMB annual volume), Jinli International (high-end gold and diamond), and Jinzhan Plaza (silver and fashion pieces). 1688 terms: \u6DF1\u5733\u9EC4\u91D1\u9996\u9970, \u6C34\u8D1D\u73E0\u5B9D\u6279\u53D1. Note for 2026: Shuibei faces margin pressure after a 13.3 billion yuan gold shop collapse and a proposed 5% consumption tax. Processing fees have compressed to around 2%. Verify current conditions before committing to large orders.",
     ],
     cta: "Explore Shenzhen jewelry suppliers",
   },
@@ -90,18 +90,30 @@ const categories = [
   {
     name: "Fashion & Apparel",
     stars: 3,
-    hook: "",
-    images: [],
-    content: [],
-    cta: "",
+    hook: "Nanyou in Nanshan: 4,000+ merchants across 20 buildings, Asia\u2019s largest original-design women\u2019s fashion hub",
+    images: [
+      { src: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80", alt: "Nanyou fashion wholesale market" },
+      { src: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&q=80", alt: "Shenzhen fashion district" },
+    ],
+    content: [
+      "Shenzhen is not a fashion city in the way Guangzhou is. But Nanyou wholesale market in Nanshan district has carved a niche in original-design women\u2019s fashion. 4,000+ merchants across 20+ buildings, each floor with a different price tier and style. Buildings 107/108 (Tairon) carry young Chinese designer brands. Building 109 specialises in silk. Buildings 110/111 are the premium powerhouses.",
+      "Century Plaza sells factory-direct originals. Feima City (buildings 204/209) handles budget wholesale. \u2018Higher floors = more surprises\u2019 \u2014 factory showrooms on the top floors supply the stalls below at source pricing. Metro Line 9/12 to Nanyou Station, Exit F1. 1688 terms: \u6DF1\u5733\u5357\u6CB9\u5973\u88C5, \u6DF1\u5733\u539F\u521B\u8BBE\u8BA1\u5973\u88C5.",
+    ],
+    cta: "Explore Shenzhen fashion suppliers",
   },
   {
     name: "Phone Accessories",
     stars: 3,
-    hook: "",
-    images: [],
-    content: [],
-    cta: "",
+    hook: "Mingtong Digital Mall draws 200,000 visitors daily \u2014 the world\u2019s phone accessory wholesale centre",
+    images: [
+      { src: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&q=80", alt: "Phone accessories wholesale" },
+      { src: "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&q=80", alt: "Phone cases and accessories display" },
+    ],
+    content: [
+      "Huaqiangbei is where phone accessories are sourced at scale. Mingtong Digital Mall alone covers 70,000 m\u00B2 with 60,000+ employees handling phone cases, screen protectors, cables, chargers, power banks, and Bluetooth accessories. Yuanwang Digital Mall next door handles ~60% of China\u2019s wholesale refurbished iPhone distribution.",
+      "Longsheng market specialises in phone cases and packaging. SEG Communication Market (Baohua Building) covers mobile repair parts and components. MOQs start at 1,000-5,000 units for phone cases, less for cables and chargers. 1688 terms: \u6DF1\u5733\u624B\u673A\u58F3\u6279\u53D1, \u6DF1\u5733\u624B\u673A\u914D\u4EF6, \u6DF1\u5733\u5145\u7535\u5668.",
+    ],
+    cta: "Explore Shenzhen phone accessory suppliers",
   },
 ];
 
