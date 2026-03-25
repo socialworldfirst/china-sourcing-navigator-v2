@@ -208,6 +208,18 @@ body {
 .market-grad-plastics { background: linear-gradient(135deg, #F1F5F9 0%, #CBD5E1 100%); }
 .market-grad-knitwear { background: linear-gradient(135deg, #FCE7F3 0%, #F9A8D4 100%); }
 .market-grad-packaging { background: linear-gradient(135deg, #FFF7ED 0%, #FED7AA 100%); }
+.market-grad-kitchenware { background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%); }
+.market-grad-appliances { background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); }
+.market-grad-autoparts { background: linear-gradient(135deg, #F5F5F4 0%, #E7E5E4 100%); }
+.market-grad-molds { background: linear-gradient(135deg, #F8FAFC 0%, #CBD5E1 100%); }
+.market-grad-chemical { background: linear-gradient(135deg, #ECFDF5 0%, #A7F3D0 100%); }
+.market-grad-semiconductor { background: linear-gradient(135deg, #EEF2FF 0%, #C7D2FE 100%); }
+.market-grad-food { background: linear-gradient(135deg, #FEF9C3 0%, #FDE68A 100%); }
+.market-grad-trade { background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%); }
+.market-grad-fashion { background: linear-gradient(135deg, #FFF1F2 0%, #FECDD3 100%); }
+.market-grad-tailoring { background: linear-gradient(135deg, #FAF5FF 0%, #E9D5FF 100%); }
+.market-grad-seafood { background: linear-gradient(135deg, #F0F9FF 0%, #BAE6FD 100%); }
+.market-grad-building { background: linear-gradient(135deg, #F5F5F4 0%, #D6D3D1 100%); }
 
 /* Gated supplier overlay */
 .supplier-gated-overlay {
