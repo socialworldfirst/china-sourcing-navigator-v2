@@ -69,7 +69,7 @@ export default function SourcingLayersTabs() {
                     <p className="text-sm text-wf-text-secondary leading-relaxed mb-6">
                       Yiwu has three platforms worth knowing. 1688 is Alibaba&apos;s domestic B2B
                       marketplace where prices run 20&ndash;40% below international Alibaba. Yiwugo
-                      (\u4E49\u4E4C\u8D2D) is the official directory of all 75,000+ booths with 4 million+
+                      (义乌购) is the official directory of all 75,000+ booths with 4 million+
                       product listings. Chinagoods is the newer digital portal with market maps and
                       real-time booth information.
                     </p>

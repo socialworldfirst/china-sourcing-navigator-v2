@@ -15,9 +15,9 @@ export default function OnlineDiscoveryLayer() {
           {/* Left: Steps */}
           <div className="space-y-4">
             {[
-              { step: "1", title: "Search in Chinese", desc: "Use \u4E1C\u839E\u5DE5\u5382\u76F4\u9500 (Dongguan factory direct) or category-specific terms like \u4E1C\u839E\u5851\u80F6\u6A21\u5177 (Dongguan plastic moulds) or \u5927\u6717\u6BDB\u8863 (Dalang sweaters)." },
-              { step: "2", title: "Use the Dongguan Industrial Belt", desc: "1688 has a dedicated \u4E1C\u839E\u4EA7\u4E1A\u5E26 section. Or filter by supplier location: Dongguan (\u4E1C\u839E) or specific towns like \u539A\u8857 (Houjie), \u864E\u95E8 (Humen)." },
-              { step: "3", title: "Check factory badges", desc: "Look for \u5B9E\u529B\u5546\u5BB6 (verified merchant) and \u6E90\u5934\u5DE5\u5382 (source factory) tags. Dongguan listings are overwhelmingly factory-direct." },
+              { step: "1", title: "Search in Chinese", desc: "Use 东莞工厂直销 (Dongguan factory direct) or category-specific terms like 东莞塑胶模具 (Dongguan plastic moulds) or 大朗毛衣 (Dalang sweaters)." },
+              { step: "2", title: "Use the Dongguan Industrial Belt", desc: "1688 has a dedicated 东莞产业带 section. Or filter by supplier location: Dongguan (东莞) or specific towns like 厚街 (Houjie), 虎门 (Humen)." },
+              { step: "3", title: "Check factory badges", desc: "Look for 实力商家 (verified merchant) and 源头工厂 (source factory) tags. Dongguan listings are overwhelmingly factory-direct." },
               { step: "4", title: "Verify before paying", desc: "Cross-check the business registration, then pay through 1688 World Pay for protection." },
             ].map((s) => (
               <div key={s.step} className="flex gap-3">
@@ -36,16 +36,16 @@ export default function OnlineDiscoveryLayer() {
               <h5 className="text-sm font-medium text-wf-text mb-2">Dongguan search terms for 1688</h5>
               <div className="grid grid-cols-2 gap-2 text-xs">
                 {[
-                  { cn: "\u4E1C\u839E\u7535\u5B50\u914D\u4EF6", en: "Electronics parts" },
-                  { cn: "\u4E1C\u839E\u6CE8\u5851\u52A0\u5DE5", en: "Injection moulding" },
-                  { cn: "\u4E1C\u839EPCBA\u52A0\u5DE5", en: "PCB assembly" },
-                  { cn: "\u4E1C\u839E\u978B\u5382", en: "Shoe factory" },
-                  { cn: "\u4E1C\u839E\u5BB6\u5177\u5382", en: "Furniture factory" },
-                  { cn: "\u5927\u6717\u6BDB\u7EC7\u52A0\u5DE5", en: "Dalang knitwear OEM" },
-                  { cn: "\u864E\u95E8\u5973\u88C5\u6279\u53D1", en: "Humen women\u2019s wear" },
-                  { cn: "\u4E1C\u839E\u73A9\u5177\u5382", en: "Toy factory" },
-                  { cn: "\u4E1C\u839E\u5370\u5237\u5305\u88C5", en: "Printing & packaging" },
-                  { cn: "\u4E1C\u839E\u4E94\u91D1\u51B2\u538B", en: "Hardware stamping" },
+                  { cn: "东莞电子配件", en: "Electronics parts" },
+                  { cn: "东莞注塑加工", en: "Injection moulding" },
+                  { cn: "东莞PCBA加工", en: "PCB assembly" },
+                  { cn: "东莞鞋厂", en: "Shoe factory" },
+                  { cn: "东莞家具厂", en: "Furniture factory" },
+                  { cn: "大朗毛织加工", en: "Dalang knitwear OEM" },
+                  { cn: "虎门女装批发", en: "Humen women’s wear" },
+                  { cn: "东莞玩具厂", en: "Toy factory" },
+                  { cn: "东莞印刷包装", en: "Printing & packaging" },
+                  { cn: "东莞五金冲压", en: "Hardware stamping" },
                 ].map((term) => (
                   <div key={term.cn} className="flex items-center gap-1.5">
                     <span className="text-wf-text font-medium">{term.cn}</span>

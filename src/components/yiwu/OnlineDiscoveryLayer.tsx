@@ -15,9 +15,9 @@ export default function OnlineDiscoveryLayer() {
           {/* Left: Steps */}
           <div className="space-y-4">
             {[
-              { step: "1", title: "Search in Chinese", desc: "Use \u4E49\u4E4C + product name (e.g. \u4E49\u4E4C\u888D\u5B50\u6279\u53D1). WorldFirst\u2019s AI Sourcing Agent translates for you." },
-              { step: "2", title: "Filter by Yiwu", desc: "Set the supplier location filter to Yiwu (\u4E49\u4E4C) or Zhejiang (\u6D59\u6C5F) province. Look for the \u4E49\u4E4C\u4EA7\u4E1A\u5E26 (Yiwu industrial belt) tag." },
-              { step: "3", title: "Cross-check on Yiwugo", desc: "Search the supplier\u2019s booth number on yiwugo.com to verify their market presence and see their full product range." },
+              { step: "1", title: "Search in Chinese", desc: "Use 义乌 + product name (e.g. 义乌袍子批发). WorldFirst's AI Sourcing Agent translates for you." },
+              { step: "2", title: "Filter by Yiwu", desc: "Set the supplier location filter to Yiwu (义乌) or Zhejiang (浙江) province. Look for the 义乌产业带 (Yiwu industrial belt) tag." },
+              { step: "3", title: "Cross-check on Yiwugo", desc: "Search the supplier's booth number on yiwugo.com to verify their market presence and see their full product range." },
               { step: "4", title: "Verify before paying", desc: "Cross-check the business registration, then pay through 1688 World Pay for protection." },
             ].map((s) => (
               <div key={s.step} className="flex gap-3">
@@ -59,7 +59,7 @@ export default function OnlineDiscoveryLayer() {
                 <span className="text-orange-600 font-bold text-sm">YG</span>
               </div>
               <div>
-                <h5 className="text-sm font-semibold text-wf-text">Yiwugo (\u4E49\u4E4C\u8D2D)</h5>
+                <h5 className="text-sm font-semibold text-wf-text">Yiwugo (义乌购)</h5>
                 <p className="text-xs text-wf-text-muted">en.yiwugo.com</p>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function OnlineDiscoveryLayer() {
                 <span className="text-blue-600 font-bold text-sm">CG</span>
               </div>
               <div>
-                <h5 className="text-sm font-semibold text-wf-text">Chinagoods (\u4E49\u4E4C\u5C0F\u5546\u54C1\u57CE)</h5>
+                <h5 className="text-sm font-semibold text-wf-text">Chinagoods (义乌小商品城)</h5>
                 <p className="text-xs text-wf-text-muted">en.chinagoods.com</p>
               </div>
             </div>

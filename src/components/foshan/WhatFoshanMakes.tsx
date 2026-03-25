@@ -6,94 +6,94 @@ const categories = [
   {
     name: "Furniture & Home",
     stars: 5,
-    hook: "World\u2019s largest furniture wholesale market \u2014 7,000+ factories, 20 million sqm of showrooms",
+    hook: "World’s largest furniture wholesale market — 7,000+ factories, 20 million sqm of showrooms",
     images: [
       { src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80", alt: "Lecong furniture showroom" },
       { src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80", alt: "Foshan furniture manufacturing" },
     ],
     content: [
-      "Foshan produces 50\u201375% of all furniture made in China. The operation splits across two towns in Shunde district: Lecong handles the selling, Longjiang handles the making. Lecong alone has 20 million+ sqm of showroom space across 3,450+ shops \u2014 a 10km strip from Lanshi Bridge to Longjiang Bridge. Louvre International anchors the premium end with 380,000 sqm and 2,000+ domestic brands. Red Star Macalline runs the only wholesale-format branch in its national chain, with 90%+ factory-direct sales.",
-      "Longjiang is where the production happens. 7,000+ furniture factories and 26,000+ proprietary brands. The first modern sofa built in China came out of Longjiang in 1977 when Chenyong Woodworking Group reverse-engineered Hong Kong designs. Today the cluster produces everything from budget panel furniture to pieces that compete with Italian luxury at 40\u201360% lower cost. Nearby Jiujiang adds mattresses \u2014 one in every ten mattresses sold worldwide ships from that single town.",
+      "Foshan produces 50–75% of all furniture made in China. The operation splits across two towns in Shunde district: Lecong handles the selling, Longjiang handles the making. Lecong alone has 20 million+ sqm of showroom space across 3,450+ shops — a 10km strip from Lanshi Bridge to Longjiang Bridge. Louvre International anchors the premium end with 380,000 sqm and 2,000+ domestic brands. Red Star Macalline runs the only wholesale-format branch in its national chain, with 90%+ factory-direct sales.",
+      "Longjiang is where the production happens. 7,000+ furniture factories and 26,000+ proprietary brands. The first modern sofa built in China came out of Longjiang in 1977 when Chenyong Woodworking Group reverse-engineered Hong Kong designs. Today the cluster produces everything from budget panel furniture to pieces that compete with Italian luxury at 40–60% lower cost. Nearby Jiujiang adds mattresses — one in every ten mattresses sold worldwide ships from that single town.",
     ],
     cta: "Explore Foshan furniture suppliers",
   },
   {
     name: "Ceramics & Tiles",
     stars: 5,
-    hook: "54% of China\u2019s tile production, 25% of global output \u2014 5,000 years of ceramic heritage",
+    hook: "54% of China’s tile production, 25% of global output — 5,000 years of ceramic heritage",
     images: [
       { src: "https://images.unsplash.com/photo-1615971677499-5467cbab01c0?w=800&q=80", alt: "Ceramic tile production in Foshan" },
       { src: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80", alt: "Foshan ceramic tiles showroom" },
     ],
     content: [
-      "Foshan has been making ceramics for 5,000 years. Shiwan\u2019s Nanfeng Kiln, built in 1506 during the Ming Dynasty, still fires with wood today. The modern industry took off in the 1980s when Foshan imported Italy\u2019s first ceramic tile production line. Now the city runs 1,000+ production lines turning out 1.2 billion sqm of tiles annually \u2014 54% of China\u2019s total and roughly a quarter of global output.",
-      "The trading hub is Nanzhuang in Chancheng district, designated \u201cChina Building Ceramic First Town.\u201d Its 2,000+ ceramic enterprises and 3+ million sqm of trading space include Cihai International (600+ enterprises), China Ceramics City (200+ brands, export-focused), and Shiwan Zhiye Market (470,000 sqm, 30+ years running). Major brands \u2014 Dongpeng, Monalisa, ARROW, Marco Polo, New Pearl \u2014 all have their roots and factories here.",
+      "Foshan has been making ceramics for 5,000 years. Shiwan’s Nanfeng Kiln, built in 1506 during the Ming Dynasty, still fires with wood today. The modern industry took off in the 1980s when Foshan imported Italy’s first ceramic tile production line. Now the city runs 1,000+ production lines turning out 1.2 billion sqm of tiles annually — 54% of China’s total and roughly a quarter of global output.",
+      "The trading hub is Nanzhuang in Chancheng district, designated “China Building Ceramic First Town.” Its 2,000+ ceramic enterprises and 3+ million sqm of trading space include Cihai International (600+ enterprises), China Ceramics City (200+ brands, export-focused), and Shiwan Zhiye Market (470,000 sqm, 30+ years running). Major brands — Dongpeng, Monalisa, ARROW, Marco Polo, New Pearl — all have their roots and factories here.",
     ],
     cta: "Explore Foshan ceramics suppliers",
   },
   {
     name: "Aluminium & Metals",
     stars: 5,
-    hook: "Dali: China\u2019s \u201cAluminium No. 1 Town\u201d \u2014 largest aluminium production and distribution centre nationally",
+    hook: "Dali: China’s “Aluminium No. 1 Town” — largest aluminium production and distribution centre nationally",
     images: [
       { src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80", alt: "Aluminium profile extrusion" },
       { src: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&q=80", alt: "Aluminium manufacturing Foshan" },
     ],
     content: [
-      "Dali town in Nanhai district is China\u2019s largest aluminium profile production and distribution centre. The Foshan Nanhai Aluminum Profile Association (NAPA), established in 2004, is the country\u2019s largest regional aluminium industry body. Bomei Hardware Decorative City \u2014 600+ mu at the intersection of Qilu and Guihe Roads \u2014 is the main trading hub for aluminium profiles, doors, windows, and hardware.",
-      "Chencun in Shunde district adds stainless steel, operating as South China\u2019s stainless steel processing centre. The two clusters together supply the raw materials that feed Foshan\u2019s downstream industries: furniture frames, lighting fixtures, building facades, and doors and windows. Key manufacturers include Oriental Aluminium, Hehua Aluminum, and Datong Jinwei.",
+      "Dali town in Nanhai district is China’s largest aluminium profile production and distribution centre. The Foshan Nanhai Aluminum Profile Association (NAPA), established in 2004, is the country’s largest regional aluminium industry body. Bomei Hardware Decorative City — 600+ mu at the intersection of Qilu and Guihe Roads — is the main trading hub for aluminium profiles, doors, windows, and hardware.",
+      "Chencun in Shunde district adds stainless steel, operating as South China’s stainless steel processing centre. The two clusters together supply the raw materials that feed Foshan’s downstream industries: furniture frames, lighting fixtures, building facades, and doors and windows. Key manufacturers include Oriental Aluminium, Hehua Aluminum, and Datong Jinwei.",
     ],
     cta: "Explore Foshan aluminium suppliers",
   },
   {
     name: "Lighting",
     stars: 4,
-    hook: "LED and decorative lighting cluster powered by Nanhai\u2019s aluminium supply chain",
+    hook: "LED and decorative lighting cluster powered by Nanhai’s aluminium supply chain",
     images: [
       { src: "https://images.unsplash.com/photo-1507494924047-60b8ee826ca9?w=800&q=80", alt: "LED lighting fixtures" },
       { src: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&q=80", alt: "Crystal chandelier showroom" },
     ],
     content: [
-      "Danzao town in Nanhai district runs a dedicated LED manufacturing cluster with companies like Lianpu Lighting (500+ employees), Yingpeng Lighting (established 1997), and Land Lighting (300+ workers). The cluster benefits from direct access to Nanhai\u2019s aluminium supply chain for fixture housings and heat sinks.",
-      "Trading happens in the Lecong corridor. Sunlink Lighting & Kitchen Cabinet City and Shunle International Lighting City stock crystal chandeliers, ceiling lights, wall sconces, LED panels, floor lamps, and spotlights in styles from modern minimalist to European classical. Foshan\u2019s lighting industry is strong but secondary to Zhongshan\u2019s Guzhen \u2014 China\u2019s designated lighting capital \u2014 about 90 minutes south.",
+      "Danzao town in Nanhai district runs a dedicated LED manufacturing cluster with companies like Lianpu Lighting (500+ employees), Yingpeng Lighting (established 1997), and Land Lighting (300+ workers). The cluster benefits from direct access to Nanhai’s aluminium supply chain for fixture housings and heat sinks.",
+      "Trading happens in the Lecong corridor. Sunlink Lighting & Kitchen Cabinet City and Shunle International Lighting City stock crystal chandeliers, ceiling lights, wall sconces, LED panels, floor lamps, and spotlights in styles from modern minimalist to European classical. Foshan’s lighting industry is strong but secondary to Zhongshan’s Guzhen — China’s designated lighting capital — about 90 minutes south.",
     ],
     cta: "Explore Foshan lighting suppliers",
   },
   {
     name: "Building Materials",
     stars: 4,
-    hook: "330,000 sqm at Huayi alone \u2014 everything from flooring to smart locks under one roof",
+    hook: "330,000 sqm at Huayi alone — everything from flooring to smart locks under one roof",
     images: [
       { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80", alt: "Building materials warehouse" },
       { src: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80", alt: "Interior building materials showroom" },
     ],
     content: [
-      "Foshan\u2019s building materials ecosystem covers everything outside the ceramics and aluminium categories that have their own clusters. Huayi International Decoration Expo City is the anchor: 330,000 sqm across 5 floors with 2,000 shops selling tiles, wooden flooring, lighting, doors, windows, sanitaryware, ceilings, hardware, wallpaper, paints, and appliances. Brands like TOTO, ARROW, and Panasonic all have presence here.",
-      "Huada Ceramics Sanitarywares Building Materials City (120,000 sqm, 300+ shops) focuses on doors and windows \u2014 about 60% of its suppliers sell aluminium, stainless steel, wooden, and security doors plus smart locks. Meiju International Building Materials Expo Center adds another 280,000 sqm. Casa Ceramics & Sanitaryware Mall, founded in 1994, was one of Foshan\u2019s first ceramic wholesale markets and now stocks mid-to-high-end sanitary ware from TOTO, KOHLER, OPPEIN, and JOMOO.",
+      "Foshan’s building materials ecosystem covers everything outside the ceramics and aluminium categories that have their own clusters. Huayi International Decoration Expo City is the anchor: 330,000 sqm across 5 floors with 2,000 shops selling tiles, wooden flooring, lighting, doors, windows, sanitaryware, ceilings, hardware, wallpaper, paints, and appliances. Brands like TOTO, ARROW, and Panasonic all have presence here.",
+      "Huada Ceramics Sanitarywares Building Materials City (120,000 sqm, 300+ shops) focuses on doors and windows — about 60% of its suppliers sell aluminium, stainless steel, wooden, and security doors plus smart locks. Meiju International Building Materials Expo Center adds another 280,000 sqm. Casa Ceramics & Sanitaryware Mall, founded in 1994, was one of Foshan’s first ceramic wholesale markets and now stocks mid-to-high-end sanitary ware from TOTO, KOHLER, OPPEIN, and JOMOO.",
     ],
     cta: "Explore Foshan building materials suppliers",
   },
   {
     name: "Appliances",
     stars: 3,
-    hook: "Midea and Galanz HQ \u2014 Shunde produces 50%+ of the world\u2019s air conditioners",
+    hook: "Midea and Galanz HQ — Shunde produces 50%+ of the world’s air conditioners",
     images: [
       { src: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80", alt: "Home appliance manufacturing" },
     ],
     content: [
-      "Beijiao town in Shunde district is home to Midea Group \u2014 a Fortune 500 company and one of the world\u2019s largest appliance makers. Galanz, the microwave oven giant, is also based in Shunde. The district\u2019s 3,000+ electrical appliance factories produce over 50% of the world\u2019s air conditioners and refrigerators. Sourcing here is typically direct factory relationships rather than wholesale market browsing.",
+      "Beijiao town in Shunde district is home to Midea Group — a Fortune 500 company and one of the world’s largest appliance makers. Galanz, the microwave oven giant, is also based in Shunde. The district’s 3,000+ electrical appliance factories produce over 50% of the world’s air conditioners and refrigerators. Sourcing here is typically direct factory relationships rather than wholesale market browsing.",
     ],
     cta: "Explore Foshan appliance suppliers",
   },
   {
     name: "Textiles",
     stars: 3,
-    hook: "Some textile production but secondary to Guangzhou\u2019s Zhongda and Shahe districts",
+    hook: "Some textile production but secondary to Guangzhou’s Zhongda and Shahe districts",
     images: [
       { src: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&q=80", alt: "Textile fabric rolls" },
     ],
     content: [
-      "Foshan has textile manufacturing capacity, but it is not a primary cluster. Guangzhou\u2019s Zhongda Fabric Market (23,000+ shops, 30 minutes away) and Shahe clothing district dominate the Pearl River Delta textile supply chain. Foshan\u2019s textile production supports its furniture industry \u2014 upholstery fabrics, curtains, and soft furnishings \u2014 rather than operating as an independent export cluster.",
+      "Foshan has textile manufacturing capacity, but it is not a primary cluster. Guangzhou’s Zhongda Fabric Market (23,000+ shops, 30 minutes away) and Shahe clothing district dominate the Pearl River Delta textile supply chain. Foshan’s textile production supports its furniture industry — upholstery fabrics, curtains, and soft furnishings — rather than operating as an independent export cluster.",
     ],
     cta: "Explore Guangzhou textile suppliers",
   },

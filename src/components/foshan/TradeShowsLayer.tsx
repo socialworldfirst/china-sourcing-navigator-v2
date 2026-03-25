@@ -4,7 +4,7 @@ const foshanShows = [
   { month: "MAR", startDay: "17", endDay: "20", name: "Longjiang International Furniture Expo", focus: "Furniture, materials, 90,000+ buyers from 120 countries" },
   { month: "MAR", startDay: "18", endDay: "21", name: "CIFF Phase 1 (Guangzhou)", focus: "Home furniture, outdoor, decor" },
   { month: "MAR", startDay: "28", endDay: "31", name: "CIFF Phase 2 (Guangzhou)", focus: "Office furniture, commercial, CIFM/interzum" },
-  { month: "APR", startDay: "18", endDay: "23", name: "CeramBath (3 Foshan venues)", focus: "Ceramics, sanitary ware, bathroom \u2014 Asia\u2019s No. 1" },
+  { month: "APR", startDay: "18", endDay: "23", name: "CeramBath (3 Foshan venues)", focus: "Ceramics, sanitary ware, bathroom — Asia’s No. 1" },
   { month: "APR", startDay: "20", endDay: "23", name: "Uniceramics Expo", focus: "Full ceramic value chain, 96,000 sqm, 600+ exhibitors" },
 ];
 

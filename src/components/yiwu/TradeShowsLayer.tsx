@@ -1,16 +1,16 @@
 const yiwuFair = {
   name: "China Yiwu International Commodities Fair",
-  nameCn: "\u4E49\u535A\u4F1A",
-  dates: "October 21\u201324, 2026",
-  scale: "100,000 sqm \u00B7 2,400+ exhibitors \u00B7 180,000+ global buyers",
-  description: "China\u2019s 3rd largest trade fair, after Canton Fair and East China Fair. UFI certified, sponsored by the Ministry of Commerce. Running since 1995. Covers consumer products, hardware, electronics, toys, apparel accessories, home goods, socks/hosiery, and stationery.",
+  nameCn: "义博会",
+  dates: "October 21–24, 2026",
+  scale: "100,000 sqm · 2,400+ exhibitors · 180,000+ global buyers",
+  description: "China’s 3rd largest trade fair, after Canton Fair and East China Fair. UFI certified, sponsored by the Ministry of Commerce. Running since 1995. Covers consumer products, hardware, electronics, toys, apparel accessories, home goods, socks/hosiery, and stationery.",
   venue: "Yiwu International Expo Center, No. 59 Zongze East Road, Yiwu",
 };
 
 const otherShows = [
   { month: "APR", startDay: "20", endDay: "22", name: "Hardware & Electrical Appliances Fair", focus: "Hardware tools, home appliances, electronics" },
   { month: "MAY", startDay: "16", endDay: "18", name: "Gifts, Fashion & Household Goods Expo", focus: "Gifts, fashion accessories, household goods" },
-  { month: "MAY", startDay: "28", endDay: "30", name: "TOYEXPO \u2014 Toy & Hobby Expo", focus: "Plush, educational, electronic, IP/blind box toys" },
+  { month: "MAY", startDay: "28", endDay: "30", name: "TOYEXPO — Toy & Hobby Expo", focus: "Plush, educational, electronic, IP/blind box toys" },
   { month: "JUN", startDay: "3", endDay: "5", name: "Stationery & Gift Exhibition", focus: "Stationery, office supplies, art supplies" },
   { month: "JUN", startDay: "23", endDay: "25", name: "Cross-Border E-Commerce Expo", focus: "Cross-border e-commerce, digital trade, logistics" },
   { month: "NOV", startDay: "TBD", endDay: "", name: "Imported Commodities Fair", focus: "Household, food, garments, e-commerce services" },
@@ -28,7 +28,7 @@ export default function TradeShowsLayer() {
               <span className="w-2 h-2 rounded-full bg-wf-red canton-pulse" />
               <span className="text-xs font-semibold uppercase tracking-wider">
                 <span className="text-wf-red font-bold">Flagship Event</span>
-                <span className="text-wf-text-muted"> \u00B7 October 2026</span>
+                <span className="text-wf-text-muted"> · October 2026</span>
               </span>
             </div>
 

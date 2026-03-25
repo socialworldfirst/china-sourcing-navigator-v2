@@ -15,9 +15,9 @@ export default function OnlineDiscoveryLayer() {
           {/* Left: Steps */}
           <div className="space-y-4">
             {[
-              { step: "1", title: "Search in Chinese", desc: "Use Foshan-specific terms: \u4F5B\u5C71\u5BB6\u5177 (Foshan furniture), \u4F5B\u5C71\u74F7\u7816 (Foshan tiles), \u5357\u6D77\u94DD\u578B\u6750 (Nanhai aluminium). WorldFirst\u2019s AI Sourcing Agent translates for you." },
-              { step: "2", title: "Filter by Foshan", desc: "Set supplier location to \u4F5B\u5C71 (Foshan) or narrow to \u987A\u5FB7 (Shunde) for furniture, \u7985\u57CE (Chancheng) for ceramics, \u5357\u6D77 (Nanhai) for aluminium." },
-              { step: "3", title: "Check factory badges", desc: "Look for \u5B9E\u529B\u5546\u5BB6 (verified merchant) and \u6E90\u5934\u5DE5\u5382 (source factory). In furniture, single-category specialists are real factories \u2014 if a seller offers everything, they\u2019re a trader." },
+              { step: "1", title: "Search in Chinese", desc: "Use Foshan-specific terms: 佛山家具 (Foshan furniture), 佛山瓷砖 (Foshan tiles), 南海铝型材 (Nanhai aluminium). WorldFirst’s AI Sourcing Agent translates for you." },
+              { step: "2", title: "Filter by Foshan", desc: "Set supplier location to 佛山 (Foshan) or narrow to 顺德 (Shunde) for furniture, 禅城 (Chancheng) for ceramics, 南海 (Nanhai) for aluminium." },
+              { step: "3", title: "Check factory badges", desc: "Look for 实力商家 (verified merchant) and 源头工厂 (source factory). In furniture, single-category specialists are real factories — if a seller offers everything, they’re a trader." },
               { step: "4", title: "Verify before paying", desc: "Cross-check business registration against their showroom in Lecong or Nanzhuang, then pay through 1688 World Pay for protection." },
             ].map((s) => (
               <div key={s.step} className="flex gap-3">
@@ -36,14 +36,14 @@ export default function OnlineDiscoveryLayer() {
               <h5 className="text-sm font-medium text-wf-text mb-2">Foshan search terms for 1688</h5>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {[
-                  { cn: "\u4E50\u4ECE\u5BB6\u5177\u6279\u53D1", en: "Lecong furniture wholesale" },
-                  { cn: "\u9F99\u6C5F\u5B9E\u6728\u5BB6\u5177", en: "Longjiang solid wood furniture" },
-                  { cn: "\u5357\u5E84\u9676\u74F7\u6279\u53D1", en: "Nanzhuang ceramics wholesale" },
-                  { cn: "\u4F5B\u5C71\u5927\u677F\u74F7\u7816", en: "Foshan large-format tiles" },
-                  { cn: "\u5927\u6CA5\u94DD\u6750", en: "Dali aluminium materials" },
-                  { cn: "\u4F5B\u5C71\u94DD\u5408\u91D1\u95E8\u7A97", en: "Foshan aluminium doors/windows" },
-                  { cn: "\u4F5B\u5C71LED\u706F\u5177", en: "Foshan LED lighting" },
-                  { cn: "\u4F5B\u5C71\u5E8A\u57AB\u5DE5\u5382", en: "Foshan mattress factory" },
+                  { cn: "乐从家具批发", en: "Lecong furniture wholesale" },
+                  { cn: "龙江实木家具", en: "Longjiang solid wood furniture" },
+                  { cn: "南庄陶瓷批发", en: "Nanzhuang ceramics wholesale" },
+                  { cn: "佛山大板瓷砖", en: "Foshan large-format tiles" },
+                  { cn: "大沥铝材", en: "Dali aluminium materials" },
+                  { cn: "佛山铝合金门窗", en: "Foshan aluminium doors/windows" },
+                  { cn: "佛山LED灯具", en: "Foshan LED lighting" },
+                  { cn: "佛山床垫工厂", en: "Foshan mattress factory" },
                 ].map((term) => (
                   <div key={term.cn} className="text-xs">
                     <span className="text-wf-text font-medium">{term.cn}</span>

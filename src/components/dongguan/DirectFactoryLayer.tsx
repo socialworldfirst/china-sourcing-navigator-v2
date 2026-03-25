@@ -5,7 +5,7 @@ const featuredSuppliers = [
   { companyName: "Tangxia Smartech Electronics", specialty: "PCBA assembly, Bluetooth modules, IoT device manufacturing", since: "2018", initials: "TS", gradientFrom: "#3B82F6", gradientTo: "#1D4ED8" },
   { companyName: "Houjie Yongsheng Furniture", specialty: "Export furniture, office chairs, bedroom sets, custom woodwork", since: "2015", initials: "YS", gradientFrom: "#F59E0B", gradientTo: "#D97706" },
   { companyName: "Dalang Xinmao Knitwear", specialty: "OEM sweaters, cardigans, knitted accessories", since: "2017", initials: "XM", gradientFrom: "#EC4899", gradientTo: "#DB2777" },
-  { companyName: "Chang\u2019an Lida Toy Manufacturing", specialty: "Plastic toys, educational toys, action figures, licensed products", since: "2014", initials: "LD", gradientFrom: "#8B5CF6", gradientTo: "#6D28D9" },
+  { companyName: "Chang’an Lida Toy Manufacturing", specialty: "Plastic toys, educational toys, action figures, licensed products", since: "2014", initials: "LD", gradientFrom: "#8B5CF6", gradientTo: "#6D28D9" },
 ];
 
 export default function DirectFactoryLayer() {

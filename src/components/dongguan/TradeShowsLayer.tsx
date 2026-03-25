@@ -1,10 +1,10 @@
 const dongguanShows = [
-  { month: "MAR", startDay: "8", endDay: "10", name: "DPE \u2014 Power Supply & Electronic Switches Exhibition", focus: "Power supplies, transformers, electronic switches" },
+  { month: "MAR", startDay: "8", endDay: "10", name: "DPE — Power Supply & Electronic Switches Exhibition", focus: "Power supplies, transformers, electronic switches" },
   { month: "MAR", startDay: "15", endDay: "19", name: "55th Famous Furniture Fair (3F)", focus: "Home furniture, bedroom, mattresses, wood machinery. 1,000+ brands" },
-  { month: "MAR", startDay: "25", endDay: "27", name: "DTC \u2014 Textile & Clothing Industry Fair", focus: "Textile, clothing, sewing machinery, digital printing" },
-  { month: "MAR", startDay: "25", endDay: "27", name: "DFM \u2014 Footwear Machinery & Material Fair", focus: "Footwear machinery, leather, fly knit, injection. 550 exhibitors, 50,000 sqm" },
-  { month: "MAR", startDay: "25", endDay: "27", name: "SCISMA \u2014 Sewing Machinery & Accessories Show", focus: "Sewing machinery, production accessories" },
-  { month: "MAY", startDay: "23", endDay: "25", name: "Dongguan Int\u2019l Cutting Industry Equipment Expo", focus: "Cutting tools, automation, CNC machining. 200+ exhibitors" },
+  { month: "MAR", startDay: "25", endDay: "27", name: "DTC — Textile & Clothing Industry Fair", focus: "Textile, clothing, sewing machinery, digital printing" },
+  { month: "MAR", startDay: "25", endDay: "27", name: "DFM — Footwear Machinery & Material Fair", focus: "Footwear machinery, leather, fly knit, injection. 550 exhibitors, 50,000 sqm" },
+  { month: "MAR", startDay: "25", endDay: "27", name: "SCISMA — Sewing Machinery & Accessories Show", focus: "Sewing machinery, production accessories" },
+  { month: "MAY", startDay: "23", endDay: "25", name: "Dongguan Int’l Cutting Industry Equipment Expo", focus: "Cutting tools, automation, CNC machining. 200+ exhibitors" },
 ];
 
 const annualShows = [

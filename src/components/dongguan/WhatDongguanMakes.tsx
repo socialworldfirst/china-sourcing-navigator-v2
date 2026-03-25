@@ -6,77 +6,77 @@ const categories = [
   {
     name: "Plastics & Moulds",
     stars: 5,
-    hook: "South China\u2019s largest plastic manufacturing cluster \u2014 precision mould capital",
+    hook: "South China’s largest plastic manufacturing cluster — precision mould capital",
     images: [
       { src: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80", alt: "Plastic injection moulding machine" },
       { src: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&q=80", alt: "Precision mould workshop" },
     ],
     content: [
-      "Dongguan is the precision mould capital of southern China. Changping, Hengli, and Chang\u2019an house thousands of factories specializing in plastic injection moulding, die-casting, and CNC machining. Mould costs range from US$2,000 for simple two-part moulds to US$15,000+ for multi-cavity production tooling. Hengli alone has built an entire mould industry cluster with dedicated government support and shared testing facilities.",
-      "The reason Dongguan dominates: the full supply chain sits within 30 minutes. Raw plastic pellets, mould steel, CNC machining centres, surface treatment workshops, and assembly lines all cluster in the same towns. A prototype mould can be cut in 7\u201310 days. Production moulds take 3\u20135 weeks. MOQs start at 1,000\u20135,000 pieces, though overcapacity since 2023 has pushed many factories to accept 600\u2013800 units.",
+      "Dongguan is the precision mould capital of southern China. Changping, Hengli, and Chang’an house thousands of factories specializing in plastic injection moulding, die-casting, and CNC machining. Mould costs range from US$2,000 for simple two-part moulds to US$15,000+ for multi-cavity production tooling. Hengli alone has built an entire mould industry cluster with dedicated government support and shared testing facilities.",
+      "The reason Dongguan dominates: the full supply chain sits within 30 minutes. Raw plastic pellets, mould steel, CNC machining centres, surface treatment workshops, and assembly lines all cluster in the same towns. A prototype mould can be cut in 7–10 days. Production moulds take 3–5 weeks. MOQs start at 1,000–5,000 pieces, though overcapacity since 2023 has pushed many factories to accept 600–800 units.",
     ],
     cta: "Explore Dongguan plastics suppliers",
   },
   {
     name: "Electronics Assembly",
     stars: 5,
-    hook: "Trillion-yuan cluster \u2014 1 in 5 smartphones worldwide built here",
+    hook: "Trillion-yuan cluster — 1 in 5 smartphones worldwide built here",
     images: [
       { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80", alt: "Electronics assembly line" },
       { src: "https://images.unsplash.com/photo-1588508065123-287b28e013da?w=800&q=80", alt: "PCB circuit board manufacturing" },
     ],
     content: [
-      "Dongguan\u2019s electronic information industry crossed the \u00A51 trillion mark, making it the city\u2019s largest sector. Chang\u2019an, Tangxia, Shijie, Liaobu, Fenggang, and Qingxi collectively house 10,000+ electronics factories. This is where Huawei runs its Ox Horn Campus R&D centre, and where OPPO and Vivo have major production lines. Smartphones and mechanical products account for 80%+ of Dongguan\u2019s export value.",
-      "For importers, Dongguan\u2019s electronics cluster is strongest in PCBA assembly, power supplies, connectors, cables, Bluetooth modules, and consumer device assembly. Unlike Shenzhen\u2019s Huaqiangbei (which is a trading hub), Dongguan is where the actual manufacturing happens. MOQs for electronics assembly run 500\u20135,000 pieces, and have dropped 15\u201325% since 2023 due to overcapacity.",
+      "Dongguan’s electronic information industry crossed the ¥1 trillion mark, making it the city’s largest sector. Chang’an, Tangxia, Shijie, Liaobu, Fenggang, and Qingxi collectively house 10,000+ electronics factories. This is where Huawei runs its Ox Horn Campus R&D centre, and where OPPO and Vivo have major production lines. Smartphones and mechanical products account for 80%+ of Dongguan’s export value.",
+      "For importers, Dongguan’s electronics cluster is strongest in PCBA assembly, power supplies, connectors, cables, Bluetooth modules, and consumer device assembly. Unlike Shenzhen’s Huaqiangbei (which is a trading hub), Dongguan is where the actual manufacturing happens. MOQs for electronics assembly run 500–5,000 pieces, and have dropped 15–25% since 2023 due to overcapacity.",
     ],
     cta: "Explore Dongguan electronics suppliers",
   },
   {
     name: "Furniture & Home",
     stars: 4,
-    hook: "2,000+ brands on a 5 km Furniture Avenue \u2014 China\u2019s #1 furniture export town nearby",
+    hook: "2,000+ brands on a 5 km Furniture Avenue — China’s #1 furniture export town nearby",
     images: [
       { src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80", alt: "Furniture showroom" },
       { src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80", alt: "Modern furniture manufacturing" },
     ],
     content: [
-      "Houjie town is the furniture trade centre: a 5 km Furniture Avenue lined with 600+ furniture companies, showrooms, and raw material suppliers employing 100,000+ people. The Dongguan Furniture Expo Center on Furniture Avenue hosts the annual Famous Furniture Fair (3F) \u2014 1,000+ brands across multiple halls covering home, bedroom, living, dining, mattresses, and wood machinery.",
-      "Dalingshan town handles the export manufacturing side. Designated \u201cChina\u2019s #1 Furniture Export Town,\u201d Dalingshan has 500+ export-oriented furniture factories. The split is clear: visit Houjie to compare finished products and attend the 3F Fair, then place production orders with Dalingshan factories at 20\u201330% below showroom prices. MOQs run 50\u2013200 pieces for stock items, higher for custom work.",
+      "Houjie town is the furniture trade centre: a 5 km Furniture Avenue lined with 600+ furniture companies, showrooms, and raw material suppliers employing 100,000+ people. The Dongguan Furniture Expo Center on Furniture Avenue hosts the annual Famous Furniture Fair (3F) — 1,000+ brands across multiple halls covering home, bedroom, living, dining, mattresses, and wood machinery.",
+      "Dalingshan town handles the export manufacturing side. Designated “China’s #1 Furniture Export Town,” Dalingshan has 500+ export-oriented furniture factories. The split is clear: visit Houjie to compare finished products and attend the 3F Fair, then place production orders with Dalingshan factories at 20–30% below showroom prices. MOQs run 50–200 pieces for stock items, higher for custom work.",
     ],
     cta: "Explore Dongguan furniture suppliers",
   },
   {
     name: "Toys & Games",
     stars: 4,
-    hook: "Largest toy export base in China \u2014 1 in 3 Barbie dolls made here",
+    hook: "Largest toy export base in China — 1 in 3 Barbie dolls made here",
     images: [
       { src: "https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=800&q=80", alt: "Toy manufacturing facility" },
       { src: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&q=80", alt: "Toy production line" },
     ],
     content: [
-      "Dongguan is China\u2019s largest toy export base. One in three Barbie dolls worldwide is manufactured here. 75% of global toy exports pass through the city. Chang\u2019an and Changping are the primary toy manufacturing towns, producing everything from plastic action figures and board games to plush toys and electronic learning devices. Major international toy brands have contracted Dongguan factories for decades.",
-      "The toy sector here is factory-direct, not trading-company driven. Most factories handle their own production from raw material (plastic pellets, fabric, electronics) through assembly, painting, and packaging. MOQs typically run 1,000\u20135,000 pieces, higher for licensed or branded products. The advantage over Chenghai (Shantou) \u2014 China\u2019s other toy capital \u2014 is that Dongguan factories are better set up for international compliance testing and export documentation.",
+      "Dongguan is China’s largest toy export base. One in three Barbie dolls worldwide is manufactured here. 75% of global toy exports pass through the city. Chang’an and Changping are the primary toy manufacturing towns, producing everything from plastic action figures and board games to plush toys and electronic learning devices. Major international toy brands have contracted Dongguan factories for decades.",
+      "The toy sector here is factory-direct, not trading-company driven. Most factories handle their own production from raw material (plastic pellets, fabric, electronics) through assembly, painting, and packaging. MOQs typically run 1,000–5,000 pieces, higher for licensed or branded products. The advantage over Chenghai (Shantou) — China’s other toy capital — is that Dongguan factories are better set up for international compliance testing and export documentation.",
     ],
     cta: "Explore Dongguan toy suppliers",
   },
   {
     name: "Footwear",
     stars: 4,
-    hook: "China\u2019s largest shoe-making base \u2014 500 million+ pairs exported annually",
+    hook: "China’s largest shoe-making base — 500 million+ pairs exported annually",
     images: [
       { src: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80", alt: "Shoe manufacturing" },
       { src: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&q=80", alt: "Footwear production line" },
     ],
     content: [
-      "Houjie town is designated the \u201cWorld Footwear HQ Base\u201d by the Asian Footwear Industry Association. Dongguan exports 500 million+ pairs of shoes annually \u2014 roughly 1 in 10 pairs of sports shoes worldwide. Houjie concentrates shoe factories, shoe material suppliers, and shoe machinery manufacturers in one district. Haopan Shoe Plaza on Houjie Road is the main trading centre for finished shoes and raw materials.",
-      "The footwear supply chain in Houjie covers every stage: synthetic leather, rubber soles, textile uppers, adhesives, shoe moulds, stitching, and final assembly. Sports shoes, casual shoes, and work boots are the strongest categories. MOQs run 300\u20131,000 pairs per style and size. The annual DFM (Greater Bay Area International Footwear Machinery & Material Industry Fair) in March draws 550 exhibitors across 50,000 sqm.",
+      "Houjie town is designated the “World Footwear HQ Base” by the Asian Footwear Industry Association. Dongguan exports 500 million+ pairs of shoes annually — roughly 1 in 10 pairs of sports shoes worldwide. Houjie concentrates shoe factories, shoe material suppliers, and shoe machinery manufacturers in one district. Haopan Shoe Plaza on Houjie Road is the main trading centre for finished shoes and raw materials.",
+      "The footwear supply chain in Houjie covers every stage: synthetic leather, rubber soles, textile uppers, adhesives, shoe moulds, stitching, and final assembly. Sports shoes, casual shoes, and work boots are the strongest categories. MOQs run 300–1,000 pairs per style and size. The annual DFM (Greater Bay Area International Footwear Machinery & Material Industry Fair) in March draws 550 exhibitors across 50,000 sqm.",
     ],
     cta: "Explore Dongguan footwear suppliers",
   },
   {
     name: "Apparel & Knitwear",
     stars: 3,
-    hook: "Humen: Southern China\u2019s Clothing Kingdom. Dalang: 900 million sweaters a year",
+    hook: "Humen: Southern China’s Clothing Kingdom. Dalang: 900 million sweaters a year",
     content: [],
     images: [
       { src: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80", alt: "Clothing wholesale market" },
@@ -87,7 +87,7 @@ const categories = [
   {
     name: "Paper & Packaging",
     stars: 3,
-    hook: "Zhongtang and Machong \u2014 established printing and custom packaging cluster",
+    hook: "Zhongtang and Machong — established printing and custom packaging cluster",
     content: [],
     images: [
       { src: "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=800&q=80", alt: "Paper packaging production" },
