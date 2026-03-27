@@ -210,5 +210,5 @@ export const categories: Category[] = [
   { name: "Jewelry", slug: "jewelry", description: "Fashion jewelry, watches, sunglasses, and accessories", topCities: ["Yiwu", "Guangzhou", "Shenzhen"] },
   { name: "Hardware & Tools", slug: "hardware-tools", description: "Hand tools, power tools, fasteners, and hardware fittings", topCities: ["Ningbo", "Yiwu", "Qingdao"] },
   { name: "Building Materials", slug: "building-materials", description: "Tiles, stone, plumbing, sanitary ware, and construction materials", topCities: ["Foshan", "Quanzhou", "Guangzhou"] },
-  { name: "Packaging", slug: "packaging", description: "Custom packaging, labels, boxes, and printing materials", topCities: ["Yiwu", "Guangzhou", "Shanghai"] },
+  { name: "Packaging", slug: "packaging", description: "Custom packaging, labels, boxes, and printing materials", topCities: ["Yiwu", "Guangzhou", "Dongguan"] },
 ];
