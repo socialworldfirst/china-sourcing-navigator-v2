@@ -96,7 +96,7 @@ export default function AtTheFair() {
         {/* Navigate the venue */}
         <div>
           <h3 className="text-xl font-semibold text-wf-text mb-2">
-            Navigate the Venue
+            Navigate the venue
           </h3>
           <p className="text-sm text-wf-text-muted mb-4">
             Download the floor plan before day 1. The venue has 4 exhibition areas — knowing which halls match your product category saves you hours of wandering.
@@ -128,7 +128,7 @@ export default function AtTheFair() {
         {/* How to work the halls */}
         <div>
           <h3 className="text-xl font-semibold text-wf-text mb-2">
-            How to Work the Halls
+            How to work the halls
           </h3>
           <p className="text-sm text-wf-text-muted mb-4">
             These are lessons from buyers who&apos;ve been. Not theory — experience.
@@ -160,7 +160,7 @@ export default function AtTheFair() {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-wf-text">
-                Spotting Real Factories vs Trading Companies
+                Spotting real factories vs trading companies
               </h3>
               <p className="text-sm text-wf-text-secondary mt-1">
                 This is the number one thing first-timers learn the hard way. Most booths are run by trading companies or export agents, not actual manufacturers. They rent a booth, show products from multiple small workshops, and present themselves as the factory. Here are 5 questions that reveal the truth.
@@ -190,7 +190,7 @@ export default function AtTheFair() {
         {/* What to ask at every booth */}
         <div>
           <h3 className="text-xl font-semibold text-wf-text mb-2">
-            What to Ask at Every Booth
+            What to ask at every booth
           </h3>
           <p className="text-sm text-wf-text-muted mb-4">
             When a supplier quotes you a price, make sure it&apos;s FOB (Free On Board) — that means the price includes shipping the goods to the port. EXW (Ex Works) means you pick up at the factory door, and the cost of getting it to the port is on you. First-timers who don&apos;t ask this question get hit with unexpected shipping costs that wipe out their margin.
@@ -212,7 +212,7 @@ export default function AtTheFair() {
         {/* Gap days = factory visits */}
         <div className="bg-white rounded-xl border border-wf-border p-6 md:p-8">
           <h3 className="text-lg font-semibold text-wf-text mb-2">
-            Gap Days Are Your Golden Opportunity
+            Gap days are your golden opportunity
           </h3>
           <p className="text-sm text-wf-text-secondary leading-relaxed mb-4">
             Between each phase there are 3-day gaps: <strong>April 20–22</strong> and <strong>April 28–30</strong>. Contact your top suppliers at the fair and ask to visit their factory during these days. Dongguan, Foshan, Shenzhen, and Zhongshan are all 1 to 3 hours away by car or high-speed train.
@@ -274,7 +274,7 @@ export default function AtTheFair() {
         {/* Stay safe */}
         <div>
           <h3 className="text-xl font-semibold text-wf-text mb-2">
-            Watch Out For
+            Watch out for
           </h3>
           <p className="text-sm text-wf-text-muted mb-4">
             China is generally safe, but trade fairs attract opportunists. A few things to know.

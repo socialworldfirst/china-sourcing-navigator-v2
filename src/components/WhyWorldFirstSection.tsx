@@ -21,18 +21,15 @@ export default function WhyWorldFirstSection() {
               Source Smarter, <span className="accent-word">Pay Safer</span>
             </h2>
             <p className="text-wf-text-secondary text-base leading-relaxed mb-5">
-              We&apos;ve helped 1.5 million businesses move money across borders since 2004.
-              We&apos;ve watched thousands of importers transition from marketplace platforms
-              to direct factory sourcing.
+              1.5 million businesses have used WorldFirst to pay suppliers since 2004.
+              We&apos;ve seen thousands of importers move from Alibaba to direct factory sourcing.
             </p>
             <p className="text-wf-text-secondary text-base leading-relaxed mb-5">
-              The ones who succeed did their homework &mdash; they understood the cities,
-              verified their suppliers, and protected their payments before wiring
-              their first deposit.
+              The ones who do well learn the cities first, verify their suppliers second,
+              and sort out payments before wiring a deposit.
             </p>
             <p className="text-wf-text font-medium text-base leading-relaxed mb-8">
-              That&apos;s why we built this guide. So you can source with confidence
-              and pay with certainty.
+              That&apos;s what this guide is for.
             </p>
 
             <a

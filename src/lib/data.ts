@@ -194,7 +194,7 @@ export const categories: Category[] = [
   // 18 categories — buyer-intent taxonomy, locked March 2026
   // topCities are provisional — will be confirmed by /csn_category_research per category
   { name: "Electronics", slug: "electronics", description: "Consumer electronics, components, PCBs, and smart devices", topCities: ["Shenzhen", "Dongguan", "Guangzhou"] },
-  { name: "Appliances", slug: "appliances", description: "Kitchen appliances, home appliances, and small electronics", topCities: ["Ningbo", "Foshan", "Guangzhou"] },
+  { name: "Appliances", slug: "appliances", description: "Kitchen appliances, home appliances, and small electronics", topCities: ["Ningbo", "Foshan", "Qingdao"] },
   { name: "Apparel", slug: "apparel", description: "Clothing, fashion, fabrics, and garment manufacturing", topCities: ["Guangzhou", "Dongguan", "Hangzhou"] },
   { name: "Footwear", slug: "footwear", description: "Sneakers, sandals, boots, and shoe manufacturing", topCities: ["Quanzhou", "Dongguan", "Guangzhou"] },
   { name: "Bags & Luggage", slug: "bags-luggage", description: "Handbags, backpacks, suitcases, and travel goods", topCities: ["Guangzhou", "Quanzhou", "Yiwu"] },

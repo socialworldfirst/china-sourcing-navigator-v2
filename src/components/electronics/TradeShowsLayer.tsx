@@ -30,7 +30,7 @@ export default function TradeShowsLayer() {
 
       {/* ── Other Electronics Trade Shows ── */}
       <div>
-        <h4 className="text-lg font-semibold text-wf-text mb-2">Other Electronics Trade Shows 2026</h4>
+        <h4 className="text-lg font-semibold text-wf-text mb-2">Other electronics trade shows 2026</h4>
         <p className="text-sm text-wf-text-muted mb-4">Key exhibitions across China and Hong Kong for electronics sourcing</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {electronicsShows.map((show) => (

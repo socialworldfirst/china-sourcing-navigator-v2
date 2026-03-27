@@ -37,7 +37,7 @@ export default function WeeksBefore4() {
         {/* Essential Apps */}
         <div>
           <h3 className="text-lg font-semibold text-wf-text mb-2">
-            Download These Apps
+            Download these apps
           </h3>
           <p className="text-sm text-wf-text-muted mb-4">
             This is the part that catches almost every first-timer off guard. Most of the apps and services you rely on daily do not work in China. Set these up before you land — creating accounts is easier with unrestricted internet.
@@ -76,7 +76,7 @@ export default function WeeksBefore4() {
         {/* Maps */}
         <div>
           <h3 className="text-lg font-semibold text-wf-text mb-2">
-            Download Chinese Map Apps
+            Download Chinese map apps
           </h3>
           <p className="text-sm text-wf-text-muted mb-4">
             Google Maps does not work well in China. These are what locals use — and they have English modes.
@@ -106,7 +106,7 @@ export default function WeeksBefore4() {
         {/* Research exhibitors */}
         <div>
           <h3 className="text-lg font-semibold text-wf-text mb-2">
-            Research Exhibitors and Build Your Hit List
+            Research exhibitors and build your hit list
           </h3>
           <p className="text-sm text-wf-text-muted mb-4">
             Do not walk into Canton Fair without a plan. 48,000+ exhibitors across halls the size of airports. Without a target list, you will wander for hours and come home with nothing specific. This one step separates productive trips from expensive holidays.
@@ -138,7 +138,7 @@ export default function WeeksBefore4() {
         {/* Prepare specs */}
         <div>
           <h3 className="text-lg font-semibold text-wf-text mb-2">
-            Prepare Your Product Specs
+            Prepare your product specs
           </h3>
           <CardGrid count={1}>
             <GuidanceCardComponent

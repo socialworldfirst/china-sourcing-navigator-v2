@@ -17,7 +17,7 @@ export default function TradeShowsLayer() {
 
       {/* ── Other Trade Shows ── */}
       <div>
-        <h4 className="text-lg font-semibold text-wf-text mb-2">Other Guangzhou Trade Shows 2026</h4>
+        <h4 className="text-lg font-semibold text-wf-text mb-2">Other Guangzhou trade shows 2026</h4>
         <p className="text-sm text-wf-text-muted mb-4">All at or near Canton Fair Complex, Pazhou</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {otherShows.map((show) => (

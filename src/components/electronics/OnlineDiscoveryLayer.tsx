@@ -8,9 +8,9 @@ export default function OnlineDiscoveryLayer() {
 
   return (
     <div className="space-y-8">
-      {/* ── How to Find Electronics Suppliers on 1688 + YouTube ── */}
+      {/* ── How to find electronics suppliers on 1688 + YouTube ── */}
       <div>
-        <h4 className="text-lg font-semibold text-wf-text mb-4">How to Find Electronics Suppliers on 1688</h4>
+        <h4 className="text-lg font-semibold text-wf-text mb-4">How to find electronics suppliers on 1688</h4>
         <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Left: Steps */}
           <div className="space-y-4">

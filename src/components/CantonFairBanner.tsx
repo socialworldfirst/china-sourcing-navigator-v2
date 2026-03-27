@@ -69,15 +69,14 @@ export default function CantonFairBanner() {
           </div>
 
           <p className="text-wf-text-secondary text-sm mb-6 leading-relaxed">
-            Free toolkit with checklists, supplier templates, and category guides
-            for every phase.
+            The world&apos;s largest trade fair, held biannually in Guangzhou since 1957. Over 25,000 exhibitors across three phases.
           </p>
 
           <a
             href={`${basePath}/canton-fair-2026`}
             className="btn-pill inline-flex items-center gap-2 px-6 py-3 bg-wf-red text-white text-sm font-medium hover:bg-wf-red-hover self-start"
           >
-            Get the Canton Fair Toolkit
+            Learn more about Canton Fair
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
@@ -85,7 +84,7 @@ export default function CantonFairBanner() {
         </div>
 
         {/* Right: Canton Fair image with countdown overlay */}
-        <div className="relative min-h-[280px] md:min-h-0">
+        <div className="relative min-h-[320px] md:min-h-0 mx-2 md:mx-0 rounded-xl md:rounded-none overflow-hidden">
           <img
             src={`${basePath}/images/canton.webp`}
             alt="Canton Fair exhibition hall"

@@ -9,7 +9,7 @@ const featuredSuppliers = [
 export default function DirectFactoryLayer() {
   return (
     <div>
-      <p className="text-sm text-wf-text-secondary mb-5 max-w-2xl">
+      <p className="hidden md:block text-sm text-wf-text-secondary mb-5 max-w-2xl">
         These suppliers have been verified through WorldFirst&apos;s beneficiary check programme
         and maintain consistent trading performance in Guangzhou.
       </p>

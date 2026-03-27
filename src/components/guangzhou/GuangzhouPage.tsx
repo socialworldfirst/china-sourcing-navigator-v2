@@ -6,6 +6,7 @@ import WhitePaperCTA from "@/components/WhitePaperCTA";
 import PaymentSection from "@/components/PaymentSection";
 import WhyWorldFirstSection from "@/components/WhyWorldFirstSection";
 import HeroSection from "./HeroSection";
+import WhatGuangzhouMakes from "./WhatGuangzhouMakes";
 import SourcingLayersTabs from "./SourcingLayersTabs";
 import FAQAccordion from "./FAQAccordion";
 
@@ -14,6 +15,7 @@ export default function GuangzhouPage() {
     <main className="min-h-screen bg-white">
       <Header />
       <HeroSection />
+      <WhatGuangzhouMakes />
       <SourcingLayersTabs />
 
       {/* ── Download the China Sourcing Map ── */}

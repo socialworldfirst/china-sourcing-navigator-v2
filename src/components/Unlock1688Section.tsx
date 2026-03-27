@@ -7,7 +7,7 @@ export default function Unlock1688Section() {
       <div className="flex-1 order-2 lg:order-1 text-center lg:text-left">
         <h3 className="text-2xl md:text-3xl font-semibold mb-3">
           <span style={{ color: '#FF6A00' }}>Unlock 1688</span>{' '}
-          <span className="text-wf-red">with WorldFirst</span>
+          <span className="text-wf-text">with WorldFirst</span>
         </h3>
         <p className="text-wf-text-secondary text-sm mb-6 leading-relaxed">
           1688 is Alibaba&apos;s domestic B2B marketplace &mdash; where Chinese factories
@@ -17,8 +17,8 @@ export default function Unlock1688Section() {
           pay any 1688 supplier directly from your WorldFirst account.
         </p>
 
-        {/* Key benefits — compact */}
-        <ul className="space-y-2 mb-6 inline-block text-left">
+        {/* Key benefits — hidden on mobile */}
+        <ul className="hidden md:inline-block space-y-2 mb-6 text-left">
           {[
             "20–40% cheaper than Alibaba.com",
             "0.4% payment fee (vs 3% card surcharge)",
@@ -48,7 +48,7 @@ export default function Unlock1688Section() {
       </div>
 
       {/* RIGHT: 1688 screenshot — bigger, with WorldFirst pay overlay */}
-      <div className="flex-shrink-0 order-1 lg:order-2 flex justify-center">
+      <div className="flex-shrink-0 order-1 lg:order-2 flex justify-center mt-4 lg:mt-0">
         <div className="relative w-[22rem] md:w-[26rem] lg:w-[30rem] h-auto">
           {/* 1688.com badge — overflows top-left */}
           <div className="absolute -top-3 -left-3 z-10">

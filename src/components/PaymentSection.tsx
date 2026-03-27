@@ -5,7 +5,6 @@ export default function PaymentSection() {
     <>
       {/* ============================================================
           SECTION 1 — Benefits (WorldFirst-to-WorldFirst features)
-          Dark purple, 3 cards + qualifier + CTA
           ============================================================ */}
       <section id="payment" className="py-16 md:py-24 bg-wf-purple-glow relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -23,49 +22,43 @@ export default function PaymentSection() {
             </p>
           </div>
 
-          {/* 3 benefit cards */}
-          <div className="grid md:grid-cols-3 gap-5 mb-8">
-            {/* Instant Arrival */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-7 text-center">
-              <div className="w-12 h-12 rounded-xl bg-wf-red/10 flex items-center justify-center mx-auto mb-4">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF0051" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                </svg>
+          {/* 3 benefit cards — always left-aligned layout */}
+          <div className="grid md:grid-cols-3 gap-4 md:gap-5 mb-8">
+            {[
+              {
+                icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF0051" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>,
+                iconBg: "bg-wf-red/10",
+                title: "Instant arrival",
+                desc: "Between WorldFirst accounts, payments arrive instantly. No middleman banks, no waiting.",
+              },
+              {
+                icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>,
+                iconBg: "bg-green-500/10",
+                title: "Zero transfer fees",
+                desc: "No transfer fees between WorldFirst accounts. Keep more of your margin on every order.",
+              },
+              {
+                icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>,
+                iconBg: "bg-blue-500/10",
+                title: "Verified suppliers",
+                desc: "We verify your supplier holds a valid business license and export license before processing your payment.",
+              },
+            ].map((card) => (
+              <div key={card.title} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className={`w-10 h-10 rounded-xl ${card.iconBg} flex items-center justify-center flex-shrink-0`}>
+                    {card.icon}
+                  </div>
+                  <h3 className="text-white font-semibold text-lg">{card.title}</h3>
+                </div>
+                <p className="text-white/50 text-sm leading-relaxed">
+                  {card.desc}
+                </p>
               </div>
-              <h3 className="text-white font-semibold text-xl mb-2">Instant Arrival</h3>
-              <p className="text-white/50 text-sm leading-relaxed">
-                Between WorldFirst accounts, payments arrive instantly. No middleman banks, no waiting.
-              </p>
-            </div>
-
-            {/* Zero Transfer Fees */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-7 text-center">
-              <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center mx-auto mb-4">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                </svg>
-              </div>
-              <h3 className="text-white font-semibold text-xl mb-2">Zero Transfer Fees</h3>
-              <p className="text-white/50 text-sm leading-relaxed">
-                No transfer fees between WorldFirst accounts. Keep more of your margin on every order.
-              </p>
-            </div>
-
-            {/* Verified Suppliers */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-7 text-center">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mx-auto mb-4">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
-              </div>
-              <h3 className="text-white font-semibold text-xl mb-2">Verified Suppliers</h3>
-              <p className="text-white/50 text-sm leading-relaxed">
-                We verify your supplier holds a valid business license and export license before processing your payment.
-              </p>
-            </div>
+            ))}
           </div>
 
-          {/* WorldFirst-to-WorldFirst qualifier */}
+          {/* Qualifier */}
           <p className="text-white/30 text-xs text-center mb-8 max-w-lg mx-auto">
             Instant arrival and zero transfer fees apply to payments between WorldFirst accounts. Standard international transfers are also supported.
           </p>
@@ -87,7 +80,7 @@ export default function PaymentSection() {
       </section>
 
       {/* ============================================================
-          SECTION 2 — Payment Network (Ant International infrastructure)
+          SECTION 2 — Payment Network (Ant International)
           ============================================================ */}
       <section className="py-16 md:py-24 relative overflow-hidden" style={{ background: '#0F0A14' }}>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-3xl pointer-events-none" />
@@ -104,26 +97,18 @@ export default function PaymentSection() {
             </p>
           </div>
 
-          {/* Logos row — WorldFirst × Ant International */}
-          <div className="flex items-center justify-center gap-6 md:gap-10 mb-12">
-            {/* WorldFirst logo */}
-            <div className="flex flex-col items-center">
-              <img
-                src={`${basePath}/images/wf-logo-reversed.webp`}
-                alt="WorldFirst"
-                className="h-6 md:h-7 w-auto"
-              />
-            </div>
-            {/* Connector */}
-            <div className="text-white/20 text-2xl font-light">&times;</div>
-            {/* Ant International logo */}
-            <div className="flex flex-col items-center">
-              <img
-                src={`${basePath}/images/ant-international-logo.png`}
-                alt="Ant International"
-                className="h-7 md:h-9 w-auto"
-              />
-            </div>
+          {/* Logos row — side by side, no connector */}
+          <div className="flex items-center justify-center gap-8 md:gap-12 mb-12">
+            <img
+              src={`${basePath}/images/wf-logo-reversed.webp`}
+              alt="WorldFirst"
+              className="h-9 md:h-10 w-auto"
+            />
+            <img
+              src={`${basePath}/images/ant-international-logo.png`}
+              alt="Ant International"
+              className="h-8 md:h-9 w-auto"
+            />
           </div>
 
           {/* Network stats */}
@@ -142,8 +127,8 @@ export default function PaymentSection() {
               ))}
             </div>
 
-            <p className="text-white/50 text-sm text-center leading-relaxed max-w-xl mx-auto mb-6">
-              With 150,000+ verified Chinese suppliers already connected, chances are yours is too. When they are, your payments arrive instantly with zero transfer fees.
+            <p className="hidden md:block text-white/50 text-sm text-center leading-relaxed max-w-xl mx-auto mb-6">
+              With 150,000+ verified Chinese suppliers already on the network, chances are yours is too. When they are, payments arrive instantly with zero transfer fees.
             </p>
 
             {/* CTA */}
@@ -163,7 +148,7 @@ export default function PaymentSection() {
       </section>
 
       {/* ============================================================
-          SECTION 3 — How It Works (steps + video)
+          SECTION 3 — How It Works (steps + video on desktop)
           ============================================================ */}
       <section className="py-16 md:py-24 bg-wf-purple-glow relative overflow-hidden">
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-wf-red/5 rounded-full blur-3xl pointer-events-none" />
@@ -205,8 +190,8 @@ export default function PaymentSection() {
               ))}
             </div>
 
-            {/* YouTube embed */}
-            <div className="relative rounded-2xl overflow-hidden bg-black min-h-[280px]">
+            {/* YouTube embed — desktop only */}
+            <div className="hidden md:block relative rounded-2xl overflow-hidden bg-black min-h-[280px]">
               <iframe
                 width="100%"
                 height="100%"

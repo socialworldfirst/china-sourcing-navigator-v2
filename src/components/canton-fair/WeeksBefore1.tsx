@@ -57,7 +57,7 @@ export default function WeeksBefore1() {
           </div>
           <div>
             <h3 className="text-xl font-semibold text-wf-text mb-2">
-              Download the Full Checklist
+              Download the full checklist
             </h3>
             <p className="text-sm text-wf-text-secondary mb-4 leading-relaxed">
               Save this to your phone camera roll. It covers the complete timeline from visa applications to post-fair follow-ups.

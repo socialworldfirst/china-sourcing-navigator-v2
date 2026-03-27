@@ -23,7 +23,7 @@ export default function AfterTheFair() {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-wf-text">
-                The 48-Hour Rule
+                The 48-hour rule
               </h3>
               <p className="text-sm text-wf-text-secondary mt-1">
                 Suppliers meet thousands of buyers at the fair. Wait a week to follow up and they will not remember your conversation.
@@ -56,7 +56,7 @@ export default function AfterTheFair() {
         {/* Verify before you pay */}
         <div>
           <h3 className="text-xl font-semibold text-wf-text mb-2">
-            Verify Before You Pay
+            Verify before you pay
           </h3>
           <p className="text-sm text-wf-text-secondary leading-relaxed mb-6">
             Standard payment terms are 30% deposit with 70% before shipping — but only after samples are approved and contracts are signed. Never wire money to an unverified supplier. Ghost suppliers target first-time buyers specifically: temporary registrations, professional-looking booths, then silence after the deposit clears. This is where most first-timers lose money.
@@ -70,7 +70,7 @@ export default function AfterTheFair() {
                   How WorldFirst helps
                 </span>
                 <h3 className="text-2xl font-semibold text-white mb-4">
-                  Verify Your Supplier Before Wiring Money
+                  Verify your supplier before wiring money
                 </h3>
                 <p className="text-white/70 text-sm leading-relaxed mb-6">
                   Before your payment moves, WorldFirst cross-checks your supplier&apos;s bank account against their registered business name. We verify whether they are a factory or trading company, and WorldTrade holds your payment in escrow until shipment is confirmed.
@@ -164,7 +164,7 @@ export default function AfterTheFair() {
         {/* Pay your supplier */}
         <div>
           <h3 className="text-xl font-semibold text-wf-text mb-2">
-            Pay Your Supplier
+            Pay your supplier
           </h3>
           <p className="text-sm text-wf-text-secondary leading-relaxed mb-6">
             Once your supplier is verified and terms are agreed, you need to move money to China — fast, cheap, and safe.

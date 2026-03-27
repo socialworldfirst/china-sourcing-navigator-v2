@@ -85,7 +85,7 @@ export default function Home() {
       </section>
 
       {/* ================================================
-          CATEGORIES — all 24, show 12 initially
+          CATEGORIES — all 18, show 12 initially
           ================================================ */}
       <section id="categories" className="py-16 md:py-24 bg-wf-bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,7 +94,7 @@ export default function Home() {
               Explore by <span className="accent-word">Category</span>
             </h2>
             <p className="text-wf-text-secondary text-sm md:text-base max-w-lg mx-auto">
-              24 product categories mapped to the best sourcing cities
+              18 product categories mapped to the best sourcing cities
             </p>
           </div>
 
@@ -112,7 +112,7 @@ export default function Home() {
                 onClick={() => setShowAllCategories(true)}
                 className="btn-pill inline-flex items-center gap-2 px-8 py-3.5 border border-wf-red text-wf-red font-medium text-sm hover:bg-wf-red hover:text-white transition-colors"
               >
-                See all 24 categories
+                See all 18 categories
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 9l6 6 6-6" />
                 </svg>

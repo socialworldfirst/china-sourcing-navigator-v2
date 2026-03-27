@@ -80,7 +80,7 @@ export default function WeeksBefore12() {
         {/* Visa */}
         <div>
           <h3 className="text-lg font-semibold text-wf-text mb-2">
-            Apply for Your Visa
+            Apply for your visa
           </h3>
           <CardGrid count={1}>
             <GuidanceCardComponent
@@ -96,7 +96,7 @@ export default function WeeksBefore12() {
         {/* Hotels */}
         <div>
           <h3 className="text-lg font-semibold text-wf-text mb-2">
-            Book Your Hotel
+            Book your hotel
           </h3>
           <p className="text-sm text-wf-text-muted mb-4">
             Do this early. Seriously. Hotel prices near Pazhou spike 8-10x during fair weeks. The Westin Pazhou is directly connected to the venue and books out fast. Budget alternative: stay in Yuexiu District and metro in — about 40 minutes each way, 5 RMB per ride. Not glamorous, but it saves hundreds per night.
@@ -138,7 +138,7 @@ export default function WeeksBefore12() {
         {/* Phase dates */}
         <div>
           <h3 className="text-lg font-semibold text-wf-text mb-2">
-            Check Which Phase You Need
+            Check which phase you need
           </h3>
           <p className="text-sm text-wf-text-muted mb-4">
             The fair runs in 3 phases, each covering different product categories. Most first-timers attend one phase. Going to the wrong phase is one of the most common regrets.
@@ -172,7 +172,7 @@ export default function WeeksBefore12() {
         {/* Cost reality */}
         <div className="bg-wf-bg-warm rounded-xl p-6 md:p-8 border border-wf-border">
           <h3 className="text-lg font-semibold text-wf-text mb-3">
-            Let&apos;s Be Honest About What This Trip Costs
+            Let&apos;s be honest about what this trip costs
           </h3>
           <p className="text-sm text-wf-text-secondary leading-relaxed mb-5">
             Especially if you&apos;re a smaller buyer wondering whether the fair is even for you. Here&apos;s the truth: it is. But only if you go prepared.

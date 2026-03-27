@@ -64,7 +64,7 @@ function ElectronicsCityCard({ name, slug, stars, imageUrl }: typeof electronics
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70 group-hover:to-black/85 transition-all duration-300" />
 
-        {/* TOP: Star rating — left aligned (replaces category tags) */}
+        {/* TOP: Star rating */}
         <div className="absolute top-4 left-4">
           <Stars count={stars} />
         </div>
@@ -156,57 +156,41 @@ function CityCarousel() {
   );
 }
 
-/* ── Main export ── */
+/* ── Hero section (just the hero image) ── */
 export default function HeroSection() {
   return (
-    <>
-      {/* ════ HERO IMAGE ════ */}
-      <section className="relative min-h-[420px] md:min-h-[480px] flex items-end overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1588508065123-287b28e013da?w=1600&q=80"
-          alt="Electronics components and circuit boards"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
+    <section className="relative min-h-[420px] md:min-h-[480px] flex items-end overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1588508065123-287b28e013da?w=1600&q=80"
+        alt="Electronics components and circuit boards"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 pt-28 w-full">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.1] text-white mb-4 tracking-[-0.02em] lg:whitespace-nowrap">
-              Source Electronics from China
-            </h1>
-            <p className="text-lg text-white/70 leading-relaxed">
-              From Shenzhen&apos;s Huaqiangbei — the world&apos;s largest electronics
-              market — to the assembly lines of Dongguan. This is where hardware ideas
-              become products.
-            </p>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 pt-28 w-full">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.1] text-white mb-4 tracking-[-0.02em] lg:whitespace-nowrap">
+            Source Electronics from China
+          </h1>
+          <p className="text-lg text-white/70 leading-relaxed">
+            From Shenzhen&apos;s Huaqiangbei — the world&apos;s largest electronics
+            market — to the assembly lines of Dongguan. This is where hardware ideas
+            become products.
+          </p>
 
-            <div className="flex flex-wrap gap-3 mt-6">
-              <a
-                href="#source-electronics"
-                className="btn-pill px-7 py-3 bg-wf-red text-white text-sm font-medium hover:bg-wf-red-hover"
-              >
-                Find Electronics Suppliers in China
-              </a>
-            </div>
+          <div className="flex flex-wrap gap-3 mt-6">
+            <a
+              href="#source-electronics"
+              className="btn-pill px-7 py-3 bg-wf-red text-white text-sm font-medium hover:bg-wf-red-hover"
+            >
+              Find Electronics Suppliers in China
+            </a>
           </div>
         </div>
-      </section>
-
-      {/* ════ TOP ELECTRONICS SOURCING CITIES — Scrollable carousel ════ */}
-      <section className="py-14 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-semibold text-wf-text mb-2">
-              Top <span className="accent-word">Electronics</span> Sourcing Cities
-            </h2>
-            <p className="text-wf-text-secondary text-base max-w-lg mx-auto">
-              Ranked by supply chain depth, factory density, and export track record
-            </p>
-          </div>
-
-          <CityCarousel />
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
+
+/* ── Exported city carousel for use in page layout ── */
+export { CityCarousel as ElectronicsCityCarousel };

@@ -14,7 +14,7 @@ interface FAQCategory {
 
 const faqData: FAQCategory[] = [
   {
-    category: "Getting Started in Guangzhou",
+    category: "Getting started in Guangzhou",
     faqs: [
       { q: "Is Guangzhou good for sourcing?", a: "Yes. Guangzhou is China's oldest trade capital and has more wholesale markets than any other Chinese city. It covers more product categories at scale than anywhere else: garments, leather, beauty, textiles, toys, jewelry, electronics accessories, and furniture (via nearby Foshan). It's the most versatile sourcing city for importers who need multiple categories in one trip." },
       { q: "What products is Guangzhou best known for?", a: "Guangzhou's strongest categories are garments and fashion (Shisanhang, Baima, Shahe), leather goods and bags (Shiling, Sanyuanli), beauty and cosmetics (Baiyun district OEM hub), textiles and fabrics (Zhongda, Asia's largest fabric market), and furniture via Foshan's Lecong market (30 minutes away). It also has solid markets for toys, jewelry, and electronics accessories." },
@@ -24,7 +24,7 @@ const faqData: FAQCategory[] = [
     ],
   },
   {
-    category: "1688 & Online Sourcing",
+    category: "1688 & online sourcing",
     faqs: [
       { q: "What is 1688 and how is it different from Alibaba?", a: "1688.com is Alibaba's domestic Chinese wholesale platform. Prices are 20-50% lower than Alibaba.com because there's no export markup, no English sales team overhead, and no Trade Assurance fees. The tradeoff: the platform is entirely in Chinese, payment requires CNY, and there's no built-in international buyer protection." },
       { q: "How do I pay suppliers on 1688?", a: "1688 payments are in Chinese Yuan (CNY). Options include: 1688 World Pay (WorldFirst's integrated payment), Alipay (requires Chinese bank account or international Alipay), or bank transfer in CNY. WorldFirst's World Account lets you hold, convert, and send CNY without a Chinese bank account." },
@@ -33,7 +33,7 @@ const faqData: FAQCategory[] = [
     ],
   },
   {
-    category: "Canton Fair & Trade Shows",
+    category: "Canton Fair & trade shows",
     faqs: [
       { q: "What is the Canton Fair?", a: "The China Import and Export Fair (Canton Fair) is the world's largest trade fair, held twice yearly in Guangzhou since 1957. It runs across 3 phases over approximately 3 weeks, with 25,000+ exhibitors covering virtually every product category China exports. Spring edition: April-May. Autumn edition: October-November." },
       { q: "How do I register for Canton Fair?", a: "Registration is free at cantonfair.org.cn. You'll need a passport and business details. Register early for faster entry. The Canton Fair app lets you search exhibitors by product category before arriving and schedule meetings." },
@@ -42,7 +42,7 @@ const faqData: FAQCategory[] = [
     ],
   },
   {
-    category: "Pricing, Payment & Verification",
+    category: "Pricing, payment & verification",
     faqs: [
       { q: "How much cheaper is sourcing from Guangzhou vs Alibaba?", a: "Direct factory in Guangzhou is typically 30-60% cheaper than Alibaba export pricing. Guangzhou wholesale markets are 15-30% cheaper. 1688.com is 20-50% cheaper. The savings come from removing export markups, English sales team costs, and platform fees." },
       { q: "How do I pay Chinese suppliers safely?", a: "Never wire money without verification. Use WorldFirst's beneficiary verification (cross-checks bank account against business registration), WorldTrade escrow (holds payment until shipment confirmed), and pay in CNY through a World Account for better rates. Always pay to the company's registered business account, not personal accounts." },
@@ -51,7 +51,7 @@ const faqData: FAQCategory[] = [
     ],
   },
   {
-    category: "Logistics & Practical",
+    category: "Logistics & practical",
     faqs: [
       { q: "How do I ship goods from Guangzhou?", a: "Sea freight departs from Nansha Port (3-6 weeks to most destinations, cheapest for bulk). Air freight from Baiyun International Airport (5-10 days, best for samples and urgent orders). Express courier (DHL, FedEx) for samples. Many suppliers handle domestic shipping to the port; you arrange international freight or use a freight forwarder." },
       { q: "What Incoterms should I use?", a: "FOB (Free on Board) is the most common for Guangzhou exports. The supplier delivers goods to the port, you arrange and pay for shipping. FOB gives you the best balance of cost control and simplicity for most importers." },
@@ -130,7 +130,7 @@ export default function FAQAccordion() {
                         onClick={() => toggleQuestion(faq.q)}
                         className="w-full flex items-center justify-between px-3 py-2.5 text-left hover:bg-wf-bg-light/50 rounded-lg transition-colors"
                       >
-                        <span className="text-sm text-wf-text pr-4">{faq.q}</span>
+                        <span className={`text-sm pr-4 ${openQuestion === faq.q ? 'text-wf-red font-medium' : 'text-wf-text'}`}>{faq.q}</span>
                         <svg
                           className={`flex-shrink-0 text-wf-text-muted transition-all duration-200 ${
                             openQuestion === faq.q ? "rotate-180" : ""

@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storyboard — China Sourcing Map: Shenzhen</title>
+<style>
+  :root {
+    --blue: #2563eb;
+    --orange: #ea580c;
+    --green: #16a34a;
+    --purple: #7c3aed;
+    --gray: #6b7280;
+    --bg: #f9fafb;
+    --card: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+  /* STICKY NAV */
+  .nav { position: sticky; top: 0; z-index: 100; background: #111827; color: white; padding: 10px 24px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+  .nav a { color: #93c5fd; text-decoration: none; font-size: 13px; padding: 4px 10px; border-radius: 4px; transition: background .2s; white-space: nowrap; }
+  .nav a:hover { background: rgba(255,255,255,.1); }
+  .nav .title { font-weight: 700; font-size: 14px; color: white; margin-right: 12px; }
+
+  /* LANGUAGE TOGGLE */
+  .lang-toggle { margin-left: auto; background: transparent; border: 1.5px solid #93c5fd; color: #93c5fd; padding: 4px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .2s; display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+  .lang-toggle:hover { background: rgba(147,197,253,.15); }
+  .lang-toggle.active { background: #6366f1; border-color: #6366f1; color: white; }
+  .lang-toggle .icon { font-size: 15px; }
+
+  /* CHINESE TRANSLATION ELEMENTS */
+  .zh { display: none; font-size: 0.88em; color: #6366f1; margin-top: 3px; line-height: 1.5; }
+  .zh::before { content: '🇨🇳 '; font-size: 0.85em; }
+  body.show-zh .zh { display: block; }
+  span.zh { display: none; margin-top: 0; margin-left: 6px; }
+  body.show-zh span.zh { display: inline; }
+  .zh-inline { display: none; font-size: 0.88em; color: #6366f1; }
+  .zh-inline::before { content: '🇨🇳 '; font-size: 0.85em; }
+  body.show-zh .zh-inline { display: block; margin-top: 2px; }
+
+  /* HEADER */
+  .header { background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%); color: white; padding: 60px 40px 40px; }
+  .header h1 { font-size: 36px; font-weight: 800; margin-bottom: 4px; }
+  .header .subtitle { font-size: 18px; color: #93c5fd; margin-bottom: 20px; }
+  .header .meta { display: flex; gap: 32px; flex-wrap: wrap; font-size: 14px; color: #cbd5e1; }
+  .header .meta span { display: flex; align-items: center; gap: 6px; }
+
+  /* ASSET SUMMARY */
+  .summary { background: white; border: 1px solid #e5e7eb; border-radius: 12px; margin: 24px 40px; padding: 24px 32px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .summary-item { text-align: center; flex: 1; min-width: 120px; }
+  .summary-item .num { font-size: 32px; font-weight: 800; }
+  .summary-item .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .summary-item.stock .num { color: var(--blue); }
+  .summary-item.graphic .num { color: var(--orange); }
+  .summary-item.overlay .num { color: var(--purple); }
+  .summary-item.screen .num { color: var(--green); }
+  .summary-item.card .num { color: #dc2626; }
+
+  /* ENERGY MAP */
+  .energy { background: white; border: 1px solid #e5e7eb; border-radius: 12px; margin: 0 40px 24px; padding: 24px 32px; }
+  .energy h2 { font-size: 16px; font-weight: 700; margin-bottom: 16px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .energy-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; font-size: 13px; }
+  .energy-row .label { width: 100px; text-align: right; font-weight: 600; color: var(--text); }
+  .energy-bar { height: 20px; border-radius: 4px; transition: width .3s; }
+  .energy-row .desc { color: var(--muted); font-size: 12px; }
+
+  /* CHAPTER SECTIONS */
+  .chapter { margin: 32px 40px; }
+  .chapter-header { background: #111827; color: white; padding: 16px 24px; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center; }
+  .chapter-header h2 { font-size: 20px; font-weight: 700; }
+  .chapter-header .time { font-size: 14px; color: #93c5fd; }
+  .chapter-body { background: white; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 12px 12px; padding: 24px; }
+
+  /* SHOT BLOCKS */
+  .shot { display: flex; gap: 20px; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #f3f4f6; align-items: flex-start; }
+  .shot:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .shot-img { width: 400px; min-width: 400px; height: 225px; border-radius: 8px; object-fit: cover; border: 3px solid var(--blue); background: #e5e7eb; }
+  .shot-img.graphic { border-color: var(--orange); }
+  .shot-img.screen { border-color: var(--green); }
+  .shot-img.overlay { border-color: var(--purple); }
+  .shot-img.talking { border-color: var(--gray); }
+  .shot-info { flex: 1; }
+  .shot-info h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+  .shot-info .type-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: white; margin-bottom: 8px; }
+  .shot-info .type-badge.stock { background: var(--blue); }
+  .shot-info .type-badge.graphic { background: var(--orange); }
+  .shot-info .type-badge.screen { background: var(--green); }
+  .shot-info .type-badge.overlay { background: var(--purple); }
+  .shot-info .type-badge.talking { background: var(--gray); }
+  .shot-info .desc { font-size: 14px; color: #374151; margin-bottom: 8px; }
+  .shot-info .meta-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .shot-info .tag { font-size: 11px; padding: 2px 8px; background: #f3f4f6; border-radius: 4px; color: var(--muted); }
+
+  /* TEXT OVERLAY MOCKUPS */
+  .overlay-mockup { background: rgba(0,0,0,0.75); color: white; padding: 16px 24px; border-radius: 8px; font-size: 18px; font-weight: 600; margin: 16px 0; max-width: 500px; border: 3px solid var(--purple); }
+  .overlay-mockup .position { font-size: 11px; color: #a78bfa; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; font-weight: 400; }
+  .overlay-mockup .duration { font-size: 11px; color: #a78bfa; margin-top: 8px; font-weight: 400; }
+
+  /* THOMAS MOMENT */
+  .thomas { background: #f9fafb; border: 2px dashed var(--gray); border-radius: 8px; padding: 16px 20px; margin: 16px 0; }
+  .thomas .label { font-size: 11px; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .thomas .line { font-size: 14px; font-style: italic; color: #374151; }
+  .thomas .direction { font-size: 12px; color: var(--muted); margin-top: 8px; }
+
+  /* YT CARD TRIGGER */
+  .yt-card { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 12px 16px; margin: 12px 0; display: flex; align-items: center; gap: 12px; }
+  .yt-card .icon { font-size: 20px; }
+  .yt-card .info { font-size: 13px; color: #991b1b; }
+
+  /* YOUTUBE FURNITURE */
+  .furniture { margin: 32px 40px; background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px 32px; }
+  .furniture h2 { font-size: 16px; font-weight: 700; margin-bottom: 16px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .furniture-item { padding: 12px 0; border-bottom: 1px solid #f3f4f6; display: flex; gap: 16px; align-items: center; }
+  .furniture-item:last-child { border-bottom: none; }
+  .furniture-item .icon { font-size: 24px; }
+  .furniture-item .detail { font-size: 14px; }
+  .furniture-item .detail strong { color: var(--text); }
+  .furniture-item .detail span { color: var(--muted); }
+
+  /* THUMBNAIL SECTION */
+  .thumbnails { margin: 32px 40px; background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px 32px; }
+  .thumbnails h2 { font-size: 16px; font-weight: 700; margin-bottom: 16px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .thumb-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .thumb-card { border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; }
+  .thumb-card .thumb-img { width: 100%; height: 180px; object-fit: cover; background: #e5e7eb; }
+  .thumb-card .thumb-info { padding: 12px; }
+  .thumb-card .thumb-info h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .thumb-card .thumb-info p { font-size: 12px; color: var(--muted); margin-bottom: 2px; }
+
+  /* ASSET CHECKLIST */
+  .checklist { margin: 32px 40px; background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px 32px; }
+  .checklist h2 { font-size: 16px; font-weight: 700; margin-bottom: 16px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .checklist-group { margin-bottom: 16px; }
+  .checklist-group h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; padding-left: 4px; }
+  .checklist-group h3.stock { color: var(--blue); }
+  .checklist-group h3.graphic { color: var(--orange); }
+  .checklist-group h3.screen { color: var(--green); }
+  .checklist-group h3.overlay { color: var(--purple); }
+  .check-item { display: flex; align-items: flex-start; gap: 8px; padding: 4px 0; font-size: 14px; }
+  .check-item input[type="checkbox"] { width: 16px; height: 16px; margin-top: 3px; }
+
+  /* PRINT */
+  @media print {
+    .nav { display: none; }
+    .header { padding: 20px; }
+    .chapter, .summary, .energy, .furniture, .thumbnails, .checklist { margin: 16px 20px; page-break-inside: avoid; }
+    .shot { page-break-inside: avoid; }
+    .shot-img { width: 300px; min-width: 300px; height: 169px; }
+    .zh { display: none !important; }
+  }
+  @media print {
+    body.show-zh .zh { display: block !important; }
+    body.show-zh span.zh { display: inline !important; }
+    body.show-zh .zh-inline { display: block !important; }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .header, .summary, .energy, .chapter, .furniture, .thumbnails, .checklist { margin-left: 16px; margin-right: 16px; }
+    .shot { flex-direction: column; }
+    .shot-img { width: 100%; min-width: unset; height: 200px; }
+    .thumb-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Image fallback */
+  .shot-img-wrap { position: relative; width: 400px; min-width: 400px; height: 225px; border-radius: 8px; overflow: hidden; }
+  .shot-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .shot-img-wrap .fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: #e5e7eb; color: var(--muted); font-size: 13px; text-align: center; padding: 16px; }
+  .shot-img-wrap img + .fallback { display: none; }
+  .shot-img-wrap img[src=""] + .fallback, .shot-img-wrap img:not([src]) + .fallback { display: flex; }
+
+  @media (max-width: 900px) {
+    .shot-img-wrap { width: 100%; min-width: unset; }
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY NAV -->
+<nav class="nav">
+  <span class="title">STORYBOARD</span>
+  <a href="#hook">Hook</a>
+  <a href="#ch1">CH1: Pirate Years</a>
+  <a href="#ch2">CH2: Ecosystem</a>
+  <a href="#ch3">CH3: Districts</a>
+  <a href="#ch3-5">CH3.5: Studio</a>
+  <a href="#ch4">CH4: Dark Side</a>
+  <a href="#ch5">CH5: Speed</a>
+  <a href="#ch6">CH6: Playbook</a>
+  <a href="#outro">Outro</a>
+  <a href="#checklist">Checklist</a>
+  <button class="lang-toggle" onclick="toggleChinese()" id="langBtn">
+    <span class="icon">&#x4E2D;</span> 中文翻译
+  </button>
+</nav>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>China Sourcing Map: Shenzhen</h1>
+  <div class="subtitle">Visual Storyboard &mdash; Production Brief</div>
+  <div class="meta">
+    <span>Duration: ~14 min</span>
+    <span>Chapters: 8 (Hook + 6 + CH3.5 + Outro)</span>
+    <span>Total shots: 32</span>
+    <span>Generated: 2026-03-13</span>
+    <span>Series: China Sourcing Map &mdash; Episode 2</span>
+  </div>
+</div>
+
+<!-- ASSET SUMMARY -->
+<div class="summary">
+  <div class="summary-item stock"><div class="num">16</div><div class="label">Stock footage</div><div class="zh" style="font-size:11px;">素材视频</div></div>
+  <div class="summary-item graphic"><div class="num">4</div><div class="label">Graphics to create</div><div class="zh" style="font-size:11px;">需制作图表</div></div>
+  <div class="summary-item overlay"><div class="num">16</div><div class="label">Text overlays</div><div class="zh" style="font-size:11px;">文字叠加</div></div>
+  <div class="summary-item screen"><div class="num">1</div><div class="label">Screen recording</div><div class="zh" style="font-size:11px;">屏幕录制</div></div>
+  <div class="summary-item card"><div class="num">3</div><div class="label">YouTube cards</div><div class="zh" style="font-size:11px;">YouTube 卡片</div></div>
+</div>
+
+<!-- ENERGY MAP -->
+<div class="energy">
+  <h2>Pacing &amp; Energy Arc</h2>
+  <div class="zh" style="margin-bottom:12px; font-size:13px;">节奏与能量弧线</div>
+  <div class="energy-row">
+    <span class="label">HOOK</span>
+    <div class="energy-bar" style="width:300px; background: linear-gradient(90deg, #ef4444, #f97316);"></div>
+    <span class="desc">High energy. Pirate-to-powerhouse reveal. Swagger.<span class="zh">高能量。从盗版到强权的揭示。气势十足。</span></span>
+  </div>
+  <div class="energy-row">
+    <span class="label">CH 1</span>
+    <div class="energy-bar" style="width:240px; background: linear-gradient(90deg, #3b82f6, #6366f1);"></div>
+    <span class="desc">Cinematic storytelling. Shanzhai origin arc &mdash; wonder + surprise.<span class="zh">电影质感叙事。山寨起源弧——惊叹+意外。</span></span>
+  </div>
+  <div class="energy-row">
+    <span class="label">CH 2</span>
+    <div class="energy-bar" style="width:280px; background: linear-gradient(90deg, #f97316, #eab308);"></div>
+    <span class="desc">Upbeat, dense. Huaqiangbei market energy &mdash; fast cuts.<span class="zh">节奏明快，信息密集。华强北市场能量——快速剪辑。</span></span>
+  </div>
+  <div class="energy-row">
+    <span class="label">CH 3</span>
+    <div class="energy-bar" style="width:220px; background: linear-gradient(90deg, #22c55e, #14b8a6);"></div>
+    <span class="desc">Informative, map-driven. District tour &mdash; data montage.<span class="zh">信息丰富，地图驱动。区域巡览——数据蒙太奇。</span></span>
+  </div>
+  <div class="energy-row">
+    <span class="label">CH 3.5</span>
+    <div class="energy-bar" style="width:160px; background: linear-gradient(90deg, #8b5cf6, #a78bfa);"></div>
+    <span class="desc">Intimate, reflective. Thomas personal moment &mdash; slow down.<span class="zh">亲密，反思。Thomas 个人时刻——放慢节奏。</span></span>
+  </div>
+  <div class="energy-row">
+    <span class="label">CH 4</span>
+    <div class="energy-bar" style="width:300px; background: linear-gradient(90deg, #dc2626, #991b1b);"></div>
+    <span class="desc">Dark, tense. Counterfeits + fraud. Dramatic tone shift.<span class="zh">暗黑，紧张。假冒+欺诈。戏剧性的语调转变。</span></span>
+  </div>
+  <div class="energy-row">
+    <span class="label">CH 5</span>
+    <div class="energy-bar" style="width:320px; background: linear-gradient(90deg, #ef4444, #ec4899);"></div>
+    <span class="desc">Peak energy. Speed + prototyping amazement. Mind-blowing stats.<span class="zh">能量巅峰。速度+原型制造的惊叹。令人震撼的数据。</span></span>
+  </div>
+  <div class="energy-row">
+    <span class="label">CH 6</span>
+    <div class="energy-bar" style="width:260px; background: linear-gradient(90deg, #eab308, #f97316);"></div>
+    <span class="desc">Practical, helpful. Travel playbook &mdash; viewer takes notes.<span class="zh">实用，有帮助。旅行指南——观众开始记笔记。</span></span>
+  </div>
+  <div class="energy-row">
+    <span class="label">OUTRO</span>
+    <div class="energy-bar" style="width:200px; background: linear-gradient(90deg, #3b82f6, #22c55e);"></div>
+    <span class="desc">Warm, inspiring. Full-circle callback. Subscribe energy.<span class="zh">温暖，激励。首尾呼应。引导订阅。</span></span>
+  </div>
+</div>
+
+<!-- ========== HOOK ========== -->
+<div class="chapter" id="hook">
+  <div class="chapter-header">
+    <h2>HOOK</h2>
+    <span class="time">0:00 &ndash; 0:35</span>
+  </div>
+  <div class="chapter-body">
+
+    <!-- Shot 1: Talking head — Thomas delivers hook -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--gray); border-radius: 8px;">
+        <div class="fallback" style="background: #1e293b; color: #94a3b8;">
+          <div>TALKING HEAD<br><br>Thomas delivers pirate-to-innovation hook.<br>Confident, conspiratorial, slightly incredulous.</div>
+        </div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge talking">Hold on presenter</span>
+        <h3>Thomas delivers hook to camera</h3>
+        <div class="zh">Thomas 对镜头讲开场白</div>
+        <p class="desc">"In the nineteen-nineties, this city was famous for one thing — knockoffs..." Then: "I'm Thomas — I'm German, I've lived in China for thirteen years, and this is the China Sourcing Map."</p>
+        <div class="meta-tags">
+          <span class="tag">Duration: ~15 sec<span class="zh"> (时长: ~15秒)</span></span>
+          <span class="tag">Energy: confident, conspiratorial<span class="zh"> (氛围: 自信、有共谋感)</span></span>
+          <span class="tag">Hold on face for "knockoffs" reveal<span class="zh"> (说到"knockoffs"时停留在脸部)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shot 2: Huaqiangbei timelapse -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=800&q=80" alt="Shenzhen skyline timelapse" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Shenzhen skyline &mdash; Huaqiangbei district, neon lights, modern towers</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>Huaqiangbei timelapse &amp; Shenzhen skyline</h3>
+        <div class="zh">华强北延时摄影与深圳天际线</div>
+        <p class="desc">Dramatic drone sweep or timelapse of Huaqiangbei district. Neon signs, dense market buildings, modern Shenzhen towers behind. Day-to-night transition if possible. Establishes the contrast: old market district + gleaming skyline.</p>
+        <div class="zh">华强北地区的戏剧性无人机扫描或延时摄影。霓虹灯招牌、密集的市场建筑、身后的现代深圳大厦。如有可能做日到夜的过渡。展现对比: 老市场区+闪亮的天际线。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 5-8 sec<span class="zh"> (时长: 5-8秒)</span></span>
+          <span class="tag">16:9 full screen<span class="zh"> (16:9 全屏)</span></span>
+          <span class="tag">Drone/timelapse<span class="zh"> (无人机/延时)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shot 3: Old vs new comparison -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Shenzhen_CBD_and_Civic_Center.jpg/1280px-Shenzhen_CBD_and_Civic_Center.jpg" alt="Modern Shenzhen CBD" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Modern Shenzhen CBD &mdash; glass towers, Civic Center, contrast with fishing village past</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>Old vs new Shenzhen &mdash; fishing village to metropolis</h3>
+        <div class="zh">新旧深圳对比——从渔村到大都市</div>
+        <p class="desc">Split-screen or dissolve transition: black-and-white photo of 1980s Shenzhen fishing village on left, modern Shenzhen CBD skyline on right. The transformation story in one frame.</p>
+        <div class="zh">分屏或溶解转场: 左边是1980年代深圳渔村的黑白照片，右边是现代深圳CBD天际线。一帧画面讲完变迁故事。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 4-5 sec<span class="zh"> (时长: 4-5秒)</span></span>
+          <span class="tag">Split-screen or dissolve<span class="zh"> (分屏或溶解转场)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay: Title card -->
+    <div class="overlay-mockup">
+      <div class="position">Center screen &mdash; title card <span class="zh">(屏幕中央——标题卡)</span></div>
+      China Sourcing Map: Shenzhen
+      <div class="duration">Hold: 3 sec &mdash; appears over skyline B-roll <span class="zh">(保持3秒——出现在天际线B-roll画面上)</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== CHAPTER 1: THE PIRATE YEARS ========== -->
+<div class="chapter" id="ch1">
+  <div class="chapter-header">
+    <h2>CHAPTER 1: The Pirate Years</h2>
+    <span class="time">0:35 &ndash; 3:30</span>
+  </div>
+  <div class="chapter-body">
+
+    <!-- Shot: Historical Shenzhen -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Deng_Xiaoping_and_Jimmy_Carter_at_the_arrival_ceremony_for_the_Vice_Premier_of_China._-_NARA_-_183157-restored.jpg/1280px-Deng_Xiaoping_and_Jimmy_Carter_at_the_arrival_ceremony_for_the_Vice_Premier_of_China._-_NARA_-_183157-restored.jpg" alt="Deng Xiaoping" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Deng Xiaoping &mdash; 1980 SEZ announcement, historical archive footage</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage / archive</span>
+        <h3>Historical Shenzhen &mdash; 1980 SEZ founding</h3>
+        <div class="zh">历史深圳——1980年经济特区成立</div>
+        <p class="desc">Archival footage or photos: 1980 Shenzhen as a fishing village (30,000 people). Deng Xiaoping archive footage. Ken Burns zoom into historical photos. Narration covers the SEZ gamble &mdash; lower taxes, open door to foreign money.</p>
+        <div class="zh">档案影像或照片: 1980年的深圳渔村（3万人）。邓小平档案影像。对历史照片做肯·伯恩斯推近。旁白讲述经济特区的赌注——低税收、向外资开放。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 6-8 sec<span class="zh"> (时长: 6-8秒)</span></span>
+          <span class="tag">Ken Burns slow zoom<span class="zh"> (肯·伯恩斯缓慢推近)</span></span>
+          <span class="tag">Source: public domain / NARA<span class="zh"> (来源: 公共版权/美国国家档案馆)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay -->
+    <div class="overlay-mockup">
+      <div class="position">Lower third <span class="zh">(下方三分之一)</span></div>
+      1980 &mdash; Population: 30,000 | China's first Special Economic Zone
+      <div class="duration">Hold: 4 sec &mdash; appears during historical photos <span class="zh">(保持4秒——在历史照片期间出现)</span></div>
+    </div>
+
+    <!-- Shot: SEG Plaza / early factories -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/SEG_Plaza_2019.jpg/800px-SEG_Plaza_2019.jpg" alt="SEG Plaza Shenzhen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">SEG Plaza &mdash; 赛格广场 &mdash; iconic Shenzhen electronics building</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>SEG Plaza exterior &mdash; the seed of the electronics empire</h3>
+        <div class="zh">赛格广场外景——电子帝国的起点</div>
+        <p class="desc">Exterior shot of SEG Plaza tower. Then interior: ten floors, thousands of tiny component shops. Narration covers the 1988 opening, modelled on Tokyo's Akihabara. Over 50 early vendors became billionaires.</p>
+        <div class="zh">赛格广场大楼外景。然后内景: 十层楼，数千家小型元器件店铺。旁白讲述1988年开业，仿照东京秋叶原。超过50位早期摊贩成为亿万富翁。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 5-7 sec<span class="zh"> (时长: 5-7秒)</span></span>
+          <span class="tag">Exterior + interior sequence<span class="zh"> (外景+内景序列)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- THOMAS MOMENT: Shanzhai bilingual -->
+    <div class="thomas">
+      <div class="label">&#128100; Thomas Moment &mdash; Bilingual Hook <span class="zh">(Thomas 时刻——双语钩子)</span></div>
+      <div class="line">"山寨 — shānzhài. It literally means 'mountain fortress.' But it became the Chinese word for counterfeit. And in the nineties, that was Shenzhen."</div>
+      <div class="direction">Energy: educational, slightly amused. Direct to camera. Hold on Thomas &mdash; this is a bilingual teaching moment. Show Chinese characters on screen when he says the word.</div>
+      <div class="zh">氛围: 教育性的，略带趣味。直接对镜头。镜头停留在 Thomas 身上——这是一个双语教学时刻。当他说出这个词时在屏幕上显示中文字符。</div>
+    </div>
+
+    <!-- Text overlay: Shanzhai characters -->
+    <div class="overlay-mockup">
+      <div class="position">Center screen &mdash; large characters <span class="zh">(屏幕中央——大字)</span></div>
+      山寨 &mdash; sh&#257;nzh&#224;i &mdash; "mountain fortress" / counterfeit
+      <div class="duration">Hold: 3 sec &mdash; appears when Thomas says the word <span class="zh">(保持3秒——Thomas说出这个词时出现)</span></div>
+    </div>
+
+    <!-- Shot: Shanzhai phones + dual-SIM -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Shanzhai_phone.jpg/800px-Shanzhai_phone.jpg" alt="Shanzhai knockoff phones" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Shanzhai phone montage &mdash; knockoff phones from the 1990s-2000s, dual-SIM invention</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>Shanzhai phone montage &mdash; knockoffs to innovation</h3>
+        <div class="zh">山寨手机蒙太奇——从仿制到创新</div>
+        <p class="desc">Montage of knockoff phones from the shanzhai era. Close-up of a dual-SIM phone (the accidental invention). Quick cuts between fake brand phones and the dual-SIM slot. The visual story: copying led to innovating.</p>
+        <div class="zh">山寨时代仿制手机的蒙太奇。双卡手机的特写（意外的发明）。假冒品牌手机与双卡插槽之间的快速切换。视觉故事: 模仿催生创新。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 5-7 sec<span class="zh"> (时长: 5-7秒)</span></span>
+          <span class="tag">Quick cuts montage<span class="zh"> (快速剪辑蒙太奇)</span></span>
+          <span class="tag">Close-up on dual-SIM slot<span class="zh"> (双卡插槽特写)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shot: Modern Shenzhen factory / DJI / BYD -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/DJI_Sky_City_in_Nanshan%2C_Shenzhen.jpg/1280px-DJI_Sky_City_in_Nanshan%2C_Shenzhen.jpg" alt="DJI Sky City headquarters Shenzhen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">DJI Sky City &mdash; Shenzhen's innovation graduates: DJI, Huawei, BYD</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>Modern Shenzhen &mdash; DJI, Huawei, BYD campuses</h3>
+        <div class="zh">现代深圳——大疆、华为、比亚迪园区</div>
+        <p class="desc">Quick montage: DJI Sky City building, Huawei Bantian campus, BYD factory. The pirate workshops evolved into world-class companies. "Shenzhen didn't overcome its pirate past. It turned it into the world's most powerful hardware ecosystem."</p>
+        <div class="zh">快速蒙太奇: 大疆天空之城大楼、华为坂田园区、比亚迪工厂。海盗作坊进化为世界级企业。"深圳没有克服它的盗版过去。它把它变成了世界上最强大的硬件生态系统。"</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 5-6 sec<span class="zh"> (时长: 5-6秒)</span></span>
+          <span class="tag">3-shot montage<span class="zh"> (3镜头蒙太奇)</span></span>
+          <span class="tag">Modern, corporate, ambitious<span class="zh"> (现代、企业、雄心勃勃)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay -->
+    <div class="overlay-mockup">
+      <div class="position">Lower third <span class="zh">(下方三分之一)</span></div>
+      2024 &mdash; Population: 17.5 million | #1 export city in China, 32 years running
+      <div class="duration">Hold: 4 sec &mdash; appears over modern Shenzhen montage <span class="zh">(保持4秒——出现在现代深圳蒙太奇上)</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== CHAPTER 2: THE ECOSYSTEM ========== -->
+<div class="chapter" id="ch2">
+  <div class="chapter-header">
+    <h2>CHAPTER 2: The Ecosystem</h2>
+    <span class="time">3:30 &ndash; 6:00</span>
+  </div>
+  <div class="chapter-body">
+
+    <!-- Shot: Huaqiangbei aerial -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Huaqiangbei_Commercial_Street_%28Shenzhen%29.jpg/1280px-Huaqiangbei_Commercial_Street_%28Shenzhen%29.jpg" alt="Huaqiangbei Commercial Street aerial" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Huaqiangbei aerial &mdash; 1.45 km², 40+ markets, dense electronics district</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>Huaqiangbei aerial &mdash; the nerve centre</h3>
+        <div class="zh">华强北航拍——神经中枢</div>
+        <p class="desc">Drone shot over Huaqiangbei Commercial Street. Show the density &mdash; 40+ market buildings packed into 1.45 km². The camera reveals building after building. This is the supply neighbourhood, not a supply chain.</p>
+        <div class="zh">华强北商业街的无人机镜头。展示密度——40+市场建筑集中在1.45平方公里内。镜头一栋接一栋地揭示建筑。这是一个供应邻里，不是供应链。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 5-7 sec<span class="zh"> (时长: 5-7秒)</span></span>
+          <span class="tag">Drone aerial<span class="zh"> (无人机航拍)</span></span>
+          <span class="tag">Reveal shot &mdash; building after building<span class="zh"> (揭示镜头——一栋接一栋)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay: Huaqiangbei stats -->
+    <div class="overlay-mockup">
+      <div class="position">Center screen &mdash; stat card <span class="zh">(屏幕中央——数据卡)</span></div>
+      &#21326;&#24378;&#21271; &mdash; Huaqiangbei | 1.45 km&sup2; | 40+ markets | 750,000 daily visitors
+      <div class="duration">Hold: 4 sec &mdash; appears over aerial shot <span class="zh">(保持4秒——出现在航拍镜头上)</span></div>
+    </div>
+
+    <!-- Shot: SEG Plaza interior (deep dive) -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://jingsourcing.com/wp-content/uploads/2023/06/SEG-electronic-market.jpg" alt="SEG Plaza electronics market interior" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">SEG Plaza interior &mdash; 3,000+ tiny component shops, resistors, chips, PCBs</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>SEG Plaza interior &mdash; component paradise</h3>
+        <div class="zh">赛格广场内景——元器件天堂</div>
+        <p class="desc">Slow tracking shot through SEG Plaza floors. Tiny counters selling resistors, capacitors, chips, PCBs. Close-ups of component bins, magnifying glasses, testing equipment. The storytelling focus: one building, 3,000 shops, over 50 billionaires started here.</p>
+        <div class="zh">赛格广场各层的慢速跟踪镜头。微小的柜台出售电阻、电容、芯片、PCB。元器件箱、放大镜、测试设备的特写。叙事焦点: 一栋楼，3000家店，超过50位亿万富翁从这里起步。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 8-10 sec<span class="zh"> (时长: 8-10秒)</span></span>
+          <span class="tag">Slow tracking shot<span class="zh"> (慢速跟踪镜头)</span></span>
+          <span class="tag">Close-ups of components<span class="zh"> (元器件特写)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay: SEG -->
+    <div class="overlay-mockup">
+      <div class="position">Lower third <span class="zh">(下方三分之一)</span></div>
+      SEG Plaza &mdash; &#36187;&#26684;&#24191;&#22330; | 3,000+ shops | Est. 1988
+      <div class="duration">Hold: 3 sec <span class="zh">(保持3秒)</span></div>
+    </div>
+
+    <!-- Shot: Tongtiandi (second-hand iPhones) -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://jingsourcing.com/wp-content/uploads/2023/06/Huaqiangbei-phone-market.jpg" alt="Tongtiandi second-hand phone market" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Tongtiandi 通天地 &mdash; China's largest second-hand iPhone hub, 4 floors</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>Tongtiandi &mdash; second-hand iPhone economy</h3>
+        <div class="zh">通天地——二手iPhone经济</div>
+        <p class="desc">Interior of Tongtiandi market. Four floors: used phones on three, components on the other. Close-ups of technicians stripping phones, sorting screens, testing motherboards. An entire circular economy giving devices second lives.</p>
+        <div class="zh">通天地市场内景。四层: 三层卖二手手机，一层卖配件。技师拆解手机、分拣屏幕、测试主板的特写。一个完整的循环经济让设备获得第二次生命。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 5-7 sec<span class="zh"> (时长: 5-7秒)</span></span>
+          <span class="tag">Close-ups of repair work<span class="zh"> (维修工作特写)</span></span>
+          <span class="tag">Circular economy visual<span class="zh"> (循环经济视觉)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shot: Foreign buyers browsing -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?w=800&q=80" alt="Foreign buyers browsing electronics market" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Foreign buyers browsing Huaqiangbei &mdash; 7,000 international visitors daily</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>International buyers in Huaqiangbei</h3>
+        <div class="zh">华强北的国际买家</div>
+        <p class="desc">B-roll of foreign buyers browsing market stalls, inspecting components, negotiating. The narration covers: 750,000 daily visitors, 7,000 international, doubling year on year. This is a pilgrimage site for hardware people worldwide.</p>
+        <div class="zh">外国买家浏览市场摊位、检查元器件、谈判的B-roll。旁白内容: 每日75万访客，7000名国际访客，年年翻倍。这是全球硬件人的朝圣地。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 4-5 sec<span class="zh"> (时长: 4-5秒)</span></span>
+          <span class="tag">Multiple nationalities visible<span class="zh"> (可见多国买家)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay: Download CTA -->
+    <div class="overlay-mockup">
+      <div class="position">Lower third <span class="zh">(下方三分之一)</span></div>
+      Download the full China Sourcing Map &mdash; link in description
+      <div class="duration">Hold: 4 sec &mdash; first CTA placement <span class="zh">(保持4秒——第一次CTA)</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== CHAPTER 3: THE DISTRICTS ========== -->
+<div class="chapter" id="ch3">
+  <div class="chapter-header">
+    <h2>CHAPTER 3: The Districts</h2>
+    <span class="time">6:00 &ndash; 8:00</span>
+  </div>
+  <div class="chapter-body">
+
+    <!-- Shot: Animated map of Shenzhen districts -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--orange); border-radius: 8px;">
+        <div class="fallback" style="background: #fff7ed; color: #9a3412; display: flex;">
+          <div>GRAPHIC: SHENZHEN DISTRICT MAP<br><br>Animated map showing Shenzhen districts with specialties:<br>Longhua (Foxconn) | Longgang (Huawei + Eyewear)<br>Bao'an (Mass Mfg) | Nanshan (DJI) | Pingshan (BYD)<br>Shuibei (Gold) | Nanyou (Fashion)<br><br>Districts light up as Thomas mentions them.</div>
+        </div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge graphic">Graphic to create</span>
+        <h3>Shenzhen district map &mdash; animated, specialties</h3>
+        <div class="zh">深圳区域地图——动画，标注特色产业</div>
+        <p class="desc">Clean animated map of Shenzhen. Each district lights up sequentially as Thomas narrates. Pin icons show specialty: circuit board for Longhua, glasses for Longgang, drone for Nanshan, gold bar for Shuibei. Keep it clean &mdash; not cluttered.</p>
+        <div class="zh">深圳的简洁动画地图。每个区域在Thomas解说时依次亮起。图钉图标显示特色产业: 龙华的电路板、龙岗的眼镜、南山的无人机、水贝的金条。保持简洁——不要杂乱。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 15-20 sec (stays on screen across narration)<span class="zh"> (时长: 15-20秒，在解说期间保持在屏幕上)</span></span>
+          <span class="tag">After Effects / Motion Graphics<span class="zh"> (After Effects / 动态图形)</span></span>
+          <span class="tag">Sequential reveal animation<span class="zh"> (依次揭示动画)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shot: Foxconn / Longhua -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Foxconn_Longhua_campus_Shenzhen_panorama.jpg/1280px-Foxconn_Longhua_campus_Shenzhen_panorama.jpg" alt="Foxconn Longhua campus" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Foxconn Longhua &mdash; world's largest factory complex, 3 km², 15 factories</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>Foxconn Longhua &mdash; world's largest factory complex</h3>
+        <div class="zh">富士康龙华——世界最大工厂园区</div>
+        <p class="desc">Aerial of Foxconn's massive Longhua campus. Three square kilometres, fifteen factories. Scale is the story &mdash; show the sheer size. At peak: 450,000 workers, a small city inside a city. When Apple releases a new iPhone, these assembly lines run around the clock.</p>
+        <div class="zh">富士康龙华园区的航拍。三平方公里，十五座工厂。规模就是故事——展示纯粹的大。高峰期: 45万工人，城中之城。苹果发布新iPhone时，这些生产线昼夜不停运转。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 5-6 sec<span class="zh"> (时长: 5-6秒)</span></span>
+          <span class="tag">Aerial &mdash; show scale<span class="zh"> (航拍——展示规模)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shot: Henggang eyewear -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://jingsourcing.com/wp-content/uploads/2023/06/Henggang-optical-market.jpg" alt="Henggang eyewear district" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Henggang, Longgang &mdash; eyewear capital, 500 manufacturers, 100M+ pairs/year</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>Henggang &mdash; China's eyewear capital</h3>
+        <div class="zh">横岗——中国眼镜之都</div>
+        <p class="desc">Surprise reveal: inside Longgang district, a neighbourhood nobody expects. Henggang makes 100+ million pairs of glasses per year. Show factory floors with frames being assembled, polished, quality-checked. "The frames you're wearing right now? There's a real chance they started here."</p>
+        <div class="zh">意外揭示: 在龙岗区内，一个没人想到的地方。横岗每年生产超过1亿副眼镜。展示工厂车间里镜框的组装、抛光、质检。"你现在戴的眼镜框？很可能就是从这里出来的。"</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 5-6 sec<span class="zh"> (时长: 5-6秒)</span></span>
+          <span class="tag">Factory interior + close-ups<span class="zh"> (工厂内景+特写)</span></span>
+          <span class="tag">Surprise element<span class="zh"> (意外元素)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay -->
+    <div class="overlay-mockup">
+      <div class="position">Lower third &mdash; split <span class="zh">(下方三分之一——分屏)</span></div>
+      Longhua &mdash; Foxconn | Longgang &mdash; Huawei + 100M pairs of eyewear/year
+      <div class="duration">Hold: 4 sec <span class="zh">(保持4秒)</span></div>
+    </div>
+
+    <!-- Text overlay -->
+    <div class="overlay-mockup">
+      <div class="position">Lower third <span class="zh">(下方三分之一)</span></div>
+      Full district guide &rarr; China Sourcing Map | Link in description
+      <div class="duration">Hold: 3 sec <span class="zh">(保持3秒)</span></div>
+    </div>
+
+    <!-- Editor note: Address tip -->
+    <div class="thomas">
+      <div class="label">&#128161; Editor Note &mdash; Key line to emphasise <span class="zh">(编辑提示——需要强调的关键台词)</span></div>
+      <div class="line">"If a supplier gives you an address in Futian or Luohu — the central business districts — they're probably a trading company. If the address is in Bao'an, Longhua, or Longgang, that's where the factories actually are."</div>
+      <div class="direction">This is a practical golden nugget. Consider text overlay or callout box on screen. Hold on Thomas &mdash; direct to camera, authoritative tone.</div>
+      <div class="zh">这是一个实用的黄金建议。考虑在屏幕上加文字叠加或标注框。镜头停留在Thomas身上——直面镜头，权威语调。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== CHAPTER 3.5: WHY I MOVED MY STUDIO HERE ========== -->
+<div class="chapter" id="ch3-5">
+  <div class="chapter-header">
+    <h2>CHAPTER 3.5: Why I Moved My Studio Here</h2>
+    <span class="time">8:00 &ndash; 9:00</span>
+  </div>
+  <div class="chapter-body">
+
+    <!-- Shot: Talking head — Thomas personal -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--gray); border-radius: 8px;">
+        <div class="fallback" style="background: #1e293b; color: #94a3b8;">
+          <div>TALKING HEAD<br><br>Thomas opens up personally.<br>Warm, reflective, genuine.<br>Slower pace than rest of video.<br>"I want to tell you something personal for a second."</div>
+        </div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge talking">Hold on presenter</span>
+        <h3>Thomas &mdash; personal studio moment</h3>
+        <div class="zh">Thomas——个人工作室时刻</div>
+        <p class="desc">Long talking head hold. Thomas explains why he opened a studio in Shenzhen after years in Shanghai. The energy is different. "Shanghai is finance, fashion, services. Shenzhen is making things." This is the emotional heart of the video.</p>
+        <div class="zh">长时间的讲者特写。Thomas解释为什么在上海多年后在深圳开了工作室。这里的能量不同。"上海是金融、时尚、服务。深圳是制造东西。"这是视频的情感核心。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 20-25 sec<span class="zh"> (时长: 20-25秒)</span></span>
+          <span class="tag">Energy: warm, genuine, reflective<span class="zh"> (氛围: 温暖、真诚、反思)</span></span>
+          <span class="tag">Slow down the pace here<span class="zh"> (这里放慢节奏)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shot: Shenzhen street life / startup energy -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80" alt="Shenzhen co-working startup scene" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Shenzhen startup energy &mdash; co-working spaces, coffee shops, young entrepreneurs</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>Shenzhen startup energy &mdash; coffee shops, co-working, drones</h3>
+        <div class="zh">深圳创业能量——咖啡厅、联合办公、无人机</div>
+        <p class="desc">Montage supporting Thomas's "energy" thesis: someone designing a circuit board in a coffee shop, a drone prototype being tested in a car park, young entrepreneurs in a co-working space. 60% of post-90s Shenzhen graduates want to start a business.</p>
+        <div class="zh">支持Thomas"能量"论点的蒙太奇: 有人在咖啡厅设计电路板，有人在停车场测试无人机原型，年轻创业者在联合办公空间。60%的90后深圳毕业生想创业。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 8-10 sec<span class="zh"> (时长: 8-10秒)</span></span>
+          <span class="tag">Lifestyle B-roll montage<span class="zh"> (生活方式B-roll蒙太奇)</span></span>
+          <span class="tag">Young, energetic, creative<span class="zh"> (年轻、有活力、创造性)</span></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== CHAPTER 4: THE DARK SIDE ========== -->
+<div class="chapter" id="ch4">
+  <div class="chapter-header">
+    <h2>CHAPTER 4: The Dark Side</h2>
+    <span class="time">9:00 &ndash; 11:00</span>
+  </div>
+  <div class="chapter-body">
+
+    <!-- Shot: Night Huaqiangbei -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80" alt="Night market corridors" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Night shots of Huaqiangbei &mdash; dim corridors, neon, Ghost Market atmosphere</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>Huaqiangbei at night &mdash; Ghost Market atmosphere</h3>
+        <div class="zh">华强北夜景——鬼市氛围</div>
+        <p class="desc">Dramatic tone shift. Night footage of Huaqiangbei &mdash; dim corridors, neon reflections, shadowy storefronts. The Ghost Market runs midnight to 4 AM. Counterfeit AirPods for $10, replica smartwatches for $30. Vendors want cash in small bills. Photography not welcome.</p>
+        <div class="zh">戏剧性的语调转变。华强北夜间画面——昏暗走廊、霓虹倒影、阴暗的店面。鬼市从午夜运营到凌晨4点。10美元的假AirPods，30美元的仿制智能手表。商贩要小额现金。不欢迎拍照。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 5-7 sec<span class="zh"> (时长: 5-7秒)</span></span>
+          <span class="tag">Dark, moody lighting<span class="zh"> (暗色调、情绪化灯光)</span></span>
+          <span class="tag">Tone shift music cue<span class="zh"> (语调转换的音乐提示)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay: The Dark Side -->
+    <div class="overlay-mockup">
+      <div class="position">Center screen &mdash; chapter title <span class="zh">(屏幕中央——章节标题)</span></div>
+      The Dark Side
+      <div class="duration">Hold: 2 sec &mdash; dramatic reveal with dark B-roll <span class="zh">(保持2秒——配合暗色B-roll的戏剧性揭示)</span></div>
+    </div>
+
+    <!-- Text overlay: bunnie Huang quote -->
+    <div class="overlay-mockup">
+      <div class="position">Center screen &mdash; quote card <span class="zh">(屏幕中央——引用卡)</span></div>
+      "EVERYTHING here is fake." &mdash; bunnie Huang
+      <div class="duration">Hold: 3 sec &mdash; appears after Thomas delivers the quote <span class="zh">(保持3秒——Thomas说完引用后出现)</span></div>
+    </div>
+
+    <!-- Shot: Golden sample trap / QC issues -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--orange); border-radius: 8px;">
+        <div class="fallback" style="background: #fff7ed; color: #9a3412; display: flex;">
+          <div>GRAPHIC: GOLDEN SAMPLE TRAP<br><br>Visual comparison:<br>LEFT: Beautiful prototype sample (sparkles, checkmark)<br>RIGHT: 10,000 units that look nothing like it (X mark)<br><br>Simple, impactful side-by-side.</div>
+        </div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge graphic">Graphic to create</span>
+        <h3>Golden sample trap &mdash; visual comparison</h3>
+        <div class="zh">金样品陷阱——视觉对比</div>
+        <p class="desc">Simple split graphic: left side shows a perfect prototype (clean, polished), right side shows the actual bulk order (different quality, different finish). Visual storytelling of the most common scam in Shenzhen sourcing.</p>
+        <div class="zh">简单的分屏图形: 左边展示完美的样品（干净、抛光），右边展示实际批量订单（不同的质量、不同的工艺）。深圳采购中最常见骗局的视觉叙事。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 5-6 sec<span class="zh"> (时长: 5-6秒)</span></span>
+          <span class="tag">After Effects / simple animation<span class="zh"> (After Effects / 简单动画)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay: Fraud stat -->
+    <div class="overlay-mockup">
+      <div class="position">Center screen &mdash; stat card <span class="zh">(屏幕中央——数据卡)</span></div>
+      18% of importers lose an average of $45,000 to fraud
+      <div class="duration">Hold: 4 sec &mdash; dramatic pause after delivery <span class="zh">(保持4秒——说完后戏剧性停顿)</span></div>
+    </div>
+
+    <!-- Shot: SAMR verification + video call -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--green); border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80" alt="Video call verification" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Screen recording: SAMR database (gsxt.gov.cn) + video call to factory floor</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge screen">Screen recording</span>
+        <h3>Verification toolkit &mdash; SAMR + video call + payment safety</h3>
+        <div class="zh">验证工具包——工商查询+视频通话+支付安全</div>
+        <p class="desc">Quick sequence: (1) Screen recording of gsxt.gov.cn business registry lookup, (2) Mock video call showing a factory floor vs a meeting room, (3) Payment screen showing "never pay to personal account." Three protection steps, visually demonstrated.</p>
+        <div class="zh">快速序列: (1) gsxt.gov.cn 工商注册查询的屏幕录制，(2) 模拟视频通话展示工厂车间 vs 会议室，(3) 支付界面显示"永远不要付款到个人账户"。三个保护步骤，视觉化演示。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 6-8 sec<span class="zh"> (时长: 6-8秒)</span></span>
+          <span class="tag">Screen recording + B-roll hybrid<span class="zh"> (屏幕录制+B-roll混合)</span></span>
+          <span class="tag">3-step sequence<span class="zh"> (3步骤序列)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- WF MENTION A -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--orange); border-radius: 8px;">
+        <div class="fallback" style="background: #fff7ed; color: #9a3412; display: flex;">
+          <div>GRAPHIC: WORLDFIRST NETWORK<br><br>Animated network diagram:<br>150,000+ Chinese suppliers ↔ 1.5M businesses<br>FREE + INSTANT when both sides on network<br>Solves compliance on BOTH ends<br><br>Clean, trust-focused. Not a product demo.</div>
+        </div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge graphic">Graphic to create</span>
+        <h3>WorldFirst trust network &mdash; animated diagram</h3>
+        <div class="zh">WorldFirst 信任网络——动画图表</div>
+        <p class="desc">Animated network visualization. Dots representing suppliers and buyers connecting through WorldFirst. Key stats appear: 150K+ suppliers, 1.5M+ customers, free + instant in-network. Then: "Shenzhen suppliers tell their buyers: just use WorldFirst." The graphic should feel organic, not corporate.</p>
+        <div class="zh">动画网络可视化。代表供应商和买家的点通过WorldFirst连接。关键数据出现: 15万+供应商，150万+客户，网络内免费+即时。然后: "深圳供应商告诉买家: 用WorldFirst就行。"图形应该感觉自然，而不是企业化。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 10-12 sec<span class="zh"> (时长: 10-12秒)</span></span>
+          <span class="tag">After Effects network animation<span class="zh"> (After Effects 网络动画)</span></span>
+          <span class="tag">WF MENTION A<span class="zh"> (WorldFirst 提及 A)</span></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== CHAPTER 5: THE SPEED WEAPON ========== -->
+<div class="chapter" id="ch5">
+  <div class="chapter-header">
+    <h2>CHAPTER 5: The Speed Weapon</h2>
+    <span class="time">11:00 &ndash; 12:30</span>
+  </div>
+  <div class="chapter-body">
+
+    <!-- Text overlay: Speed quote -->
+    <div class="overlay-mockup">
+      <div class="position">Center screen &mdash; quote card <span class="zh">(屏幕中央——引用卡)</span></div>
+      "A week in Shenzhen = a month in Silicon Valley"
+      <div class="duration">Hold: 3 sec &mdash; bold, impactful <span class="zh">(保持3秒——粗体，有冲击力)</span></div>
+    </div>
+
+    <!-- Shot: PCB prototyping / makerspace -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" alt="PCB circuit board close-up" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">PCB prototyping &mdash; $2 per board, MOQ: 1, 24-hour turnaround</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>PCB prototyping &mdash; speed and scale</h3>
+        <div class="zh">PCB原型制作——速度与规模</div>
+        <p class="desc">Close-ups of PCB manufacturing: boards being etched, components placed by pick-and-place machines, soldering. The jaw-dropping stat: $2 per prototype, MOQ of 1, 2,000+ assembly companies, 24-hour turnaround. This is why hardware startups move to Shenzhen.</p>
+        <div class="zh">PCB制造特写: 电路板蚀刻、贴片机放置元件、焊接。令人震惊的数据: 每板2美元、最低订量1片、2000+家组装公司、24小时交付。这就是硬件创业公司搬到深圳的原因。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 6-8 sec<span class="zh"> (时长: 6-8秒)</span></span>
+          <span class="tag">Close-up manufacturing<span class="zh"> (制造特写)</span></span>
+          <span class="tag">Fast-paced, impressive<span class="zh"> (快节奏、令人印象深刻)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay: PCB stats -->
+    <div class="overlay-mockup">
+      <div class="position">Lower third &mdash; stat bar <span class="zh">(下方三分之一——数据条)</span></div>
+      PCB prototype: $2 | MOQ: 1 piece | 2,000+ assembly companies
+      <div class="duration">Hold: 4 sec <span class="zh">(保持4秒)</span></div>
+    </div>
+
+    <!-- THOMAS MOMENT: $200/month reaction -->
+    <div class="thomas">
+      <div class="label">&#128100; Thomas Moment &mdash; Personal Reaction <span class="zh">(Thomas 时刻——个人反应)</span></div>
+      <div class="line">"Two hundred dollars a month. That number still gets me every time I hear it."</div>
+      <div class="direction">Energy: genuinely amazed. Brief pause after delivery. Thomas shakes his head slightly. This is a pattern interrupt &mdash; a moment of honest disbelief that re-engages the viewer.</div>
+      <div class="zh">氛围: 真诚地惊叹。说完后短暂停顿。Thomas微微摇头。这是一个模式打断——一个诚实的难以置信的时刻，重新吸引观众。</div>
+    </div>
+
+    <!-- YT Card: 1688 video -->
+    <div class="yt-card">
+      <span class="icon">&#9654;</span>
+      <div class="info"><strong>YouTube Card #1</strong> &mdash; Link to dedicated 1688 video. Trigger when Thomas says "1688 is where the factories list their products" &mdash; top right corner, 8 sec duration.</div>
+      <div class="zh" style="margin-left: 32px;"><strong>YouTube 卡片 #1</strong> —— 链接到1688专题视频。当Thomas说到"1688是工厂列出产品的地方"时触发——右上角，持续8秒。</div>
+    </div>
+
+    <!-- Shot: Trade shows -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" alt="Tech trade show exhibition hall" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Shenzhen trade shows &mdash; CHTF, ELEXCON, Global Sources HK</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>Trade show montage &mdash; CHTF, ELEXCON, Global Sources</h3>
+        <div class="zh">展会蒙太奇——高交会、ELEXCON、环球资源</div>
+        <p class="desc">Quick-cut montage of trade show floors. Massive exhibition halls, exhibitor booths, product demos. Three shows to put on the calendar: China Hi-Tech Fair (Nov, 5,000 exhibitors), ELEXCON (Aug, 240K visitors), Global Sources HK (April, right across the border).</p>
+        <div class="zh">展会现场的快速剪辑蒙太奇。大型展览厅、参展商展位、产品演示。三个值得记下的展会: 高交会（11月，5000家参展商）、ELEXCON（8月，24万访客）、环球资源香港（4月，就在对岸）。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 5-6 sec<span class="zh"> (时长: 5-6秒)</span></span>
+          <span class="tag">Quick cuts<span class="zh"> (快速剪辑)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay: Trade show dates -->
+    <div class="overlay-mockup">
+      <div class="position">Lower third <span class="zh">(下方三分之一)</span></div>
+      CHTF: Nov 26&ndash;28 | ELEXCON: Aug 25&ndash;27 | Global Sources: April
+      <div class="duration">Hold: 4 sec <span class="zh">(保持4秒)</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== CHAPTER 6: THE PLAYBOOK ========== -->
+<div class="chapter" id="ch6">
+  <div class="chapter-header">
+    <h2>CHAPTER 6: The Playbook</h2>
+    <span class="time">12:30 &ndash; 13:30</span>
+  </div>
+  <div class="chapter-body">
+
+    <!-- Shot: Travel logistics -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Shenzhen_Bao%27an_International_Airport.jpg/1280px-Shenzhen_Bao%27an_International_Airport.jpg" alt="Shenzhen Bao'an Airport" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Shenzhen Bao'an Airport &mdash; metro Line 11, 30 min to city centre</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>Travel logistics &mdash; airport, border, high-speed rail</h3>
+        <div class="zh">出行物流——机场、口岸、高铁</div>
+        <p class="desc">Quick montage: (1) Bao'an Airport interior/exterior, (2) border crossing pedestrian walk at Futian/Luohu, (3) high-speed rail from Hong Kong West Kowloon (15 min to Shenzhen). Practical, helpful visuals for trip planning.</p>
+        <div class="zh">快速蒙太奇: (1) 宝安机场内外景，(2) 福田/罗湖口岸步行过关，(3) 香港西九龙高铁（15分钟到深圳）。实用、有帮助的行程规划视觉。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 5-7 sec<span class="zh"> (时长: 5-7秒)</span></span>
+          <span class="tag">3-shot sequence<span class="zh"> (3镜头序列)</span></span>
+          <span class="tag">Clean, modern, practical<span class="zh"> (干净、现代、实用)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay: Travel times -->
+    <div class="overlay-mockup">
+      <div class="position">Lower third <span class="zh">(下方三分之一)</span></div>
+      Shenzhen &harr; Guangzhou: 29 minutes | HK &rarr; Shenzhen: 15 minutes
+      <div class="duration">Hold: 4 sec <span class="zh">(保持4秒)</span></div>
+    </div>
+
+    <!-- Graphic: Travel info card -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--orange); border-radius: 8px;">
+        <div class="fallback" style="background: #fff7ed; color: #9a3412; display: flex;">
+          <div>GRAPHIC: SHENZHEN TRAVEL CARD<br><br>Best months: March-April, Oct-Nov<br>Avoid: Summer (typhoons), CNY (Feb 15-23, 2026)<br>Must-have: WeChat Pay, VPN, business cards<br>Huaqiangbei = 2 full days minimum<br><br>Clean infographic style.</div>
+        </div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge graphic">Graphic to create</span>
+        <h3>Shenzhen travel essentials card</h3>
+        <div class="zh">深圳出行必备卡</div>
+        <p class="desc">Clean infographic: best months, what to avoid, what to bring. Matches the China Sourcing Map visual style. This is the "take notes" moment &mdash; viewer screenshots this.</p>
+        <div class="zh">简洁的信息图: 最佳月份、避免什么、带什么。匹配中国采购地图的视觉风格。这是"做笔记"的时刻——观众会截图。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 6-8 sec<span class="zh"> (时长: 6-8秒)</span></span>
+          <span class="tag">Infographic style<span class="zh"> (信息图风格)</span></span>
+          <span class="tag">Screenshot-worthy<span class="zh"> (值得截图)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- WF MENTION B -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80" alt="International payment transfer" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">WorldFirst payment interface &mdash; send USD &amp; RMB, free in-network, same-day</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>WorldFirst payment &mdash; USD &amp; RMB, free in-network</h3>
+        <div class="zh">WorldFirst 支付——美元和人民币，网络内免费</div>
+        <p class="desc">B-roll of payment interface or animation. "WorldFirst lets you send both USD and RMB — your supplier gets paid same-day." 150K suppliers on the network. Payments between users are free. Not a tagline — that's how the platform actually works.</p>
+        <div class="zh">支付界面或动画的B-roll。"WorldFirst让你同时发送美元和人民币——你的供应商当天收款。"网络上有15万供应商。用户之间的支付是免费的。不是广告语——这就是平台的实际运作方式。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 8-10 sec<span class="zh"> (时长: 8-10秒)</span></span>
+          <span class="tag">WF MENTION B<span class="zh"> (WorldFirst 提及 B)</span></span>
+          <span class="tag">Practical demo feel<span class="zh"> (实际演示感)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay: WF -->
+    <div class="overlay-mockup">
+      <div class="position">Lower third <span class="zh">(下方三分之一)</span></div>
+      WorldFirst | Send USD &amp; RMB | Free in-network | Same-day
+      <div class="duration">Hold: 4 sec <span class="zh">(保持4秒)</span></div>
+    </div>
+
+    <!-- YT Card: Guangzhou episode -->
+    <div class="yt-card">
+      <span class="icon">&#9654;</span>
+      <div class="info"><strong>YouTube Card #2</strong> &mdash; Link to Guangzhou episode (Episode 1). Trigger when Thomas mentions "Canton Fair in Guangzhou" &mdash; top right corner, 8 sec duration.</div>
+      <div class="zh" style="margin-left: 32px;"><strong>YouTube 卡片 #2</strong> —— 链接到广州集（第1集）。当Thomas提到"广州的广交会"时触发——右上角，持续8秒。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== OUTRO ========== -->
+<div class="chapter" id="outro">
+  <div class="chapter-header">
+    <h2>OUTRO</h2>
+    <span class="time">13:30 &ndash; 14:00</span>
+  </div>
+  <div class="chapter-body">
+
+    <!-- Shot: Talking head — Thomas closes -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--gray); border-radius: 8px;">
+        <div class="fallback" style="background: #1e293b; color: #94a3b8;">
+          <div>TALKING HEAD<br><br>Thomas delivers closing.<br>Warm, inspiring, full-circle callback.<br>"Shenzhen went from thirty thousand fishermen<br>to the world's electronics capital in forty years."</div>
+        </div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge talking">Hold on presenter</span>
+        <h3>Thomas &mdash; closing statement + CTA</h3>
+        <div class="zh">Thomas——结束语+行动号召</div>
+        <p class="desc">"Shenzhen went from thirty thousand fishermen to the world's electronics capital in forty years." Then subscribe CTA + download CTA. "I'm Thomas. See you in the next one." Warm, genuine close.</p>
+        <div class="meta-tags">
+          <span class="tag">Duration: ~20 sec<span class="zh"> (时长: ~20秒)</span></span>
+          <span class="tag">Energy: warm, inspiring, confident<span class="zh"> (氛围: 温暖、激励、自信)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shot: Shenzhen skyline sunset -->
+    <div class="shot">
+      <div class="shot-img-wrap" style="border: 3px solid var(--blue); border-radius: 8px;">
+        <img src="https://images.unsplash.com/photo-1535476857030-27f89f02c729?w=800&q=80" alt="Shenzhen skyline sunset" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">Shenzhen skyline at sunset &mdash; golden hour, Huaqiangbei lights coming on</div>
+      </div>
+      <div class="shot-info">
+        <span class="type-badge stock">Stock footage</span>
+        <h3>Shenzhen skyline sunset &mdash; closing beauty shot</h3>
+        <div class="zh">深圳天际线日落——收尾美景镜头</div>
+        <p class="desc">Golden hour Shenzhen skyline. Huaqiangbei lights beginning to glow. The city that never stops making things, winding down into evening. Can reuse aerial from hook with sunset colour grade.</p>
+        <div class="zh">黄金时刻的深圳天际线。华强北灯光开始亮起。这座永不停止制造的城市，进入傍晚。可以复用开头的航拍素材，加日落调色。</div>
+        <div class="meta-tags">
+          <span class="tag">Duration: 5-8 sec<span class="zh"> (时长: 5-8秒)</span></span>
+          <span class="tag">Golden hour / sunset<span class="zh"> (黄金时刻/日落)</span></span>
+          <span class="tag">Can reuse hook aerial<span class="zh"> (可复用开头航拍)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text overlay: Subscribe + Download CTA -->
+    <div class="overlay-mockup">
+      <div class="position">Center screen <span class="zh">(屏幕中央)</span></div>
+      Subscribe | Download the China Sourcing Map &mdash; link in description
+      <div class="duration">Hold: 5 sec &mdash; end screen overlay <span class="zh">(保持5秒——片尾屏幕叠加)</span></div>
+    </div>
+
+    <!-- YT Card: End screen -->
+    <div class="yt-card">
+      <span class="icon">&#9654;</span>
+      <div class="info"><strong>End Screen</strong> &mdash; Guangzhou episode (left) + 1688 dedicated video (right) + Subscribe button (centre). Standard 20-sec end screen.</div>
+      <div class="zh" style="margin-left: 32px;"><strong>片尾屏幕</strong> —— 广州集（左）+ 1688专题视频（右）+ 订阅按钮（中）。标准20秒片尾屏幕。</div>
+    </div>
+
+    <!-- Description CTA note -->
+    <div class="thomas">
+      <div class="label">&#128221; Video Description CTA <span class="zh">(视频描述行动号召)</span></div>
+      <div class="line">"Download the full China Sourcing Map for free → [link]"</div>
+      <div class="direction">Place this as the FIRST line of the video description, before any other links. Also include WorldFirst sign-up link and links to Guangzhou episode + 1688 video.</div>
+      <div class="zh">将此作为视频描述的第一行，放在所有其他链接之前。同时包含WorldFirst注册链接以及广州集+1688视频的链接。</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== YOUTUBE FURNITURE ========== -->
+<div class="furniture">
+  <h2>YouTube Furniture</h2>
+  <div class="zh" style="margin-bottom: 8px;">YouTube 装饰元素</div>
+  <div class="furniture-item">
+    <span class="icon">&#9654;</span>
+    <div class="detail"><strong>YouTube Card #1</strong> &mdash; <span>1688 dedicated video. Trigger: "1688 is where the factories list" (CH5). Top right, 8 sec.</span></div>
+  </div>
+  <div class="furniture-item">
+    <span class="icon">&#9654;</span>
+    <div class="detail"><strong>YouTube Card #2</strong> &mdash; <span>Guangzhou episode (EP1). Trigger: "Canton Fair in Guangzhou" (CH6). Top right, 8 sec.</span></div>
+  </div>
+  <div class="furniture-item">
+    <span class="icon">&#128250;</span>
+    <div class="detail"><strong>End Screen</strong> &mdash; <span>Guangzhou EP (left) + 1688 video (right) + Subscribe (centre). 20 sec. Standard YouTube end screen template.</span></div>
+  </div>
+  <div class="furniture-item">
+    <span class="icon">&#128196;</span>
+    <div class="detail"><strong>Description CTA</strong> &mdash; <span>Line 1: "Download the full China Sourcing Map for free → [link]" | Line 2: WorldFirst link | Line 3: Guangzhou episode link</span></div>
+  </div>
+  <div class="furniture-item">
+    <span class="icon">&#127925;</span>
+    <div class="detail"><strong>Music Notes</strong> &mdash; <span>Hook: driving, confident. CH1-2: cinematic wonder → market energy. CH3.5: intimate, reflective (music drops). CH4: dark, tense. CH5: peak energy, amazement. CH6: helpful, warm. Outro: inspiring close.</span></div>
+  </div>
+</div>
+
+<!-- ========== ASSET CHECKLIST ========== -->
+<div class="checklist" id="checklist">
+  <h2>Asset Checklist</h2>
+  <div class="zh" style="margin-bottom: 8px;">素材清单</div>
+  <p style="font-size:13px; color:#6b7280; margin-bottom:16px;">Print this page and check off assets as they're sourced. Every item here needs to be ready before the edit.</p>
+  <div class="zh" style="margin-bottom:16px; font-size:12px;">打印此页并在素材找到后逐项勾选。剪辑前所有素材都必须准备好。</div>
+
+  <div class="checklist-group">
+    <h3 class="stock">&#128309; Stock Footage (16 shots) <span class="zh"> — 素材视频（16个镜头）</span></h3>
+    <div class="check-item"><input type="checkbox"><div>Huaqiangbei timelapse / neon lights / market district (Hook)<div class="zh">华强北延时摄影/霓虹灯/市场区域（开场）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Shenzhen skyline drone &mdash; old vs new comparison (Hook)<div class="zh">深圳天际线无人机——新旧对比（开场）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Historical Shenzhen photos &mdash; 1980 fishing village, Deng Xiaoping archive (CH1)<div class="zh">历史深圳照片——1980年渔村、邓小平档案（第1章）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>SEG Plaza exterior + interior floors (CH1 + CH2)<div class="zh">赛格广场外景+各层内景（第1+2章）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Shanzhai phone montage &mdash; knockoff phones, dual-SIM close-up (CH1)<div class="zh">山寨手机蒙太奇——仿制手机、双卡特写（第1章）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>DJI Sky City / Huawei campus / BYD factory montage (CH1)<div class="zh">大疆天空之城/华为园区/比亚迪工厂蒙太奇（第1章）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Huaqiangbei aerial &mdash; commercial street drone shot (CH2)<div class="zh">华强北航拍——商业街无人机镜头（第2章）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Tongtiandi second-hand iPhone market interior (CH2)<div class="zh">通天地二手iPhone市场内景（第2章）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Foreign buyers browsing Huaqiangbei markets (CH2)<div class="zh">外国买家浏览华强北市场（第2章）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Foxconn Longhua campus aerial (CH3)<div class="zh">富士康龙华园区航拍（第3章）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Henggang eyewear factory floors (CH3)<div class="zh">横岗眼镜工厂车间（第3章）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Shenzhen street life, coffee shops, co-working scenes (CH3.5)<div class="zh">深圳街景、咖啡厅、联合办公场景（第3.5章）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Night Huaqiangbei &mdash; dim corridors, Ghost Market atmosphere (CH4)<div class="zh">夜间华强北——昏暗走廊、鬼市氛围（第4章）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>PCB manufacturing close-ups &mdash; etching, pick-and-place, soldering (CH5)<div class="zh">PCB制造特写——蚀刻、贴片、焊接（第5章）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Trade show floors &mdash; CHTF / ELEXCON / Global Sources (CH5)<div class="zh">展会现场——高交会/ELEXCON/环球资源（第5章）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Airport, border crossing, high-speed rail montage (CH6)<div class="zh">机场、口岸、高铁蒙太奇（第6章）</div></div></div>
+  </div>
+
+  <div class="checklist-group">
+    <h3 class="graphic">&#128992; Graphics to Create (4 items) <span class="zh"> — 需制作图表（4项）</span></h3>
+    <div class="check-item"><input type="checkbox"><div>Shenzhen district map &mdash; animated, specialties light up sequentially<div class="zh">深圳区域地图——动画，特色产业依次亮起</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Golden sample trap &mdash; sample vs bulk comparison graphic<div class="zh">金样品陷阱——样品 vs 批量对比图形</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>WorldFirst trust network &mdash; animated network diagram<div class="zh">WorldFirst信任网络——动画网络图表</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>Shenzhen travel essentials card &mdash; infographic<div class="zh">深圳出行必备卡——信息图</div></div></div>
+  </div>
+
+  <div class="checklist-group">
+    <h3 class="screen">&#128994; Screen Recordings (1 item) <span class="zh"> — 屏幕录制（1项）</span></h3>
+    <div class="check-item"><input type="checkbox"><div>SAMR database (gsxt.gov.cn) supplier verification lookup + video call mock<div class="zh">工商数据库（gsxt.gov.cn）供应商验证查询 + 视频通话模拟</div></div></div>
+  </div>
+
+  <div class="checklist-group">
+    <h3 class="overlay">&#128995; Text Overlays (16 items) <span class="zh"> — 文字叠加（16项）</span></h3>
+    <div class="check-item"><input type="checkbox"><div>"China Sourcing Map: Shenzhen" (title card)<div class="zh">"China Sourcing Map: Shenzhen"（标题卡）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"1980 — Population: 30,000 | China's first Special Economic Zone"<div class="zh">"1980——人口: 3万 | 中国第一个经济特区"</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"山寨 — shānzhài — mountain fortress / counterfeit"<div class="zh">"山寨——拼音: shānzhài——山中堡垒/仿冒"</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"2024 — Population: 17.5 million | #1 export city in China, 32 years running"<div class="zh">"2024——人口: 1750万 | 中国出口第一城，连续32年"</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"华强北 — Huaqiangbei | 1.45 km² | 40+ markets | 750,000 daily visitors"<div class="zh">"华强北 | 1.45平方公里 | 40+市场 | 每日75万访客"</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"SEG Plaza — 赛格广场 | 3,000+ shops | Est. 1988"<div class="zh">"赛格广场 | 3000+店铺 | 建于1988年"</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"Download the full China Sourcing Map — link in description" (×2)<div class="zh">"免费下载完整中国采购地图——链接在简介中"（×2）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"Longhua — Foxconn | Longgang — Huawei + 100M pairs of eyewear/year"<div class="zh">"龙华——富士康 | 龙岗——华为+每年1亿副眼镜"</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"Full district guide → China Sourcing Map | Link in description"<div class="zh">"完整区域指南→中国采购地图 | 链接在简介中"</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"The Dark Side" (chapter title)<div class="zh">"暗面"（章节标题）</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"EVERYTHING here is fake." — bunnie Huang<div class="zh">"这里所有东西都是假的。"——bunnie Huang</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"18% of importers lose an average of $45,000 to fraud"<div class="zh">"18%的进口商平均损失45,000美元于欺诈"</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"A week in Shenzhen = a month in Silicon Valley"<div class="zh">"深圳一周=硅谷一个月"</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"PCB prototype: $2 | MOQ: 1 piece | 2,000+ assembly companies"<div class="zh">"PCB原型: 2美元 | 最低订量: 1片 | 2000+组装公司"</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"CHTF: Nov 26–28 | ELEXCON: Aug 25–27 | Global Sources: April"<div class="zh">"高交会: 11月26-28日 | ELEXCON: 8月25-27日 | 环球资源: 4月"</div></div></div>
+    <div class="check-item"><input type="checkbox"><div>"WorldFirst | Send USD &amp; RMB | Free in-network | Same-day"<div class="zh">"WorldFirst | 发送美元和人民币 | 网络内免费 | 当日到账"</div></div></div>
+  </div>
+</div>
+
+<script>
+function toggleChinese() {
+  const body = document.body;
+  const btn = document.getElementById('langBtn');
+  body.classList.toggle('show-zh');
+  if (body.classList.contains('show-zh')) {
+    btn.classList.add('active');
+    btn.innerHTML = '<span class="icon">&#x4E2D;</span> 隐藏中文';
+  } else {
+    btn.classList.remove('active');
+    btn.innerHTML = '<span class="icon">&#x4E2D;</span> 中文翻译';
+  }
+}
+</script>
+
+</body>
+</html>

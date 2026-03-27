@@ -14,7 +14,7 @@ interface FAQCategory {
 
 const faqData: FAQCategory[] = [
   {
-    category: "Getting Started with Electronics Sourcing",
+    category: "Getting started with electronics sourcing",
     faqs: [
       { q: "Is it realistic to source electronics from China as a small importer?", a: "Yes, but electronics is more capital-intensive than most categories. Budget $5,000\u201315,000 for a first order including samples, tooling, and production. Start with simpler products (phone accessories, cables, chargers) before moving to custom-designed devices. Many successful importers started with accessories and graduated to more complex products." },
       { q: "Should I start on Alibaba or go direct to factories?", a: "Start on Alibaba or 1688 to understand pricing and the supplier landscape. Use it as a lead generator \u2014 shortlist 5\u201310 suppliers, request samples, then negotiate directly. Many importers attend Canton Fair Phase 1 to meet Alibaba suppliers face-to-face, then transition to factory-direct ordering through their 1688 store." },
@@ -23,7 +23,7 @@ const faqData: FAQCategory[] = [
     ],
   },
   {
-    category: "Finding & Evaluating Suppliers",
+    category: "Finding & evaluating suppliers",
     faqs: [
       { q: "How do I tell if an electronics supplier is a factory or trading company?", a: "Factories have their own SMT (Surface Mount Technology) lines, assembly floors, and testing labs. Ask for a factory tour video showing actual production \u2014 not just a showroom. Check if they can explain the BOM (Bill of Materials) in detail. Trading companies often claim to \u201cmanufacture everything\u201d \u2014 a real factory specialises in specific product types." },
       { q: "What certifications should an electronics factory have?", a: "ISO 9001 (quality management) is the baseline. For products entering the EU: CE marking is mandatory. For the US: FCC (radio emissions), UL (safety). RoHS (hazardous substances) and WEEE (waste electronics) are non-negotiable for most markets. Ask for existing certificates before sampling \u2014 retrofitting compliance after production costs 5\u201310x more." },
@@ -32,7 +32,7 @@ const faqData: FAQCategory[] = [
     ],
   },
   {
-    category: "Pricing & Payment",
+    category: "Pricing & payment",
     faqs: [
       { q: "How is electronics pricing structured?", a: "Typical FOB breakdown for consumer electronics: Components 40\u201370% (chipset choice drives the biggest variance), assembly labour 10\u201315%, housing/packaging 10\u201315%, factory overhead 5\u201310%, margin 5\u201315%. Always ask suppliers to quote with 2\u20133 chipset options to understand price sensitivity." },
       { q: "What payment terms are standard for electronics orders?", a: "Standard: 30% T/T deposit before production, 70% balance before shipment against inspection report. First orders or custom products: 50/50 is common. Some factories require 100% prepayment for orders under $5,000. Never pay 100% upfront on orders over $5,000 \u2014 regardless of how good the price is." },
@@ -42,7 +42,7 @@ const faqData: FAQCategory[] = [
     ],
   },
   {
-    category: "Shipping & Compliance",
+    category: "Shipping & compliance",
     faqs: [
       { q: "Can I air-freight electronics with lithium batteries?", a: "Yes, but with strict regulations. Lithium batteries are classified as IATA DGR Class 9 dangerous goods. You need proper MSDS (Material Safety Data Sheet) documentation, UN38.3 test reports, and packaging that meets Section II requirements. Many freight forwarders won\u2019t handle batteries without these documents. Plan for this early \u2014 getting the documentation takes 2\u20134 weeks." },
       { q: "What Incoterms should I use for electronics?", a: "FOB Shenzhen or FOB Dongguan is standard for electronics. EXW saves 3\u20135% but you handle everything from factory gate including domestic transport. CIF/DDP adds convenience but hides the logistics cost. For first orders, FOB gives you the best balance of control and transparency." },
@@ -121,7 +121,7 @@ export default function FAQAccordion() {
                         onClick={() => toggleQuestion(faq.q)}
                         className="w-full flex items-center justify-between px-3 py-2.5 text-left hover:bg-wf-bg-light/50 rounded-lg transition-colors"
                       >
-                        <span className="text-sm text-wf-text pr-4">{faq.q}</span>
+                        <span className={`text-sm pr-4 ${openQuestion === faq.q ? 'text-wf-red font-medium' : 'text-wf-text'}`}>{faq.q}</span>
                         <svg
                           className={`flex-shrink-0 text-wf-text-muted transition-all duration-200 ${
                             openQuestion === faq.q ? "rotate-180" : ""
