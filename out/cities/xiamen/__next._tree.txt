@@ -1,0 +1,3 @@
+:HL["/china-sourcing-navigator-v2/_next/static/chunks/917a4de858a569cc.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap","style"]
+0:{"buildId":"gNUCPKGx5t6z8Usfu_jxh","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"cities","paramType":null,"paramKey":"cities","hasRuntimePrefetch":false,"slots":{"children":{"name":"xiamen","paramType":null,"paramKey":"xiamen","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

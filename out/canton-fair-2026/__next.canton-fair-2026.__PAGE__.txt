@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[84295,["/china-sourcing-navigator/_next/static/chunks/a9afda55173bae63.js","/china-sourcing-navigator/_next/static/chunks/b68f42c983e0bc1b.js"],"default"]
-3:I[97367,["/china-sourcing-navigator/_next/static/chunks/ff1a16fafef87110.js","/china-sourcing-navigator/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+2:I[4395,["/china-sourcing-navigator-v2/_next/static/chunks/f963c468cfb12944.js","/china-sourcing-navigator-v2/_next/static/chunks/be4b071a801e8405.js"],"default"]
+3:I[2740,["/china-sourcing-navigator-v2/_next/static/chunks/06e734542b37e9af.js","/china-sourcing-navigator-v2/_next/static/chunks/9993f4b9b6368b82.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"buildId":"-xtjwjunglpeofGGHCSdm","rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/china-sourcing-navigator/_next/static/chunks/a9afda55173bae63.js","async":true}],["$","script","script-1",{"src":"/china-sourcing-navigator/_next/static/chunks/b68f42c983e0bc1b.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"gNUCPKGx5t6z8Usfu_jxh","rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/china-sourcing-navigator-v2/_next/static/chunks/f963c468cfb12944.js","async":true}],["$","script","script-1",{"src":"/china-sourcing-navigator-v2/_next/static/chunks/be4b071a801e8405.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
 5:null
