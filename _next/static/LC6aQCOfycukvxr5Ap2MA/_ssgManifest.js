@@ -1,1 +1,0 @@
-self.__SSG_MANIFEST=new Set(["\u002Fcategories\u002F[category]","\u002Fchina-sourcing-navigator\u002Fcategories\u002F[category]","\u002Fchina-sourcing-navigator\u002Fcities\u002F[city]","\u002Fcities\u002F[city]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
