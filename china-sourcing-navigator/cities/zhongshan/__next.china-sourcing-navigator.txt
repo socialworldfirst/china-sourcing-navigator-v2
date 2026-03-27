@@ -1,4 +1,4 @@
 1:"$Sreact.fragment"
 2:I[51191,["/china-sourcing-navigator-v2/_next/static/chunks/06e734542b37e9af.js","/china-sourcing-navigator-v2/_next/static/chunks/9993f4b9b6368b82.js"],"default"]
 3:I[19920,["/china-sourcing-navigator-v2/_next/static/chunks/06e734542b37e9af.js","/china-sourcing-navigator-v2/_next/static/chunks/9993f4b9b6368b82.js"],"default"]
-0:{"buildId":"5saTLP_QSWb2LATRyhukp","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"WDgUBPxKZ0-_JkCih5jzQ","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
