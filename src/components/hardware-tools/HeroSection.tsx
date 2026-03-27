@@ -4,12 +4,18 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import basePath from "@/lib/basePath";
 
+/* ── 10 cities ranked for hardware & tools sourcing ── */
 const hardwareCities = [
-  { name: "Ningbo",    slug: "ningbo",    stars: 5, imageUrl: `${basePath}/images/ningbo.webp` },
-  { name: "Yiwu",      slug: "yiwu",      stars: 4, imageUrl: `${basePath}/images/yiwu.webp` },
-  { name: "Qingdao",   slug: "qingdao",   stars: 3, imageUrl: `${basePath}/images/qingdao.webp` },
-  { name: "Guangzhou",  slug: "guangzhou",  stars: 3, imageUrl: `${basePath}/images/guangzhou.webp` },
+  { name: "Ningbo",     slug: "ningbo",     stars: 5, imageUrl: `${basePath}/images/ningbo.webp` },
+  { name: "Yiwu",       slug: "yiwu",       stars: 4, imageUrl: `${basePath}/images/yiwu.webp` },
+  { name: "Qingdao",    slug: "qingdao",    stars: 3, imageUrl: `${basePath}/images/qingdao.webp` },
   { name: "Dongguan",   slug: "dongguan",   stars: 3, imageUrl: `${basePath}/images/dongguan.webp` },
+  { name: "Guangzhou",  slug: "guangzhou",   stars: 3, imageUrl: `${basePath}/images/guangzhou.webp` },
+  { name: "Shanghai",   slug: "shanghai",    stars: 3, imageUrl: `${basePath}/images/shanghai.webp` },
+  { name: "Foshan",     slug: "foshan",      stars: 2, imageUrl: `${basePath}/images/foshan.webp` },
+  { name: "Shenzhen",   slug: "shenzhen",    stars: 2, imageUrl: `${basePath}/images/shenzhen.webp` },
+  { name: "Quanzhou",   slug: "quanzhou",    stars: 2, imageUrl: `${basePath}/images/quanzhou.webp` },
+  { name: "Xiamen",     slug: "xiamen",      stars: 1, imageUrl: `${basePath}/images/xiamen.webp` },
 ];
 
 const placeholderGradient = "linear-gradient(135deg, #1C1422 0%, #3b2d4a 50%, #1C1422 100%)";
@@ -99,7 +105,11 @@ export default function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 pt-28 w-full">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.1] text-white mb-4 tracking-[-0.02em]">Source Hardware &amp; Tools from China</h1>
-          <p className="text-lg text-white/70 leading-relaxed">From Ningbo&apos;s hand tool factories to Yiwu&apos;s hardware wholesale markets. China&apos;s hardware belt produces tools for the world.</p>
+          <p className="text-lg text-white/70 leading-relaxed">
+            From Yongkang &mdash; the hardware capital of China &mdash; through Ningbo&apos;s
+            fastener clusters to Yiwu&apos;s 3,000-booth tools market. 80% of the
+            world&apos;s power tools start here.
+          </p>
           <div className="flex flex-wrap gap-3 mt-6">
             <a href="#source-hardware" className="btn-pill px-7 py-3 bg-wf-red text-white text-sm font-medium hover:bg-wf-red-hover">Find hardware &amp; tools suppliers in China</a>
           </div>
