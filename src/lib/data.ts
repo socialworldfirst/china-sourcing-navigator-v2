@@ -100,6 +100,22 @@ export const cities: City[] = [
     description: "Major port city with dense SME clusters and diverse manufacturing.",
     imageUrl: `${basePath}/images/ningbo.webp`,
   },
+  {
+    name: "Hangzhou",
+    slug: "hangzhou",
+    region: "East China",
+    topCategories: ["E-commerce", "Women\u2019s Fashion", "Silk"],
+    description: "Alibaba\u2019s home city. E-commerce fashion capital and China\u2019s silk heritage hub.",
+    imageUrl: `${basePath}/images/hangzhou.jpg`,
+  },
+  {
+    name: "Suzhou",
+    slug: "suzhou",
+    region: "East China",
+    topCategories: ["Silk", "Textiles", "Precision Manufacturing"],
+    description: "Silk capital with Shengze fabric hub and Changshu garment wholesale market.",
+    imageUrl: `${basePath}/images/suzhou.jpg`,
+  },
 
   // Southeast China — Fujian
   {
@@ -120,14 +136,6 @@ export const cities: City[] = [
   },
 
   // North China
-  {
-    name: "Beijing",
-    slug: "beijing",
-    region: "North China",
-    topCategories: ["Tech", "Policy Exports", "Cultural Goods"],
-    description: "Technology hub and policy-driven export centre.",
-    imageUrl: `${basePath}/images/beijing.webp`,
-  },
   {
     name: "Qingdao",
     slug: "qingdao",
@@ -170,14 +178,6 @@ export const cities: City[] = [
     description: "China\u2019s engineering lab \u2014 where R&D meets manufacturing.",
     imageUrl: `${basePath}/images/chengdu.webp`,
   },
-  {
-    name: "Xuchang",
-    slug: "xuchang",
-    region: "Central China",
-    topCategories: ["Wigs", "Hair Products", "Beauty"],
-    description: "Wig capital of the world \u2014 60%+ global market share, $2B+ exports.",
-    imageUrl: `${basePath}/images/xuchang.webp`,
-  },
 
   // Hong Kong
   {
@@ -191,28 +191,24 @@ export const cities: City[] = [
 ];
 
 export const categories: Category[] = [
-  { name: "Electronics", slug: "electronics", description: "Consumer electronics, components, PCBs, and smart devices", topCities: ["Shenzhen", "Kunshan", "Dongguan"] },
-  { name: "Home & Kitchen", slug: "home-kitchen", description: "Kitchenware, home d\u00e9cor, storage, and household products", topCities: ["Ningbo", "Yiwu", "Foshan"] },
-  { name: "Apparel & Textiles", slug: "apparel", description: "Clothing, fashion accessories, and garment manufacturing", topCities: ["Guangzhou", "Quanzhou", "Shanghai"] },
-  { name: "Beauty & Personal Care", slug: "beauty", description: "Cosmetics, skincare, hair care, and beauty tools", topCities: ["Guangzhou", "Xuchang", "Qingdao"] },
-  { name: "Packaging & Print", slug: "packaging", description: "Custom packaging, labels, boxes, and print materials", topCities: ["Yiwu", "Guangzhou", "Shanghai"] },
-  { name: "Toys & Games", slug: "toys", description: "Children\u2019s toys, educational products, and gaming accessories", topCities: ["Dongguan", "Guangzhou", "Yiwu"] },
-  { name: "Lighting", slug: "lighting", description: "LED, commercial lighting, smart lighting, and fixtures", topCities: ["Zhongshan", "Shenzhen", "Foshan"] },
-  { name: "Building Materials", slug: "building-materials", description: "Tiles, stone, plumbing fixtures, and construction materials", topCities: ["Foshan", "Quanzhou", "Guangzhou"] },
-  { name: "Furniture", slug: "furniture", description: "Home furniture, office furniture, and outdoor furniture", topCities: ["Foshan", "Dongguan", "Shanghai"] },
-  { name: "Auto Parts", slug: "auto-parts", description: "Vehicle parts, accessories, and automotive components", topCities: ["Chongqing", "Qingdao", "Ningbo"] },
-  { name: "Small Commodities", slug: "small-commodities", description: "Daily-use products, dollar-store goods, and general merchandise", topCities: ["Yiwu", "Guangzhou", "Ningbo"] },
-  { name: "Health & Medical", slug: "health-medical", description: "Medical devices, health products, and wellness equipment", topCities: ["Shenzhen", "Beijing", "Shanghai"] },
-  { name: "Pet Supplies", slug: "pet-supplies", description: "Pet food, accessories, grooming, and pet care products", topCities: ["Ningbo", "Guangzhou", "Yiwu"] },
-  { name: "Sports & Outdoors", slug: "sports-outdoors", description: "Fitness equipment, outdoor gear, and sportswear", topCities: ["Quanzhou", "Xiamen", "Dongguan"] },
-  { name: "Bags & Luggage", slug: "bags-luggage", description: "Travel bags, backpacks, handbags, and luggage", topCities: ["Guangzhou", "Quanzhou", "Yiwu"] },
-  { name: "Stationery & Office", slug: "stationery-office", description: "Office supplies, writing instruments, and paper products", topCities: ["Yiwu", "Ningbo", "Shanghai"] },
-  { name: "Garden & Landscaping", slug: "garden-landscaping", description: "Garden tools, outdoor furniture, and landscaping materials", topCities: ["Yiwu", "Foshan", "Ningbo"] },
-  { name: "Jewelry & Accessories", slug: "jewelry-accessories", description: "Fashion jewelry, watches, and personal accessories", topCities: ["Yiwu", "Guangzhou", "Shenzhen"] },
-  { name: "Tools & Hardware", slug: "tools-hardware", description: "Hand tools, power tools, and hardware fittings", topCities: ["Ningbo", "Yiwu", "Qingdao"] },
-  { name: "Cleaning Supplies", slug: "cleaning-supplies", description: "Cleaning products, equipment, and hygiene supplies", topCities: ["Yiwu", "Guangzhou", "Ningbo"] },
-  { name: "Food & Beverage Equipment", slug: "food-equipment", description: "Commercial kitchen equipment, food processing, and packaging", topCities: ["Shanghai", "Guangzhou", "Ningbo"] },
-  { name: "Safety & Security", slug: "safety-security", description: "CCTV, alarms, PPE, and safety equipment", topCities: ["Shenzhen", "Dongguan", "Beijing"] },
-  { name: "Textiles & Fabrics", slug: "textiles-fabrics", description: "Raw fabrics, functional textiles, and technical materials", topCities: ["Guangzhou", "Quanzhou", "Yiwu"] },
-  { name: "Machinery & Industrial", slug: "machinery-industrial", description: "Industrial machinery, CNC equipment, and manufacturing tools", topCities: ["Shanghai", "Chongqing", "Zhengzhou"] },
+  // 18 categories — buyer-intent taxonomy, locked March 2026
+  // topCities are provisional — will be confirmed by /csn_category_research per category
+  { name: "Electronics", slug: "electronics", description: "Consumer electronics, components, PCBs, and smart devices", topCities: ["Shenzhen", "Dongguan", "Guangzhou"] },
+  { name: "Appliances", slug: "appliances", description: "Kitchen appliances, home appliances, and small electronics", topCities: ["Ningbo", "Foshan", "Guangzhou"] },
+  { name: "Apparel", slug: "apparel", description: "Clothing, fashion, fabrics, and garment manufacturing", topCities: ["Guangzhou", "Dongguan", "Hangzhou"] },
+  { name: "Footwear", slug: "footwear", description: "Sneakers, sandals, boots, and shoe manufacturing", topCities: ["Quanzhou", "Dongguan", "Guangzhou"] },
+  { name: "Bags & Luggage", slug: "bags-luggage", description: "Handbags, backpacks, suitcases, and travel goods", topCities: ["Guangzhou", "Quanzhou", "Yiwu"] },
+  { name: "Beauty", slug: "beauty", description: "Cosmetics, skincare, haircare, wigs, and beauty tools", topCities: ["Guangzhou", "Yiwu", "Qingdao"] },
+  { name: "Toys", slug: "toys", description: "Children\u2019s toys, educational products, and games", topCities: ["Dongguan", "Guangzhou", "Yiwu"] },
+  { name: "Baby", slug: "baby", description: "Baby clothing, strollers, feeding products, and maternity", topCities: ["Pingxiang, Hebei", "Ningbo", "Guangzhou"] },
+  { name: "Sports", slug: "sports", description: "Sports equipment, fitness gear, and athletic products", topCities: ["Quanzhou", "Xiamen", "Ningbo"] },
+  { name: "Outdoor", slug: "outdoor", description: "Camping, hiking gear, outdoor furniture, and recreation", topCities: ["Ningbo", "Yiwu", "Xiamen"] },
+  { name: "Home & Furniture", slug: "home-furniture", description: "Furniture, home decor, storage, bedding, and ceramics", topCities: ["Foshan", "Guangzhou", "Yiwu"] },
+  { name: "Lighting", slug: "lighting", description: "LED, commercial lighting, decorative lighting, and smart lighting", topCities: ["Zhongshan", "Shenzhen", "Foshan"] },
+  { name: "Pets", slug: "pets", description: "Pet food, accessories, grooming, beds, and pet toys", topCities: ["Ningbo", "Guangzhou", "Yiwu"] },
+  { name: "Health & Medical", slug: "health-medical", description: "Medical devices, health products, and wellness equipment", topCities: ["Shenzhen", "Shanghai", "Guangzhou"] },
+  { name: "Jewelry", slug: "jewelry", description: "Fashion jewelry, watches, sunglasses, and accessories", topCities: ["Yiwu", "Guangzhou", "Shenzhen"] },
+  { name: "Hardware & Tools", slug: "hardware-tools", description: "Hand tools, power tools, fasteners, and hardware fittings", topCities: ["Ningbo", "Yiwu", "Qingdao"] },
+  { name: "Building Materials", slug: "building-materials", description: "Tiles, stone, plumbing, sanitary ware, and construction materials", topCities: ["Foshan", "Quanzhou", "Guangzhou"] },
+  { name: "Packaging", slug: "packaging", description: "Custom packaging, labels, boxes, and printing materials", topCities: ["Yiwu", "Guangzhou", "Shanghai"] },
 ];
