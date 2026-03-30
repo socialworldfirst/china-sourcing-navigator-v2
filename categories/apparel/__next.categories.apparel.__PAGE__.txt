@@ -2,5 +2,5 @@
 2:I[10710,["/china-sourcing-navigator-v2/_next/static/chunks/de1083fdfea9ce13.js"],"default"]
 3:I[2740,["/china-sourcing-navigator-v2/_next/static/chunks/06e734542b37e9af.js","/china-sourcing-navigator-v2/_next/static/chunks/9993f4b9b6368b82.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"buildId":"ur1Ptm9-cuAxlJjiSu7IN","rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/china-sourcing-navigator-v2/_next/static/chunks/de1083fdfea9ce13.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"Na53IiHmq_L2znOUwP1jU","rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/china-sourcing-navigator-v2/_next/static/chunks/de1083fdfea9ce13.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
 5:null
